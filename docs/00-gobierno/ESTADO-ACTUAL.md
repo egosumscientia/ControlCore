@@ -4,11 +4,14 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.6  
-**Fase actual:** Gobierno documental aprobado y preparación de ingeniería de requisitos  
-**Bloque:** B1.4 — Aprobación formal del gobierno documental  
-**Estado del bloque:** Gobierno documental aprobado; línea base establecida  
-**Estado del proyecto:** Ingeniería conceptual — implementación no autorizada
+**Versión del documento:** 0.7  
+**Fase actual:** Ingeniería de requisitos (B2)  
+**Bloque:** B2.1 — Estructura, identificación y trazabilidad de requisitos  
+**Estado del bloque:** Estructura de requisitos propuesta; convenciones pendientes de aprobación; requisitos no definidos  
+**Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)  
+**Requisitos:** Estructura propuesta; requisitos no aprobados  
+**Arquitectura:** No definida  
+**Implementación:** No autorizada
 
 ---
 
@@ -75,6 +78,8 @@ En la misma fecha se ejecutó el bloque B1.3, autorizado por el responsable del 
 
 En la misma fecha se ejecutó el bloque B1.4: el responsable del proyecto aprobó formalmente los cinco documentos de gobierno en versión 0.1, con base en la auditoría B1 versión 0.2, sin condiciones documentales pendientes. La aprobación se registró como DEC-GOB-009 y establece la línea base documental para iniciar la ingeniería de requisitos (B2). La implementación de hardware, firmware y software continúa no autorizada.
 
+En la misma fecha se inició B2 con el bloque B2.1: se estableció la estructura documental de requisitos, el esquema propuesto de identificación, los atributos, los estados y los mecanismos de trazabilidad. No se definieron requisitos concretos ni se aprobaron convenciones. La arquitectura no está definida y la implementación no está autorizada.
+
 No se ha aprobado todavía una arquitectura definitiva.
 
 No se ha autorizado la implementación del producto.
@@ -125,7 +130,6 @@ El directorio `docs/04-modulos/` fue creado con un archivo índice que describe 
 
 Permanecen sin contenido:
 
-- `docs/01-requisitos/` — requisitos funcionales, no funcionales y restricciones.
 - `docs/02-arquitectura/` — arquitectura general, hardware, firmware, software e interfaces.
 - `docs/03-seguridad-industrial/` — análisis de riesgos, normas y requisitos de seguridad.
 - `docs/05-validacion/` — estrategia de pruebas, criterios de aceptación y registro de validaciones.
@@ -159,6 +163,19 @@ La línea base de gobierno documental, aprobada el 2026-10-19, está constituida
 **Registro:** DEC-GOB-009.
 
 La línea base habilita el inicio de la ingeniería de requisitos (B2). No autoriza la implementación de hardware, firmware o software.
+
+### 4.6. Estructura inicial de requisitos
+
+La estructura documental de requisitos fue incorporada en B2.1:
+
+- `docs/01-requisitos/README.md` — índice y convenciones comunes.
+- `docs/01-requisitos/requisitos-funcionales.md` — registro de RF.
+- `docs/01-requisitos/requisitos-no-funcionales.md` — registro de RNF.
+- `docs/01-requisitos/restricciones-sistema.md` — registro de RES.
+
+Estado: propuestas pendientes de aprobación. No contienen requisitos definidos, identificadores asignados ni línea base de requisitos.
+
+Las decisiones pendientes de B2.1 se registran en `docs/06-decisiones/pendientes.md`.
 
 ## 5. Metodología de ingeniería
 
@@ -295,9 +312,19 @@ No quedan hallazgos pendientes de H-01 a H-06. Los hallazgos H-03 a H-06 quedaro
 
 ### 9.3. Requisitos — B2
 
-B2 — Ingeniería de requisitos está autorizado para iniciar. No se inició en B1.4.
+B2 inició con B2.1. La estructura documental, el esquema de identificación, los atributos, los estados y la trazabilidad fueron propuestos, pero no están aprobados.
 
-Pendiente desarrollar las especificaciones funcionales, no funcionales y las restricciones del sistema, y definir y aprobar el esquema de identificadores de requisitos.
+Pendiente:
+
+- Aprobar el esquema de identificación `RF-###`, `RNF-###`, `RES-###`.
+- Aprobar el esquema de versiones del contenido.
+- Aprobar los estados operativos **En evaluación** y **Retirado** y su relación con la metodología.
+- Definir la escala de prioridad.
+- Definir el esquema de referencia de necesidades y de vínculos hacia arquitectura, implementación, pruebas y evidencias.
+- Aprobar la estructura documental de requisitos.
+- Definir los requisitos funcionales, no funcionales y las restricciones.
+
+No hay requisitos definidos ni aprobados. No existe línea base de requisitos.
 
 La autorización de B2 no autoriza la implementación del producto.
 
@@ -357,6 +384,14 @@ Interpretar resultados de laboratorio como evidencia suficiente para operación 
 
 Interpretar la aprobación de la línea base documental o la autorización de B2 como autorización para implementar hardware, firmware o software.
 
+**Convenciones de requisitos no aprobadas**
+
+Utilizar el esquema de identificación, los estados o las versiones propuestas como si estuvieran aprobados antes de la decisión del responsable del proyecto.
+
+**Requisitos no verificables**
+
+Aprobar requisitos sin criterio de aceptación objetivo o sin método de verificación.
+
 **Implementación anticipada**
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
@@ -369,7 +404,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La aprobación del gobierno documental en B1.4 no modifica este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
+La aprobación del gobierno documental en B1.4 y el inicio de B2.1 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -554,17 +589,50 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.7. Sesión 2026-10-19 — B2.1: Estructura, identificación y trazabilidad de requisitos
+
+**Objetivo:** Establecer la estructura documental, el esquema de identificación, los atributos, los estados y los mecanismos de trazabilidad de los requisitos de ControlCore.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B1.4 `1e9fb73`.
+2. Se leyeron `README.md`, `AGENTS.md`, los cinco documentos aprobados de gobierno, esta bitácora, el registro de decisiones y los archivos de `docs/01-requisitos/`.
+3. Se identificaron las reglas de gestión de requisitos de la metodología aprobada (sección 25).
+4. Se creó el índice común de requisitos y se completó la estructura de los tres registros existentes.
+5. Se propusieron el esquema de identificación `RF-###`, `RNF-###`, `RES-###`, el esquema de versiones, los atributos, los estados y la trazabilidad.
+6. Se registraron las decisiones pendientes en `docs/06-decisiones/pendientes.md`.
+7. Se actualizó esta bitácora.
+8. Se revisó el diff y se ejecutaron las verificaciones.
+
+**Resultados:**
+
+- Estructura documental de requisitos establecida.
+- Esquema de identificación, atributos, estados y trazabilidad propuestos.
+- Ningún requisito funcional, no funcional o restricción definido.
+- Ningún identificador `RF-###`, `RNF-###` o `RES-###` asignado.
+- Ninguna convención aprobada; todas pendientes de decisión.
+- Ninguna línea base de requisitos.
+- Gobierno documental aprobado sin modificaciones.
+- Arquitectura no definida.
+- Implementación no autorizada.
+
+**Verificaciones ejecutadas:** revisión del diff, consistencia de identificadores, compatibilidad con la metodología aprobada, atributos y transiciones, estructura de trazabilidad, referencias documentales, ausencia de funcionalidades inventadas, integridad de la línea base de gobierno y alcance limitado a B2.1.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. No se definieron requisitos del producto.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-El bloque B1 quedó cerrado con la aprobación formal de la línea base documental el 2026-10-19.
+B2 — Ingeniería de requisitos se encuentra en curso. B2.1 estableció la estructura documental, pero las convenciones permanecen pendientes de aprobación.
 
-La próxima etapa autorizada es **B2 — Ingeniería de requisitos**. B2 no se inicia automáticamente en B1.4; requiere instrucciones del responsable del proyecto.
+El próximo bloque recomendado es **B2.2 — Definición y elaboración de requisitos**, una vez aprobadas las convenciones de B2.1. B2.2 no se inicia automáticamente; requiere instrucciones del responsable del proyecto.
 
-La autorización de B2 habilita la ingeniería de requisitos, no la implementación del producto. La implementación de hardware, firmware y software continúa no autorizada.
+La ingeniería de requisitos no autoriza la implementación del producto. La implementación de hardware, firmware y software continúa no autorizada.
 
-Al iniciar B2 deberán consultarse `README.md`, `AGENTS.md`, la línea base de gobierno, el registro de decisiones y esta bitácora.
+Al iniciar B2.2 deberán consultarse `docs/01-requisitos/README.md`, los tres registros de requisitos, `docs/06-decisiones/pendientes.md`, el registro de decisiones y esta bitácora.
 
-No deberán modificarse decisiones aprobadas ni documentos de la línea base sin control de cambios y autorización.
+No deberán utilizarse como aprobadas las convenciones pendientes ni modificarse la línea base de gobierno sin control de cambios y autorización.
 
 ## 14. Criterio de continuidad
 
