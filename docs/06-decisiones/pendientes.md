@@ -4,23 +4,23 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Registro de asuntos de decisión  
-**Versión:** 0.1  
-**Estado:** Registro de asuntos de decisión — B2.1 resueltos y B2.2.1 pendientes  
+**Versión:** 0.2  
+**Estado:** Registro de asuntos de decisión — B2.1 y B2.2.1 resueltos; preguntas técnicas derivadas pendientes  
 **Fase:** Ingeniería de requisitos  
-**Fecha de revisión:** 2026-10-19  
+**Fecha de revisión:** 2026-10-20  
 **Aprobación:** No aplica — registro de asuntos de decisión
 
 ---
 
 ## 1. Propósito
 
-Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1, sus resoluciones en B2.1.1 y las preguntas pendientes identificadas en B2.2.1.
+Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1 y B2.2.1, sus resoluciones en B2.1.1 y B2.2.2, y las preguntas técnicas que permanecen abiertas.
 
 Conserva las alternativas consideradas y la trazabilidad hacia el registro formal de decisiones.
 
 ## 2. Alcance
 
-Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos, sus resoluciones en B2.1.1, y las preguntas pendientes de B2.2.1 — Identificación de necesidades, actores y escenarios de uso.
+Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos, sus resoluciones en B2.1.1; las preguntas de B2.2.1 — Identificación de necesidades, actores y escenarios de uso, y sus resoluciones conceptuales en B2.2.2.
 
 No contiene requisitos del producto. Las decisiones aprobadas se registran en `docs/06-decisiones/registro-decisiones.md`.
 
@@ -114,40 +114,56 @@ No contiene requisitos del producto. Las decisiones aprobadas se registran en `d
 - **Registro formal:** DEC-GOB-015.
 - **Autoridad:** Responsable del proyecto.
 
-## 4. Asuntos pendientes de B2.2.1
+## 4. Asuntos de B2.2.1 — resueltos en B2.2.2
 
-Las preguntas siguientes requieren respuesta del responsable del proyecto. El texto completo y el contexto se encuentran en `docs/01-requisitos/necesidades-producto.md` (sección 6). No se asume ninguna respuesta.
+Las quince preguntas fueron resueltas conceptualmente por el responsable del proyecto y registradas en DEC-GOB-017 a DEC-GOB-021. La resolución conceptual no equivale a una especificación técnica completa. El contenido íntegro de cada decisión se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
-| Identificador | Pregunta | Impacto | Vínculos | Estado |
+| Identificador | Pregunta | Decisión | Resolución (síntesis) | Estado |
 |---|---|---|---|---|
-| `PREG-P-01` | ¿Qué funciones y responsabilidades de seguridad corresponden a ControlCore frente a la máquina y a los sistemas externos? | Seguridad y alcance | `NEC-P-08`; `ESC-P-06`, `ESC-P-09` | Pendiente |
-| `PREG-P-02` | ¿Qué análisis de riesgos y qué marco normativo deben aplicarse según el uso previsto y el mercado? | Seguridad y alcance | `NEC-P-08`; `ESC-P-06` | Pendiente |
-| `PREG-P-03` | ¿Qué condiciones deben considerarse estados seguros y quién los define? | Seguridad y alcance | `NEC-P-07`, `NEC-P-08`; `ESC-P-06`, `ESC-P-09` | Pendiente |
-| `PREG-P-04` | ¿Qué aplicaciones, máquinas y procesos industriales son prioritarios para la primera versión? | Aplicación objetivo | `NEC-P-01`, `NEC-P-06`; actores | Pendiente |
-| `PREG-P-05` | ¿Qué tipos de motores y actuadores deben considerarse en el alcance inicial? | Aplicación objetivo | `NEC-P-01`; `ESC-P-03` | Pendiente |
-| `PREG-P-06` | ¿Qué condiciones eléctricas, ambientales y de instalación deben soportarse? | Aplicación objetivo | `NEC-P-07`, `NEC-P-09`; `ESC-P-01`, `ESC-P-03` | Pendiente |
-| `PREG-P-07` | ¿Qué capacidades del alcance conceptual forman parte de la primera versión? | Capacidades primera versión | `NEC-P-01` a `NEC-P-10` | Pendiente |
-| `PREG-P-08` | ¿Qué capacidades quedan explícitamente fuera de la primera versión? | Capacidades primera versión | Todos los actores; todos los escenarios | Pendiente |
-| `PREG-P-09` | ¿Qué nivel de configuración, supervisión y diagnóstico se requiere inicialmente? | Capacidades primera versión | `NEC-P-02`, `NEC-P-03`, `NEC-P-04`; `ESC-P-02`, `ESC-P-04`, `ESC-P-05` | Pendiente |
-| `PREG-P-10` | ¿Con qué sistemas externos debe integrarse ControlCore y qué información debe intercambiar? | Interfaces y condiciones operativas | `NEC-P-06`; `ACT-P-01`, `ACT-P-07`; `ESC-P-08` | Pendiente |
-| `PREG-P-11` | ¿Qué actores deben operar, configurar y mantener el sistema, y qué responsabilidades y restricciones de acceso deben definirse? | Interfaces y condiciones operativas | Actores; `ESC-P-01`, `ESC-P-02`, `ESC-P-07`, `ESC-P-10` | Pendiente |
-| `PREG-P-12` | ¿Qué información debe registrarse y conservarse para operación, diagnóstico y auditoría? | Interfaces y condiciones operativas | `NEC-P-02`, `NEC-P-03`, `NEC-P-09`; `ESC-P-04`, `ESC-P-05` | Pendiente |
-| `PREG-P-13` | ¿Qué criterios de aceptación y qué evidencia deben exigirse para la primera versión? | Verificación y aceptación | `NEC-P-10`; todos los escenarios | Pendiente |
-| `PREG-P-14` | ¿Qué entorno de pruebas, banco o máquina de referencia se utilizará para verificar y validar el producto? | Verificación y aceptación | `NEC-P-09`, `NEC-P-10`; todos los escenarios | Pendiente |
-| `PREG-P-15` | ¿Qué documentación y soporte técnico debe entregarse con el producto? | Verificación y aceptación | `NEC-P-10`; `ACT-P-02`, `ACT-P-05`, `ACT-P-07` | Pendiente |
+| `PREG-P-01` | ¿Qué funciones y responsabilidades de seguridad corresponden a ControlCore frente a la máquina y a los sistemas externos? | `DEC-GOB-017` | ControlCore es responsable de las funciones de control y diagnóstico especificadas y validadas; no sustituye automáticamente las protecciones de la máquina; las responsabilidades de makeAutomatic, fabricantes e integradores deben delimitarse documentalmente. | Resuelta conceptualmente |
+| `PREG-P-02` | ¿Qué análisis de riesgos y qué marco normativo deben aplicarse según el uso previsto y el mercado? | `DEC-GOB-017` | Se adopta un proceso documentado de identificación, evaluación y reducción de riesgos; las normas se determinan según función, aplicación y mercado; se consideran ISO 12100, IEC 60204-1, ISO 13849-1 e IEC 62061 cuando corresponda; no se declara conformidad sin evidencias. | Resuelta conceptualmente |
+| `PREG-P-03` | ¿Qué condiciones deben considerarse estados seguros y quién los define? | `DEC-GOB-017` | Los estados seguros dependen del análisis de riesgos de cada aplicación; deben definirse transiciones, responsabilidades, recuperación y reinicio; no se asume que detener un motor o cortar su alimentación sea siempre seguro. | Resuelta conceptualmente |
+| `PREG-P-04` | ¿Qué aplicaciones, máquinas y procesos industriales son prioritarios para la primera versión? | `DEC-GOB-018` | ControlCore será una plataforma modular y genérica de control industrial, independiente de una máquina, fabricante o proceso específico. | Resuelta conceptualmente |
+| `PREG-P-05` | ¿Qué tipos de motores y actuadores deben considerarse en el alcance inicial? | `DEC-GOB-018` | Se busca extensibilidad hacia motores DC, paso a paso, servomotores, motores AC y otros actuadores; no implica implementar ni validar todas las familias en la primera versión; el soporte inicial permanece pendiente. | Resuelta conceptualmente |
+| `PREG-P-06` | ¿Qué condiciones eléctricas, ambientales y de instalación deben soportarse? | `DEC-GOB-018` | El entorno objetivo es industrial real; el laboratorio sirve para desarrollo y validación, pero no basta para autorizar el uso industrial; las condiciones cuantitativas y normas se determinarán posteriormente. | Resuelta conceptualmente |
+| `PREG-P-07` | ¿Qué capacidades del alcance conceptual forman parte de la primera versión? | `DEC-GOB-019` | Capacidades objetivo: control de motores y actuadores; supervisión; diagnóstico; configuración; integración externa; registro de eventos y datos. Desarrollo incremental. | Resuelta conceptualmente |
+| `PREG-P-08` | ¿Qué capacidades quedan explícitamente fuera de la primera versión? | `DEC-GOB-019` | Se excluyen: soporte simultáneo de todas las familias de motores; control coordinado de múltiples ejes; algoritmos avanzados de optimización; integración con múltiples protocolos industriales; funciones de seguridad certificadas mientras no exista el proceso de análisis y conformidad. Las exclusiones no eliminan la evaluación de riesgos. | Resuelta conceptualmente |
+| `PREG-P-09` | ¿Qué nivel de configuración, supervisión y diagnóstico se requiere inicialmente? | `DEC-GOB-019` | Configuración: establecer y consultar parámetros operativos. Supervisión: consultar estados, variables y condiciones anormales. Diagnóstico: identificar fallas detectables y facilitar su investigación. Interfaces, algoritmos y prestaciones pendientes. | Resuelta conceptualmente |
+| `PREG-P-10` | ¿Con qué sistemas externos debe integrarse ControlCore y qué información debe intercambiar? | `DEC-GOB-020` | Interfaces documentadas y arquitectura independiente de protocolos; integración progresiva con PLC, HMI, SCADA y otros sistemas; no implica compatibilidad inmediata con todos. | Resuelta conceptualmente |
+| `PREG-P-11` | ¿Qué actores deben operar, configurar y mantener el sistema, y qué responsabilidades y restricciones de acceso deben definirse? | `DEC-GOB-020` | Perfiles funcionales: Operador, Técnico/Integrador y Administrador técnico, con responsabilidades diferenciadas; autenticación y matriz detallada pendientes; los controles de acceso no sustituyen las protecciones industriales. | Resuelta conceptualmente |
+| `PREG-P-12` | ¿Qué información debe registrarse y conservarse para operación, diagnóstico y auditoría? | `DEC-GOB-020` | Se registran eventos operativos, fallas y alarmas, cambios de configuración e información de diagnóstico; referencias temporales apropiadas; retención, almacenamiento y mecanismos técnicos pendientes. | Resuelta conceptualmente |
+| `PREG-P-13` | ¿Qué criterios de aceptación y qué evidencia deben exigirse para la primera versión? | `DEC-GOB-021` | Criterios objetivos, medibles y verificables para funcionamiento, prestaciones, comportamiento ante fallas, reproducibilidad de pruebas, evidencia documental y evaluación de riesgos; valores y procedimientos pendientes. | Resuelta conceptualmente |
+| `PREG-P-14` | ¿Qué entorno de pruebas, banco o máquina de referencia se utilizará para verificar y validar el producto? | `DEC-GOB-021` | Dos niveles: banco de pruebas de ingeniería y validación en entorno industrial real; la validación de laboratorio no sustituye la evaluación necesaria para autorizar el uso industrial. | Resuelta conceptualmente |
+| `PREG-P-15` | ¿Qué documentación y soporte técnico debe entregarse con el producto? | `DEC-GOB-021` | Cinco conjuntos: documentación técnica; instalación y puesta en servicio; operación; mantenimiento y diagnóstico; validación y conformidad. Documentación versionada y coherente con las capacidades implementadas y validadas. | Resuelta conceptualmente |
 
-Las respuestas deberán registrarse como decisiones aprobadas en el registro correspondiente y actualizar los documentos de necesidades, actores y escenarios.
+## 5. Preguntas técnicas derivadas que permanecen abiertas
 
-## 5. Reglas de gestión
+Las decisiones DEC-GOB-017 a DEC-GOB-021 resuelven el marco conceptual, pero no especifican los valores, interfaces, arquitecturas ni procedimientos necesarios para implementar y verificar. Permanecen abiertos, al menos:
 
-- Los asuntos de B2.1 fueron resueltos en B2.1.1.
-- Las preguntas de B2.2.1 están pendientes de respuesta y no constituyen decisiones aprobadas.
-- La aprobación de los asuntos resueltos correspondió al responsable del proyecto; las preguntas pendientes requieren su decisión.
-- Las resoluciones se registraron en DEC-GOB-010 a DEC-GOB-015.
+| Tema | Descripción | Origen |
+|---|---|---|
+| Familia de motores y actuadores del primer incremento | Selección de la familia o familias que se implementarán y validarán primero. | `PREG-P-05`; `DEC-GOB-018` |
+| Prestaciones cuantitativas | Valores medibles de control, supervisión, diagnóstico, respuesta y recuperación. | `PREG-P-13`; `DEC-GOB-021` |
+| Condiciones industriales específicas | Rangos eléctricos, ambientales, de instalación y de compatibilidad electromagnética. | `PREG-P-06`; `DEC-GOB-018` |
+| Interfaces y protocolos concretos | Sistemas externos, contratos, formatos, temporización y tratamiento de errores. | `PREG-P-10`; `DEC-GOB-020` |
+| Arquitectura de seguridad | Funciones de seguridad, estados seguros por aplicación, independencia de protecciones y evaluación de conformidad. | `PREG-P-01`, `PREG-P-02`, `PREG-P-03`; `DEC-GOB-017` |
+| Métodos de verificación | Procedimientos, criterios de aceptación cuantitativos, banco o máquina de referencia y evidencia exigible. | `PREG-P-13`, `PREG-P-14`; `DEC-GOB-021` |
+| Alcance exacto del primer incremento | Capacidades, límites y priorización del primer incremento implementable. | `PREG-P-07`, `PREG-P-08`, `PREG-P-09`; `DEC-GOB-019` |
+| Autenticación, permisos y retención | Mecanismo de autenticación, matriz de permisos, retención y almacenamiento de información. | `PREG-P-11`, `PREG-P-12`; `DEC-GOB-020` |
+
+Estos asuntos no son decisiones aprobadas. Deberán resolverse antes de implementar el alcance afectado.
+
+## 6. Reglas de gestión
+
+- Los asuntos de B2.1 fueron resueltos en B2.1.1 y registrados en DEC-GOB-010 a DEC-GOB-015.
+- Las preguntas de B2.2.1 fueron resueltas conceptualmente en B2.2.2 y registradas en DEC-GOB-017 a DEC-GOB-021.
+- La aprobación de las necesidades, actores y escenarios se registró en DEC-GOB-016.
+- La resolución conceptual no equivale a una especificación técnica completa. Las preguntas técnicas derivadas de la sección 5 permanecen abiertas.
+- La aprobación correspondió al responsable del proyecto. Las preguntas técnicas pendientes requieren su decisión.
 - Las alternativas no seleccionadas se conservan como historial.
 - La incorporación de una propuesta al repositorio no constituye aprobación.
 
-## 6. Referencias
+## 7. Referencias
 
 - `docs/00-gobierno/metodologia-diseno.md` (secciones 9, 24, 25 y 26)
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
@@ -160,11 +176,12 @@ Las respuestas deberán registrarse como decisiones aprobadas en el registro cor
 - `docs/01-requisitos/actores-uso.md`
 - `docs/01-requisitos/escenarios-uso.md`
 
-## 7. Historial de cambios
+## 8. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.1:** registro inicial de asuntos pendientes de la estructura de requisitos.
 - **0.1 — 2026-10-19 — B2.1.1:** resolución de los seis asuntos y registro formal DEC-GOB-010 a DEC-GOB-015.
 - **0.1 — 2026-10-19 — B2.2.1:** incorporación de las quince preguntas pendientes de necesidades, actores y escenarios de uso.
+- **0.2 — 2026-10-20 — B2.2.2:** resolución conceptual de las quince preguntas y registro DEC-GOB-016 a DEC-GOB-021; incorporación de las preguntas técnicas derivadas que permanecen abiertas.
 
 ---
 

@@ -3,22 +3,23 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
-**Versión del documento:** 0.1  
-**Estado:** Registro de decisiones de gobierno y gestión de requisitos — reglas confirmadas y decisiones aprobadas  
+**Versión del documento:** 0.2  
+**Estado:** Registro de decisiones de gobierno, gestión de requisitos y alcance conceptual — reglas confirmadas y decisiones aprobadas hasta DEC-GOB-021  
 **Fase:** Gobierno documental e ingeniería de requisitos  
-**Fecha de incorporación:** 2026-10-19
+**Fecha de incorporación:** 2026-10-19  
+**Fecha de actualización:** 2026-10-20
 
 ---
 
 ## 1. Propósito
 
-Este documento constituye el registro formal de las decisiones de gobierno de ControlCore.
+Este documento constituye el registro formal de las decisiones de gobierno, de gestión de requisitos y de alcance conceptual de ControlCore.
 
-Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones aprobadas por el responsable del proyecto. Su incorporación no crea decisiones nuevas ni modifica su contenido. La aprobación de los documentos sustantivos de gobierno se registra en DEC-GOB-009. Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos.
+Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones aprobadas por el responsable del proyecto. Su incorporación no crea decisiones nuevas ni modifica su contenido. La aprobación de los documentos sustantivos de gobierno se registra en DEC-GOB-009. Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos. DEC-GOB-016 aprueba las necesidades, actores y escenarios del producto. DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a las preguntas `PREG-P-01` a `PREG-P-15`.
 
 ## 2. Convenciones y alcance
 
-- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno y de gestión de requisitos, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
+- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
 - **ADR-###:** identificador de decisiones arquitectónicas y técnicas, conforme al formato completo de `docs/00-gobierno/metodologia-diseno.md` (sección 10.2).
 - **Estado:** situación de la regla o decisión en este registro.
   - **Confirmada:** regla previamente confirmada en `docs/00-gobierno/ESTADO-ACTUAL.md`.
@@ -28,6 +29,8 @@ Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones
 La fecha de incorporación al registro no se interpreta como fecha de aprobación original de la decisión.
 
 Este registro contiene decisiones de gobierno y de gestión de requisitos, pero no decisiones técnicas, arquitectónicas ni de selección de componentes. Tampoco sustituye los documentos de requisitos, arquitectura o seguridad industrial.
+
+Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones y alcances conceptuales del producto. Se registran en la familia DEC-GOB por autorización expresa del responsable del proyecto. No seleccionan arquitecturas, tecnologías ni componentes concretos y no sustituyen los futuros registros ADR.
 
 ## 3. Resumen de decisiones registradas
 
@@ -48,6 +51,12 @@ Este registro contiene decisiones de gobierno y de gestión de requisitos, pero 
 | DEC-GOB-013 | Escala de prioridad de requisitos | Aprobada |
 | DEC-GOB-014 | Trazabilidad de requisitos | Aprobada |
 | DEC-GOB-015 | Estructura documental de requisitos | Aprobada |
+| DEC-GOB-016 | Aprobación de necesidades, actores y escenarios | Aprobada |
+| DEC-GOB-017 | Seguridad industrial, responsabilidades y normativa | Aprobada |
+| DEC-GOB-018 | Aplicación objetivo, motores y entorno | Aprobada |
+| DEC-GOB-019 | Capacidades y exclusiones de la primera versión | Aprobada |
+| DEC-GOB-020 | Integración, perfiles funcionales y registro de información | Aprobada |
+| DEC-GOB-021 | Aceptación, validación y documentación | Aprobada |
 
 ## 4. Decisiones registradas
 
@@ -183,6 +192,148 @@ Este registro contiene decisiones de gobierno y de gestión de requisitos, pero 
 
 Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos. No forman parte de la línea base de gobierno documental aprobada en DEC-GOB-009 y no aprueban requisitos concretos del producto.
 
+### DEC-GOB-016 — Aprobación de necesidades, actores y escenarios
+
+- **Asunto:** Aprobación de las necesidades del producto, los actores y los escenarios de uso identificados en B2.2.1.
+- **Contenido aprobado:**
+  - Se aprueban las diez necesidades `NEC-P-01` a `NEC-P-10`.
+  - Se aprueban los siete actores `ACT-P-01` a `ACT-P-07` y sus responsabilidades generales.
+  - Se aprueban los diez escenarios `ESC-P-01` a `ESC-P-10` como base conceptual de ingeniería.
+  - La aprobación de necesidades no las convierte en requisitos implementables ni obliga a incluir todas las capacidades en la primera versión.
+  - La aprobación de actores no define autenticación ni una matriz detallada de permisos. Los actores organizacionales se distinguen de los perfiles funcionales de acceso de DEC-GOB-020.
+  - La aprobación de escenarios no aprueba todos sus detalles, interfaces, protocolos, tiempos, algoritmos ni comportamientos de seguridad.
+  - Documentos aprobados: `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md` y `docs/01-requisitos/escenarios-uso.md`, versión 0.2.
+- **Justificación documentada:** Las necesidades, actores y escenarios fueron revisados individualmente por el responsable del proyecto y constituyen la base conceptual para derivar requisitos verificables. La aprobación preserva la distinción entre necesidades, hipótesis y requisitos.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Revisión individual en conversación con el responsable del proyecto; formalización en B2.2.2.
+- **Referencias:** `docs/01-requisitos/necesidades-producto.md`; `docs/01-requisitos/actores-uso.md`; `docs/01-requisitos/escenarios-uso.md`; DEC-GOB-017 a DEC-GOB-021.
+- **Condiciones y límites:** No aprueba requisitos `RF-###`, `RNF-###` o `RES-###`; no aprueba arquitectura, tecnologías, protocolos, prestaciones cuantitativas ni funciones de seguridad certificadas.
+
+### DEC-GOB-017 — Seguridad industrial, responsabilidades y normativa
+
+- **Asunto:** Funciones y responsabilidades de seguridad, proceso de evaluación de riesgos, normativa aplicable y estados seguros.
+- **Contenido aprobado:**
+  - ControlCore será responsable de las funciones de control y diagnóstico expresamente especificadas y validadas.
+  - ControlCore no sustituirá automáticamente los sistemas de protección de las máquinas.
+  - Las responsabilidades de makeAutomatic, los fabricantes de máquinas y los integradores deberán delimitarse documentalmente.
+  - Se adoptará un proceso documentado de identificación de peligros, evaluación y reducción de riesgos.
+  - Las normas aplicables se determinarán según las funciones, aplicaciones y mercados previstos. Se considerarán ISO 12100, IEC 60204-1, ISO 13849-1 e IEC 62061 cuando corresponda.
+  - No se declarará conformidad ni certificación sin evidencias.
+  - Los estados seguros dependerán del análisis de riesgos de cada aplicación. Deberán definirse las condiciones de transición, responsabilidades, recuperación y reinicio.
+  - No se asumirá que detener un motor o cortar su alimentación constituye siempre una condición segura.
+- **Justificación documentada:** El control de motores y actuadores puede producir movimiento y condiciones peligrosas. La delimitación de responsabilidades y el análisis de riesgos son condiciones previas para especificar funciones de seguridad y para evitar declaraciones de conformidad sin evidencia.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Respuestas a `PREG-P-01`, `PREG-P-02` y `PREG-P-03`, revisadas individualmente y formalizadas en B2.2.2.
+- **Referencias:** `PREG-P-01`, `PREG-P-02`, `PREG-P-03`; `NEC-P-07`, `NEC-P-08`; `ESC-P-06`, `ESC-P-09`; `docs/03-seguridad-industrial/` (pendiente de desarrollo).
+- **Condiciones y límites:** No define la arquitectura de seguridad, las funciones de seguridad concretas, los niveles de integridad o desempeño, los estados seguros de una aplicación específica ni la aplicabilidad definitiva de cada norma. No constituye certificación ni declaración de conformidad.
+
+### DEC-GOB-018 — Aplicación objetivo, motores y entorno
+
+- **Asunto:** Aplicación industrial objetivo, familias de motores y actuadores, y entorno de operación.
+- **Contenido aprobado:**
+  - ControlCore será una plataforma modular y genérica de control industrial, independiente de una máquina, fabricante o proceso específico.
+  - El objetivo es la extensibilidad hacia motores DC, motores paso a paso, servomotores, motores AC y otros actuadores.
+  - La extensibilidad no implica implementar ni validar todas las familias en la primera versión. El soporte inicial concreto permanece pendiente de definición.
+  - El entorno objetivo es industrial real. El laboratorio podrá utilizarse para desarrollo y validación, pero las pruebas de laboratorio no bastarán por sí solas para autorizar el uso industrial.
+  - Las condiciones cuantitativas y las normas aplicables se determinarán posteriormente.
+- **Justificación documentada:** Define el contexto de aplicación sin seleccionar una máquina, una familia de motores ni una tecnología concreta, y evita confundir validación de laboratorio con aptitud industrial.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Respuestas a `PREG-P-04`, `PREG-P-05` y `PREG-P-06`, revisadas individualmente y formalizadas en B2.2.2.
+- **Referencias:** `PREG-P-04`, `PREG-P-05`, `PREG-P-06`; `NEC-P-01`, `NEC-P-06`, `NEC-P-07`, `NEC-P-09`; `ESC-P-01`, `ESC-P-03`.
+- **Condiciones y límites:** No selecciona la familia de motores o actuadores del primer incremento, las condiciones eléctricas, ambientales o de instalación cuantitativas, ni las normas aplicables.
+
+### DEC-GOB-019 — Capacidades y exclusiones de la primera versión
+
+- **Asunto:** Capacidades funcionales objetivo, exclusiones de la primera versión y nivel funcional inicial.
+- **Contenido aprobado:**
+  - Capacidades objetivo: control de motores y actuadores; supervisión; diagnóstico; configuración; integración externa; registro de eventos y datos.
+  - El desarrollo será incremental, sin obligación de implementar todas las capacidades simultáneamente.
+  - Se excluyen de la primera versión:
+    - Soporte simultáneo de todas las familias de motores.
+    - Control coordinado de múltiples ejes.
+    - Algoritmos avanzados de optimización.
+    - Integración con múltiples protocolos industriales.
+    - Funciones de seguridad certificadas, mientras no exista el proceso de análisis y evaluación de conformidad correspondiente.
+  - Las exclusiones no eliminan la obligación de evaluar y tratar los riesgos aplicables.
+  - Nivel funcional inicial:
+    - Configuración: establecer y consultar parámetros operativos.
+    - Supervisión: consultar estados, variables y condiciones anormales.
+    - Diagnóstico: identificar fallas detectables y facilitar su investigación.
+  - Las interfaces, los algoritmos y las prestaciones permanecen pendientes.
+- **Justificación documentada:** Delimita el alcance funcional inicial y evita implementar capacidades no autorizadas o declarar funciones de seguridad sin el proceso de conformidad correspondiente.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Respuestas a `PREG-P-07`, `PREG-P-08` y `PREG-P-09`, revisadas individualmente y formalizadas en B2.2.2.
+- **Referencias:** `PREG-P-07`, `PREG-P-08`, `PREG-P-09`; `NEC-P-01` a `NEC-P-10`; `ESC-P-02`, `ESC-P-04`, `ESC-P-05`.
+- **Condiciones y límites:** No define el alcance exacto del primer incremento implementable, las interfaces, los algoritmos ni las prestaciones cuantitativas. Las exclusiones no eliminan la evaluación de riesgos.
+
+### DEC-GOB-020 — Integración, perfiles funcionales y registro de información
+
+- **Asunto:** Integración con sistemas externos, perfiles funcionales de acceso y registro de información.
+- **Contenido aprobado:**
+  - Se utilizarán interfaces documentadas y una arquitectura independiente de protocolos específicos.
+  - La integración con PLC, HMI, SCADA y otros sistemas industriales será progresiva. No implica compatibilidad inmediata con todos ellos.
+  - Se aprueban tres perfiles funcionales de acceso:
+    - Operador.
+    - Técnico/Integrador.
+    - Administrador técnico.
+  - Los perfiles tendrán responsabilidades diferenciadas.
+  - No se selecciona todavía el mecanismo de autenticación ni una matriz detallada de permisos.
+  - Los controles de acceso no sustituyen las protecciones industriales.
+  - Se registrará la siguiente información:
+    - Eventos operativos.
+    - Fallas y alarmas.
+    - Cambios de configuración.
+    - Información de diagnóstico.
+  - Se utilizarán referencias temporales apropiadas. La retención, el almacenamiento y los mecanismos técnicos permanecen pendientes.
+- **Justificación documentada:** Define el marco de integración y de acceso sin seleccionar protocolos, tecnologías de autenticación ni mecanismos de almacenamiento, y establece la información mínima que deberá poder registrarse.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Respuestas a `PREG-P-10`, `PREG-P-11` y `PREG-P-12`, revisadas individualmente y formalizadas en B2.2.2.
+- **Referencias:** `PREG-P-10`, `PREG-P-11`, `PREG-P-12`; `NEC-P-02`, `NEC-P-03`, `NEC-P-06`, `NEC-P-09`; `ACT-P-01` a `ACT-P-07`; `ESC-P-04`, `ESC-P-05`, `ESC-P-08`.
+- **Condiciones y límites:** Los perfiles funcionales son distintos de los actores organizacionales `ACT-P-01` a `ACT-P-07`; su asignación concreta y los permisos están pendientes. No selecciona protocolos, interfaces concretas, autenticación, retención ni almacenamiento.
+
+### DEC-GOB-021 — Aceptación, validación y documentación
+
+- **Asunto:** Criterios de aceptación, niveles de validación y documentación exigible.
+- **Contenido aprobado:**
+  - Se exigirán criterios objetivos, medibles y verificables para:
+    - Funcionamiento.
+    - Prestaciones.
+    - Comportamiento ante fallas.
+    - Reproducibilidad de pruebas.
+    - Evidencia documental.
+    - Evaluación de riesgos.
+  - Los valores cuantitativos y los procedimientos específicos permanecen pendientes.
+  - Se distinguen dos niveles de validación:
+    - Banco de pruebas de ingeniería.
+    - Validación en entorno industrial real.
+  - La validación de laboratorio no sustituye la evaluación necesaria para autorizar el uso industrial.
+  - Se entregarán cinco conjuntos de documentación:
+    - Documentación técnica.
+    - Instalación y puesta en servicio.
+    - Operación.
+    - Mantenimiento y diagnóstico.
+    - Validación y conformidad.
+  - La documentación será versionada y coherente con las capacidades realmente implementadas y validadas.
+- **Justificación documentada:** Establece las condiciones de aceptación y la documentación mínima sin fijar valores, procedimientos ni formatos no definidos, y evita que la validación de laboratorio se presente como autorización industrial.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Respuestas a `PREG-P-13`, `PREG-P-14` y `PREG-P-15`, revisadas individualmente y formalizadas en B2.2.2.
+- **Referencias:** `PREG-P-13`, `PREG-P-14`, `PREG-P-15`; `NEC-P-09`, `NEC-P-10`; todos los escenarios; `docs/05-validacion/` (pendiente de desarrollo).
+- **Condiciones y límites:** No define los criterios cuantitativos, los procedimientos de prueba, el banco o máquina de referencia, los formatos documentales ni la aceptación de una aplicación industrial concreta.
+
+Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones conceptuales. No constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación industrial ni autorización de implementación.
+
 ## 5. Estado de los documentos de gobierno
 
 En el momento de la incorporación inicial de este registro, los cinco documentos sustantivos de gobierno se encontraban en estado **Propuesta para aprobación**.
@@ -199,7 +350,7 @@ El 2026-10-19, el responsable del proyecto aprobó formalmente los cinco documen
 
 ## 6. Identificadores y decisiones futuras
 
-El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno y de gestión de requisitos. El prefijo **ADR** queda reservado para decisiones arquitectónicas futuras.
+El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual aprobadas por el responsable del proyecto. El prefijo **ADR** queda reservado para decisiones arquitectónicas y técnicas futuras.
 
 Las decisiones técnicas y arquitectónicas que se adopten en bloques posteriores deberán registrarse con su propio identificador, su justificación y su estado de aprobación. No deberán incorporarse a este registro como confirmadas sin una decisión expresa del responsable del proyecto.
 

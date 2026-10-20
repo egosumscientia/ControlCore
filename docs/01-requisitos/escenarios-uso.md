@@ -4,37 +4,39 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Escenarios de uso  
-**Versión:** 0.1  
-**Estado:** Propuesta para aprobación  
+**Versión:** 0.2  
+**Estado:** Aprobado  
 **Fase:** Ingeniería de requisitos  
-**Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto
+**Fecha de revisión:** 2026-10-20  
+**Aprobación:** 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic
 
 ---
 
 ## 1. Propósito
 
-Este documento propone escenarios representativos de utilización industrial de ControlCore.
+Este documento registra los escenarios aprobados como base conceptual de utilización industrial de ControlCore.
 
-Su finalidad es facilitar la validación de necesidades, actores y condiciones de uso antes de definir requisitos concretos.
+Los escenarios fueron propuestos en B2.2.1 y aprobados en B2.2.2. Su finalidad es facilitar la derivación de requisitos concretos a partir de condiciones de uso trazables.
 
 ## 2. Alcance
 
-Este documento comprende escenarios conceptuales de puesta en servicio, configuración, operación, supervisión, diagnóstico, mantenimiento, integración, recuperación y actualización.
+Este documento comprende escenarios conceptuales aprobados de puesta en servicio, configuración, operación, supervisión, diagnóstico, mantenimiento, integración, recuperación y actualización.
 
-No especifica interfaces, protocolos, tiempos, algoritmos ni comportamientos de seguridad. No contiene requisitos aprobados.
+No especifica interfaces, protocolos, tiempos, algoritmos ni comportamientos de seguridad. La aprobación no valida los detalles técnicos ni las implementaciones. No contiene requisitos aprobados.
 
-Los identificadores `ESC-P-###` son provisionales de B2.2.1. No constituyen un esquema permanente ni reutilizan identificadores `RF-###`, `RNF-###` o `RES-###`.
+Los identificadores `ESC-P-###` identifican los escenarios aprobados en este documento. No constituyen un esquema permanente ni reutilizan identificadores `RF-###`, `RNF-###` o `RES-###`.
 
 ## 3. Fuente y clasificación
 
 La fuente principal es `docs/00-gobierno/vision-producto.md` (secciones 2, 5, 7, 9 y 12). Se consultaron además los documentos de gobierno y la estructura de gestión de requisitos.
 
-Todos los escenarios se clasifican como **hipótesis de aplicación**. No han sido validados con los actores ni aprobados por el responsable del proyecto.
+Todos los escenarios fueron propuestos como **hipótesis de aplicación** en B2.2.1 y aprobados como base conceptual de ingeniería el 2026-10-20 (DEC-GOB-016). La clasificación de origen se conserva como historial. La aprobación no valida los detalles técnicos ni las implementaciones.
 
-Las condiciones anormales se describen de forma conceptual. Cualquier comportamiento de seguridad, recuperación o parada deberá derivarse del análisis de riesgos y de decisiones posteriores.
+Las condiciones anormales se describen de forma conceptual. Cualquier comportamiento de seguridad, recuperación o parada deberá derivarse del análisis de riesgos y de las decisiones DEC-GOB-017 a DEC-GOB-021.
 
-## 4. Escenarios propuestos
+## 4. Escenarios aprobados
+
+Los diez escenarios de la tabla están aprobados como base conceptual de ingeniería (DEC-GOB-016, 2026-10-20). Las preguntas citadas en cada escenario fueron resueltas conceptualmente; las preguntas técnicas derivadas se enumeran en la sección 6.2.
 
 | Identificador | Escenario | Actores principales | Necesidades relacionadas |
 |---|---|---|---|
@@ -58,8 +60,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** sistema en un estado operativo definido, con la configuración y las comprobaciones registradas.
 - **Condiciones anormales relevantes:** instalación incompleta; configuración incompatible; condiciones de seguridad no resueltas; información de la aplicación insuficiente.
 - **Necesidades relacionadas:** `NEC-P-04`, `NEC-P-07`, `NEC-P-08`, `NEC-P-10`.
-- **Preguntas abiertas:** `PREG-P-01`, `PREG-P-06`, `PREG-P-11`, `PREG-P-13`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-01`, `PREG-P-06`, `PREG-P-11`, `PREG-P-13`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-02 — Configuración inicial
 
@@ -70,8 +72,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** configuración documentada, validada y coherente con la aplicación.
 - **Condiciones anormales relevantes:** valores inválidos; configuración inconsistente; cambios no autorizados; pérdida de la configuración de referencia.
 - **Necesidades relacionadas:** `NEC-P-04`, `NEC-P-06`, `NEC-P-10`.
-- **Preguntas abiertas:** `PREG-P-04`, `PREG-P-09`, `PREG-P-11`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-04`, `PREG-P-09`, `PREG-P-11`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-03 — Operación normal
 
@@ -82,8 +84,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** operación realizada dentro de las condiciones previstas, con los eventos relevantes registrados.
 - **Condiciones anormales relevantes:** condiciones fuera de rango; pérdida de realimentación; pérdida de comunicación; órdenes inválidas o contradictorias.
 - **Necesidades relacionadas:** `NEC-P-01`, `NEC-P-02`, `NEC-P-07`.
-- **Preguntas abiertas:** `PREG-P-04`, `PREG-P-06`, `PREG-P-12`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-04`, `PREG-P-06`, `PREG-P-12`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-04 — Supervisión
 
@@ -94,8 +96,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** actores informados sobre el estado operativo y las desviaciones identificadas.
 - **Condiciones anormales relevantes:** información insuficiente o no actualizada; alarmas no comprendidas; pérdida de la función de supervisión.
 - **Necesidades relacionadas:** `NEC-P-02`, `NEC-P-03`, `NEC-P-09`.
-- **Preguntas abiertas:** `PREG-P-09`, `PREG-P-12`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-09`, `PREG-P-12`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-05 — Diagnóstico de fallas
 
@@ -106,8 +108,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** diagnóstico documentado y acción correctiva definida.
 - **Condiciones anormales relevantes:** diagnóstico no concluyente; evidencia insuficiente; fallas múltiples; pérdida de información.
 - **Necesidades relacionadas:** `NEC-P-03`, `NEC-P-05`, `NEC-P-09`.
-- **Preguntas abiertas:** `PREG-P-09`, `PREG-P-12`, `PREG-P-13`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-09`, `PREG-P-12`, `PREG-P-13`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-06 — Respuesta ante condiciones anormales
 
@@ -118,8 +120,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** condición gestionada conforme al diseño aprobado, con responsabilidades respetadas y evidencia registrada.
 - **Condiciones anormales relevantes:** responsabilidades no delimitadas; información insuficiente; función de seguridad no definida; fallas simultáneas.
 - **Necesidades relacionadas:** `NEC-P-03`, `NEC-P-07`, `NEC-P-08`.
-- **Preguntas abiertas:** `PREG-P-01`, `PREG-P-02`, `PREG-P-03`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-01`, `PREG-P-02`, `PREG-P-03`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 - **Nota:** este escenario no define el comportamiento de seguridad ni el estado seguro; ambos dependen del análisis de riesgos.
 
 ### ESC-P-07 — Mantenimiento
@@ -131,8 +133,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** mantenimiento completado y verificado, con historial registrado.
 - **Condiciones anormales relevantes:** hallazgos no previstos; repuestos no disponibles; verificación incompleta; configuración alterada.
 - **Necesidades relacionadas:** `NEC-P-03`, `NEC-P-05`, `NEC-P-10`.
-- **Preguntas abiertas:** `PREG-P-11`, `PREG-P-13`, `PREG-P-15`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-11`, `PREG-P-13`, `PREG-P-15`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-08 — Integración con otros sistemas
 
@@ -143,8 +145,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** integración operativa conforme a las condiciones acordadas, con responsabilidades claras.
 - **Condiciones anormales relevantes:** sistema externo incompatible; información faltante; responsabilidad no delimitada; pérdida de la integración.
 - **Necesidades relacionadas:** `NEC-P-06`, `NEC-P-02`, `NEC-P-10`.
-- **Preguntas abiertas:** `PREG-P-10`, `PREG-P-11`, `PREG-P-13`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-10`, `PREG-P-11`, `PREG-P-13`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ### ESC-P-09 — Recuperación después de interrupciones
 
@@ -155,8 +157,8 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** recuperación controlada, estado verificado y reanudación autorizada.
 - **Condiciones anormales relevantes:** interrupción repetida; estado desconocido; realimentación no disponible; causa no identificada.
 - **Necesidades relacionadas:** `NEC-P-03`, `NEC-P-07`, `NEC-P-09`.
-- **Preguntas abiertas:** `PREG-P-01`, `PREG-P-03`, `PREG-P-13`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-01`, `PREG-P-03`, `PREG-P-13`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 - **Nota:** este escenario no define el comportamiento de recuperación ni el estado seguro; ambos dependen del análisis de riesgos.
 
 ### ESC-P-10 — Actualización o modificación controlada
@@ -168,58 +170,84 @@ Las condiciones anormales se describen de forma conceptual. Cualquier comportami
 - **Resultado esperado:** cambio aplicado y verificado, con trazabilidad y documentación actualizadas.
 - **Condiciones anormales relevantes:** actualización fallida; incompatibilidad; reversión incompleta; documentación desactualizada.
 - **Necesidades relacionadas:** `NEC-P-05`, `NEC-P-06`, `NEC-P-10`.
-- **Preguntas abiertas:** `PREG-P-11`, `PREG-P-13`, `PREG-P-15`.
-- **Estado:** Hipótesis — requiere validación.
+- **Preguntas de origen:** `PREG-P-11`, `PREG-P-13`, `PREG-P-15`.
+- **Estado:** Aprobado como escenario conceptual — 2026-10-20 (DEC-GOB-016). Detalles técnicos pendientes.
 
 ## 5. Condiciones anormales y límites
 
 Los escenarios identifican condiciones anormales de forma conceptual. No definen respuestas de seguridad, tiempos de reacción, prioridades de parada ni recuperación automática.
 
+`DEC-GOB-017` aprobó que los estados seguros dependen del análisis de riesgos de cada aplicación y que no debe asumirse que detener un motor o cortar su alimentación constituye siempre una condición segura. `DEC-GOB-019` excluyó las funciones de seguridad certificadas de la primera versión mientras no exista el proceso de análisis y evaluación de conformidad correspondiente.
+
 Cualquier comportamiento asociado a condiciones anormales deberá derivarse de:
 
 - El análisis de riesgos de la aplicación.
 - La delimitación de responsabilidades entre ControlCore y la máquina.
-- Las decisiones del responsable del proyecto.
+- Las decisiones DEC-GOB-017 y DEC-GOB-019.
 - Los requisitos de seguridad que se aprueben posteriormente.
 
-## 6. Preguntas abiertas
+## 6. Decisiones aprobadas y preguntas técnicas derivadas
 
-Las preguntas completas y priorizadas se encuentran en `docs/01-requisitos/necesidades-producto.md` (sección 6).
+### 6.1. Decisiones aprobadas
 
-Las preguntas con mayor relación con los escenarios son:
+Las quince preguntas de B2.2.1 fueron resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021):
 
-- `PREG-P-01`, `PREG-P-02`, `PREG-P-03`: seguridad, responsabilidades y estados seguros.
-- `PREG-P-04`, `PREG-P-05`, `PREG-P-06`: aplicación objetivo, motores y condiciones.
-- `PREG-P-07`, `PREG-P-08`, `PREG-P-09`: capacidades de la primera versión.
-- `PREG-P-10`, `PREG-P-11`, `PREG-P-12`: integración, actores e información.
-- `PREG-P-13`, `PREG-P-14`, `PREG-P-15`: verificación, entorno de pruebas y soporte.
+| Pregunta | Asunto | Decisión |
+|---|---|---|
+| `PREG-P-01` | Funciones y responsabilidades de seguridad | `DEC-GOB-017` |
+| `PREG-P-02` | Análisis de riesgos y normativa | `DEC-GOB-017` |
+| `PREG-P-03` | Estados seguros | `DEC-GOB-017` |
+| `PREG-P-04` | Aplicación objetivo | `DEC-GOB-018` |
+| `PREG-P-05` | Motores y actuadores | `DEC-GOB-018` |
+| `PREG-P-06` | Entorno y condiciones | `DEC-GOB-018` |
+| `PREG-P-07` | Capacidades funcionales objetivo | `DEC-GOB-019` |
+| `PREG-P-08` | Exclusiones iniciales | `DEC-GOB-019` |
+| `PREG-P-09` | Nivel funcional inicial | `DEC-GOB-019` |
+| `PREG-P-10` | Integración externa | `DEC-GOB-020` |
+| `PREG-P-11` | Perfiles funcionales de acceso | `DEC-GOB-020` |
+| `PREG-P-12` | Información registrada | `DEC-GOB-020` |
+| `PREG-P-13` | Criterios de aceptación | `DEC-GOB-021` |
+| `PREG-P-14` | Niveles de validación | `DEC-GOB-021` |
+| `PREG-P-15` | Documentación y soporte | `DEC-GOB-021` |
 
-No se asume ninguna respuesta.
+### 6.2. Preguntas técnicas derivadas que permanecen abiertas
 
-## 7. Trazabilidad preliminar
+1. Familia de motores y actuadores del primer incremento implementable. Derivada de `PREG-P-05` y `DEC-GOB-018`.
+2. Prestaciones cuantitativas de control, supervisión y diagnóstico. Derivadas de `PREG-P-13` y `DEC-GOB-021`.
+3. Condiciones eléctricas, ambientales y de instalación cuantitativas. Derivadas de `PREG-P-06` y `DEC-GOB-018`.
+4. Interfaces, protocolos y sistemas externos concretos. Derivados de `PREG-P-10` y `DEC-GOB-020`.
+5. Arquitectura de seguridad, funciones de seguridad y estados seguros por aplicación. Derivada de `PREG-P-01`, `PREG-P-02`, `PREG-P-03` y `DEC-GOB-017`.
+6. Métodos de verificación, criterios de aceptación cuantitativos y entorno de pruebas. Derivados de `PREG-P-13`, `PREG-P-14` y `DEC-GOB-021`.
+7. Alcance exacto del primer incremento y su priorización. Derivado de `PREG-P-07`, `PREG-P-08`, `PREG-P-09` y `DEC-GOB-019`.
+8. Autenticación, matriz detallada de permisos, retención y almacenamiento de información. Derivados de `PREG-P-11`, `PREG-P-12` y `DEC-GOB-020`.
 
-| Escenario | Actores | Necesidades | Preguntas |
-|---|---|---|---|
-| `ESC-P-01` | `ACT-P-01`, `ACT-P-02`, `ACT-P-06` | `NEC-P-04`, `NEC-P-07`, `NEC-P-08`, `NEC-P-10` | `PREG-P-01`, `PREG-P-06`, `PREG-P-11`, `PREG-P-13` |
-| `ESC-P-02` | `ACT-P-01`, `ACT-P-02` | `NEC-P-04`, `NEC-P-06`, `NEC-P-10` | `PREG-P-04`, `PREG-P-09`, `PREG-P-11` |
-| `ESC-P-03` | `ACT-P-02`, `ACT-P-03` | `NEC-P-01`, `NEC-P-02`, `NEC-P-07` | `PREG-P-04`, `PREG-P-06`, `PREG-P-12` |
-| `ESC-P-04` | `ACT-P-02`, `ACT-P-03`, `ACT-P-04` | `NEC-P-02`, `NEC-P-03`, `NEC-P-09` | `PREG-P-09`, `PREG-P-12` |
-| `ESC-P-05` | `ACT-P-02`, `ACT-P-05` | `NEC-P-03`, `NEC-P-05`, `NEC-P-09` | `PREG-P-09`, `PREG-P-12`, `PREG-P-13` |
-| `ESC-P-06` | `ACT-P-03`, `ACT-P-04`, `ACT-P-05` | `NEC-P-03`, `NEC-P-07`, `NEC-P-08` | `PREG-P-01`, `PREG-P-02`, `PREG-P-03` |
-| `ESC-P-07` | `ACT-P-02`, `ACT-P-05` | `NEC-P-03`, `NEC-P-05`, `NEC-P-10` | `PREG-P-11`, `PREG-P-13`, `PREG-P-15` |
-| `ESC-P-08` | `ACT-P-01`, `ACT-P-07` | `NEC-P-02`, `NEC-P-06`, `NEC-P-10` | `PREG-P-10`, `PREG-P-11`, `PREG-P-13` |
-| `ESC-P-09` | `ACT-P-03`, `ACT-P-04`, `ACT-P-05` | `NEC-P-03`, `NEC-P-07`, `NEC-P-09` | `PREG-P-01`, `PREG-P-03`, `PREG-P-13` |
-| `ESC-P-10` | `ACT-P-02`, `ACT-P-05`, `ACT-P-07` | `NEC-P-05`, `NEC-P-06`, `NEC-P-10` | `PREG-P-11`, `PREG-P-13`, `PREG-P-15` |
+Estos asuntos no constituyen decisiones aprobadas. Deberán resolverse antes de implementar el alcance afectado.
 
-Estos vínculos son preliminares y no constituyen requisitos aprobados ni una matriz de trazabilidad de requisitos.
+## 7. Trazabilidad
+
+| Escenario | Actores | Necesidades | Decisiones | Preguntas de origen |
+|---|---|---|---|---|
+| `ESC-P-01` | `ACT-P-01`, `ACT-P-02`, `ACT-P-06` | `NEC-P-04`, `NEC-P-07`, `NEC-P-08`, `NEC-P-10` | `DEC-GOB-016`, `DEC-GOB-017`, `DEC-GOB-018`, `DEC-GOB-020`, `DEC-GOB-021` | `PREG-P-01`, `PREG-P-06`, `PREG-P-11`, `PREG-P-13` |
+| `ESC-P-02` | `ACT-P-01`, `ACT-P-02` | `NEC-P-04`, `NEC-P-06`, `NEC-P-10` | `DEC-GOB-016`, `DEC-GOB-018`, `DEC-GOB-019`, `DEC-GOB-020` | `PREG-P-04`, `PREG-P-09`, `PREG-P-11` |
+| `ESC-P-03` | `ACT-P-02`, `ACT-P-03` | `NEC-P-01`, `NEC-P-02`, `NEC-P-07` | `DEC-GOB-016`, `DEC-GOB-018`, `DEC-GOB-019`, `DEC-GOB-020` | `PREG-P-04`, `PREG-P-06`, `PREG-P-12` |
+| `ESC-P-04` | `ACT-P-02`, `ACT-P-03`, `ACT-P-04` | `NEC-P-02`, `NEC-P-03`, `NEC-P-09` | `DEC-GOB-016`, `DEC-GOB-019`, `DEC-GOB-020` | `PREG-P-09`, `PREG-P-12` |
+| `ESC-P-05` | `ACT-P-02`, `ACT-P-05` | `NEC-P-03`, `NEC-P-05`, `NEC-P-09` | `DEC-GOB-016`, `DEC-GOB-019`, `DEC-GOB-020`, `DEC-GOB-021` | `PREG-P-09`, `PREG-P-12`, `PREG-P-13` |
+| `ESC-P-06` | `ACT-P-03`, `ACT-P-04`, `ACT-P-05` | `NEC-P-03`, `NEC-P-07`, `NEC-P-08` | `DEC-GOB-016`, `DEC-GOB-017`, `DEC-GOB-019` | `PREG-P-01`, `PREG-P-02`, `PREG-P-03` |
+| `ESC-P-07` | `ACT-P-02`, `ACT-P-05` | `NEC-P-03`, `NEC-P-05`, `NEC-P-10` | `DEC-GOB-016`, `DEC-GOB-020`, `DEC-GOB-021` | `PREG-P-11`, `PREG-P-13`, `PREG-P-15` |
+| `ESC-P-08` | `ACT-P-01`, `ACT-P-07` | `NEC-P-02`, `NEC-P-06`, `NEC-P-10` | `DEC-GOB-016`, `DEC-GOB-020`, `DEC-GOB-021` | `PREG-P-10`, `PREG-P-11`, `PREG-P-13` |
+| `ESC-P-09` | `ACT-P-03`, `ACT-P-04`, `ACT-P-05` | `NEC-P-03`, `NEC-P-07`, `NEC-P-09` | `DEC-GOB-016`, `DEC-GOB-017`, `DEC-GOB-021` | `PREG-P-01`, `PREG-P-03`, `PREG-P-13` |
+| `ESC-P-10` | `ACT-P-02`, `ACT-P-05`, `ACT-P-07` | `NEC-P-05`, `NEC-P-06`, `NEC-P-10` | `DEC-GOB-016`, `DEC-GOB-020`, `DEC-GOB-021` | `PREG-P-11`, `PREG-P-13`, `PREG-P-15` |
+
+Estos vínculos son de trazabilidad documental. No constituyen requisitos aprobados ni una matriz de trazabilidad de requisitos.
 
 ## 8. Pendientes
 
-- Los diez escenarios son hipótesis y requieren validación con los actores y aprobación del responsable del proyecto.
-- No se han definido comportamientos de seguridad, recuperación o parada.
+- Los diez escenarios están aprobados como base conceptual (DEC-GOB-016).
+- No se han definido comportamientos de seguridad, recuperación o parada para una aplicación concreta.
 - No se han definido interfaces, protocolos, tiempos ni algoritmos.
+- Las preguntas técnicas derivadas de la sección 6.2 permanecen abiertas.
 - No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
-- Las decisiones pendientes se registran en `docs/06-decisiones/pendientes.md`.
+- Las preguntas técnicas pendientes se registran en `docs/06-decisiones/pendientes.md`.
 
 ## 9. Referencias
 
@@ -240,6 +268,7 @@ Estos vínculos son preliminares y no constituyen requisitos aprobados ni una ma
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** propuesta inicial de escenarios de uso. Hipótesis pendientes de validación y aprobación.
+- **0.2 — 2026-10-20 — B2.2.2:** aprobación de los diez escenarios como base conceptual de ingeniería (DEC-GOB-016); incorporación de las decisiones `DEC-GOB-017` a `DEC-GOB-021` y de las preguntas técnicas derivadas.
 
 ---
 

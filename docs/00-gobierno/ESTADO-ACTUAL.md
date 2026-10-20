@@ -3,14 +3,15 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
-**Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.9  
+**Fecha de actualización:** 2026-10-20  
+**Versión del documento:** 0.10  
 **Fase actual:** Ingeniería de requisitos (B2)  
-**Bloque:** B2.2.1 — Identificación de necesidades, actores y escenarios de uso  
-**Estado del bloque:** Necesidades, actores y escenarios candidatos propuestos; validación pendiente  
+**Bloque:** B2.2.2 — Formalización de necesidades, actores, escenarios y decisiones  
+**Estado del bloque:** Aprobaciones formalizadas; requisitos concretos pendientes  
 **Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)  
 **Convenciones de requisitos:** Aprobadas — DEC-GOB-010 a DEC-GOB-015  
-**Necesidades y escenarios:** Propuestos — pendientes de validación  
+**Necesidades, actores y escenarios:** Aprobados — DEC-GOB-016 (2026-10-20)  
+**Decisiones conceptuales:** Aprobadas — DEC-GOB-017 a DEC-GOB-021  
 **Requisitos concretos:** No definidos ni aprobados  
 **Arquitectura:** No definida  
 **Implementación:** No autorizada
@@ -56,7 +57,7 @@ Las capacidades concretas y las tecnologías del producto deberán definirse dur
 
 ## 3. Estado general
 
-El proyecto se encuentra en la etapa de gobierno documental aprobado y preparación de la ingeniería de requisitos.
+El proyecto se encuentra en la etapa de gobierno documental aprobado, gestión de requisitos aprobada y necesidades, actores y escenarios aprobados. Los requisitos concretos permanecen pendientes de definición.
 
 El trabajo documental de gobierno comprende los cinco documentos sustantivos, aprobados en versión 0.1:
 
@@ -84,7 +85,9 @@ En la misma fecha se inició B2 con el bloque B2.1: se estableció la estructura
 
 En la misma fecha se ejecutó B2.1.1: el responsable del proyecto aprobó las seis decisiones de gestión de requisitos, registradas como DEC-GOB-010 a DEC-GOB-015, y los cuatro documentos de requisitos en versión 0.1. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
 
-En la misma fecha se inició B2.2 con el bloque B2.2.1: se identificaron diez necesidades candidatas, siete actores y diez escenarios de uso, y se consolidaron quince preguntas abiertas. Los documentos son propuestas pendientes de validación y aprobación. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
+En la misma fecha se inició B2.2 con el bloque B2.2.1: se identificaron diez necesidades candidatas, siete actores y diez escenarios de uso, y se consolidaron quince preguntas abiertas. Los documentos quedaron como propuestas pendientes de validación y aprobación. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
+
+El 20 de octubre de 2026 se ejecutó B2.2.2: el responsable del proyecto formalizó la aprobación de las diez necesidades, los siete actores y los diez escenarios, registrada como DEC-GOB-016, y las respuestas a las quince preguntas PREG-P-01 a PREG-P-15, registradas como DEC-GOB-017 a DEC-GOB-021. Las decisiones son conceptuales: no constituyen requisitos concretos, arquitectura, selección tecnológica, certificación ni autorización de implementación.
 
 No se ha aprobado todavía una arquitectura definitiva.
 
@@ -126,7 +129,7 @@ Los documentos de gobierno se encuentran incorporados al repositorio y versionad
 
 La aprobación formal de los cinco documentos fue otorgada de forma expresa por el responsable del proyecto el 2026-10-19, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). El registro se encuentra en DEC-GOB-009.
 
-El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y las decisiones aprobadas DEC-GOB-008 y DEC-GOB-009. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental.
+El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y las decisiones aprobadas DEC-GOB-008 a DEC-GOB-021. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015, la línea base de gestión de requisitos; DEC-GOB-016, la aprobación de necesidades, actores y escenarios; y DEC-GOB-017 a DEC-GOB-021, las respuestas a PREG-P-01 a PREG-P-15.
 
 Las aprobaciones futuras de documentos requerirán el mismo registro expreso.
 
@@ -139,12 +142,13 @@ Permanecen sin contenido:
 - `docs/02-arquitectura/` — arquitectura general, hardware, firmware, software e interfaces.
 - `docs/03-seguridad-industrial/` — análisis de riesgos, normas y requisitos de seguridad.
 - `docs/05-validacion/` — estrategia de pruebas, criterios de aceptación y registro de validaciones.
-- `docs/06-decisiones/pendientes.md` — asuntos pendientes; el registro de decisiones ya está incorporado.
 - `docs/07-roadmap/` — fases y planificación de implementación.
 - `docs/08-prompts/` — contratos e instrucciones de trabajo para agentes.
 - `docs/04-modulos/` — solo el índice inicial; no contiene especificaciones de módulos.
 
 Los archivos vacíos no deberán interpretarse como especificaciones ni decisiones aprobadas.
+
+`docs/06-decisiones/pendientes.md` contiene los asuntos de B2.1 y B2.2.1 resueltos y las preguntas técnicas derivadas que permanecen abiertas. No es un documento vacío.
 
 La referencia del `README.md` a `docs/04-modulos/` quedó resuelta con la creación del directorio y su índice.
 
@@ -185,15 +189,21 @@ No contienen requisitos concretos, identificadores asignados ni línea base de r
 
 El registro histórico de asuntos resueltos se encuentra en `docs/06-decisiones/pendientes.md`.
 
-### 4.7. Documentos de identificación de necesidades
+### 4.7. Documentos de necesidades, actores y escenarios
 
-En B2.2.1 se incorporaron como propuestas pendientes de aprobación:
+En B2.2.1 se incorporaron como propuestas:
 
-- `docs/01-requisitos/necesidades-producto.md` — diez necesidades candidatas y quince preguntas abiertas priorizadas.
-- `docs/01-requisitos/actores-uso.md` — siete actores y sus responsabilidades potenciales.
-- `docs/01-requisitos/escenarios-uso.md` — diez escenarios de uso como hipótesis.
+- `docs/01-requisitos/necesidades-producto.md` — diez necesidades y quince preguntas priorizadas.
+- `docs/01-requisitos/actores-uso.md` — siete actores y sus responsabilidades.
+- `docs/01-requisitos/escenarios-uso.md` — diez escenarios de uso.
 
-Estado: **Propuesta para aprobación**. No contienen requisitos aprobados ni sustituyen la línea base de gestión de requisitos.
+En B2.2.2 fueron aprobados en versión 0.2 (DEC-GOB-016):
+
+- Las diez necesidades `NEC-P-01` a `NEC-P-10`.
+- Los siete actores `ACT-P-01` a `ACT-P-07` y sus responsabilidades generales.
+- Los diez escenarios `ESC-P-01` a `ESC-P-10` como base conceptual de ingeniería.
+
+Estado: **Aprobado**. Contienen necesidades, actores y escenarios aprobados como base conceptual. No contienen requisitos `RF-###`, `RNF-###` o `RES-###`, no constituyen una línea base de requisitos concretos y no sustituyen la línea base de gestión de requisitos.
 
 ## 5. Metodología de ingeniería
 
@@ -268,7 +278,7 @@ Las pruebas de laboratorio no equivaldrán automáticamente a validación indust
 
 Las siguientes reglas de trabajo están confirmadas por la documentación existente y por las instrucciones establecidas durante la sesión.
 
-Las referencias DEC-GOB-001 a DEC-GOB-015 se conservan como reglas y decisiones de gobierno y de gestión de requisitos. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1, B1.2, B1.4 y B2.1.1. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos.
+Las referencias DEC-GOB-001 a DEC-GOB-021 se conservan como reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1, B1.2, B1.4, B2.1.1 y B2.2.2. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos; DEC-GOB-016 aprueba necesidades, actores y escenarios; DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a PREG-P-01 a PREG-P-15.
 
 **DEC-GOB-001 — Naturaleza del producto**
 
@@ -329,6 +339,21 @@ Estado: Aprobadas. Registro: `docs/06-decisiones/registro-decisiones.md`.
 
 Estas decisiones no aprueban requisitos concretos del producto ni autorizan la implementación.
 
+**DEC-GOB-016 a DEC-GOB-021 — Aprobación de necesidades, actores, escenarios y decisiones conceptuales**
+
+El responsable del proyecto aprobó en B2.2.2:
+
+- DEC-GOB-016 — Aprobación de necesidades, actores y escenarios.
+- DEC-GOB-017 — Seguridad industrial, responsabilidades y normativa.
+- DEC-GOB-018 — Aplicación objetivo, motores y entorno.
+- DEC-GOB-019 — Capacidades y exclusiones de la primera versión.
+- DEC-GOB-020 — Integración, perfiles funcionales y registro de información.
+- DEC-GOB-021 — Aceptación, validación y documentación.
+
+Estado: Aprobadas. Registro: `docs/06-decisiones/registro-decisiones.md`.
+
+Estas decisiones formalizan aprobaciones conceptuales. No aprueban requisitos concretos, arquitectura, tecnologías, protocolos, prestaciones cuantitativas ni funciones de seguridad certificadas, y no autorizan la implementación.
+
 Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
 ## 9. Asuntos pendientes
@@ -347,13 +372,20 @@ No quedan hallazgos pendientes de H-01 a H-06. Los hallazgos H-03 a H-06 quedaro
 
 B2.1 cerró con la aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
 
-B2.2 inició con B2.2.1. Se propusieron diez necesidades candidatas, siete actores y diez escenarios de uso, con quince preguntas abiertas priorizadas. Todos son propuestas pendientes de validación y aprobación.
+B2.2 inició con B2.2.1, que propuso diez necesidades, siete actores, diez escenarios y quince preguntas. B2.2.2 formalizó las aprobaciones:
+
+- Las diez necesidades `NEC-P-01` a `NEC-P-10` están aprobadas (DEC-GOB-016).
+- Los siete actores `ACT-P-01` a `ACT-P-07` y sus responsabilidades generales están aprobados (DEC-GOB-016).
+- Los diez escenarios `ESC-P-01` a `ESC-P-10` están aprobados como base conceptual (DEC-GOB-016).
+- Las quince preguntas `PREG-P-01` a `PREG-P-15` están resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021).
+
+Permanecen abiertos los asuntos técnicos: familia de motores del primer incremento, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación y alcance exacto del primer incremento, además de autenticación, permisos y retención de información.
 
 No hay requisitos concretos definidos ni aprobados. No existe línea base de requisitos concretos.
 
-El próximo bloque recomendado es B2.2.2 — Validación y priorización de necesidades, actores y escenarios, que no se inicia automáticamente.
+El próximo bloque recomendado es la derivación y elaboración de requisitos verificables, previa delimitación del primer incremento. No se inicia automáticamente.
 
-La aprobación de la línea base de gestión y la identificación de necesidades no autorizan la implementación del producto.
+La aprobación de la línea base de gestión, de las necesidades, de los actores, de los escenarios y de las decisiones conceptuales no autoriza la implementación del producto.
 
 ### 9.4. Arquitectura
 
@@ -415,23 +447,31 @@ Interpretar la aprobación de la línea base documental o la autorización de B2
 
 Aprobar requisitos sin criterio de aceptación objetivo o sin método de verificación.
 
-**Necesidades inferidas tratadas como requisitos**
+**Aprobación conceptual tratada como especificación completa**
 
-Convertir necesidades candidatas o hipótesis de aplicación en requisitos obligatorios sin validación ni aprobación.
+Interpretar las decisiones DEC-GOB-016 a DEC-GOB-021 como requisitos, interfaces, prestaciones o arquitectura aprobados.
 
-**Escenarios no validados usados como especificación**
+**Necesidades y escenarios aprobados usados como requisitos**
 
-Utilizar escenarios de uso hipotéticos como si definieran interfaces, comportamientos o criterios de aceptación.
+Convertir necesidades o escenarios aprobados conceptualmente en requisitos obligatorios sin derivación, verificación y aprobación específicas.
 
-**Preguntas abiertas asumidas como respondidas**
+**Preguntas técnicas derivadas asumidas como resueltas**
 
-Tomar decisiones de producto a partir de respuestas supuestas a las preguntas pendientes.
+Tomar decisiones de implementación a partir de respuestas supuestas a las preguntas técnicas que permanecen abiertas.
+
+**Perfiles funcionales confundidos con actores organizacionales**
+
+Asignar permisos o responsabilidades a los actores `ACT-P-01` a `ACT-P-07` como si fueran equivalentes a los perfiles funcionales de DEC-GOB-020.
+
+**Declaración de seguridad o conformidad sin evidencia**
+
+Presentar las decisiones de seguridad como certificación, o considerar que una función de software sustituye las protecciones de la máquina.
 
 **Implementación anticipada**
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
 
-Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1.
+Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1. El riesgo de necesidades, actores y escenarios no aprobados quedó resuelto en B2.2.2.
 
 Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los controles documentales establecidos.
 
@@ -439,7 +479,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1 y el inicio de B2.2.1 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
+La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1, el inicio de B2.2.1 y la formalización de B2.2.2 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -723,17 +763,53 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.10. Sesión 2026-10-20 — B2.2.2: Formalización de necesidades, actores, escenarios y decisiones
+
+**Objetivo:** Formalizar las aprobaciones expresas de las diez necesidades, los siete actores, los diez escenarios y las quince decisiones identificadas en B2.2.1.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B2.2.1 `9217ec1`.
+2. Se leyeron `README.md`, `AGENTS.md`, los cinco documentos aprobados de gobierno, los cuatro documentos aprobados de requisitos, los tres documentos de B2.2.1, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+3. Se registraron seis decisiones agrupadas: DEC-GOB-016 para las aprobaciones de necesidades, actores y escenarios, y DEC-GOB-017 a DEC-GOB-021 con trazabilidad individual a `PREG-P-01` a `PREG-P-15`.
+4. Se actualizaron los tres documentos de B2.2.1 a versión 0.2 y estado **Aprobado**.
+5. Se marcaron las quince preguntas como resueltas conceptualmente en `docs/06-decisiones/pendientes.md` y se incorporaron las preguntas técnicas derivadas que permanecen abiertas.
+6. Se actualizó esta bitácora.
+7. Se revisó el diff y se ejecutaron las verificaciones.
+
+**Resultados:**
+
+- Diez necesidades aprobadas (DEC-GOB-016).
+- Siete actores y sus responsabilidades generales aprobados (DEC-GOB-016).
+- Diez escenarios aprobados como base conceptual (DEC-GOB-016).
+- Quince preguntas resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021).
+- Ningún requisito concreto definido ni aprobado.
+- Ningún identificador `RF-###`, `RNF-###` o `RES-###` asignado.
+- Sin selección de arquitectura, tecnologías, protocolos, prestaciones cuantitativas ni funciones de seguridad certificadas.
+- Preguntas técnicas derivadas conservadas como pendientes.
+- Línea base de gobierno y de gestión de requisitos sin modificaciones.
+- Arquitectura no definida.
+- Implementación no autorizada.
+
+**Verificaciones ejecutadas:** revisión del diff; fidelidad de las quince respuestas; comprobación de 10 necesidades, 7 actores, 10 escenarios y 15 preguntas; unicidad de DEC-GOB-016 a DEC-GOB-021; trazabilidad entre preguntas, decisiones y documentos; ausencia de requisitos concretos; ausencia de declaraciones prematuras de seguridad o conformidad; integridad de las líneas base aprobadas; alcance limitado a B2.2.2.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. La revisión con actores humanos se limitó a la aprobación del responsable del proyecto. Las decisiones formalizadas son conceptuales y no constituyen especificaciones técnicas completas.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-B2.2.1 identificó necesidades, actores y escenarios candidatos. Todos están pendientes de validación y aprobación.
+B2.2.2 formalizó la aprobación de diez necesidades, siete actores, diez escenarios y quince decisiones conceptuales.
 
-El próximo bloque recomendado es **B2.2.2 — Validación y priorización de necesidades, actores y escenarios**. B2.2.2 no se inicia automáticamente; requiere instrucciones del responsable del proyecto.
+El próximo bloque recomendado es la **derivación y elaboración de requisitos verificables**, previa delimitación del primer incremento. No se inicia automáticamente; requiere instrucciones del responsable del proyecto.
 
-La validación de necesidades y escenarios no autoriza la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
+Antes de derivar requisitos deberán delimitarse o resolverse los asuntos técnicos de la sección 9.3: familia de motores del primer incremento, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación y alcance exacto del primer incremento, además de autenticación, permisos y retención de información.
 
-Al iniciar B2.2.2 deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, el registro de asuntos pendientes y esta bitácora.
+La aprobación de necesidades, actores, escenarios y decisiones conceptuales no autoriza la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
 
-Las respuestas a las preguntas abiertas deberán registrarse como decisiones aprobadas; no deberán asumirse.
+Al iniciar el próximo bloque deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+
+Las respuestas a las preguntas técnicas pendientes deberán registrarse como decisiones aprobadas; no deberán asumirse.
 
 ## 14. Criterio de continuidad
 
