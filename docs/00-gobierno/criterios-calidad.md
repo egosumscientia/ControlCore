@@ -3,8 +3,12 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Documento:** Criterios de calidad  
 **Versión del documento:** 0.1  
-**Estado:** Propuesta para revisión y aprobación  
+**Estado:** Propuesta para aprobación  
+**Fase:** Ingeniería conceptual  
+**Fecha de revisión:** 2026-10-19  
+**Aprobación:** Pendiente — responsable del proyecto  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial
 
 ---
@@ -55,6 +59,8 @@ No deberán utilizarse expresiones ambiguas como "rápido", "robusto", "seguro" 
 Cuando estas propiedades sean relevantes, deberán definirse mediante parámetros, condiciones y procedimientos de verificación apropiados.
 
 Los valores cuantitativos se establecerán durante la ingeniería de requisitos y no deberán suponerse sin justificación.
+
+Un requisito no aprobado no deberá utilizarse como base para implementación, verificación de conformidad ni declaración de cumplimiento.
 
 ## 4. Calidad de la arquitectura
 
@@ -347,6 +353,8 @@ Deberá distinguirse entre:
 No deberán presentarse hipótesis como hechos comprobados.
 
 Los documentos incompletos o vacíos no deberán interpretarse como especificaciones aprobadas.
+
+El estado de aprobación se determinará conforme a `metodologia-diseno.md` (sección 24). La presencia de un documento en el repositorio o su publicación mediante Git no constituye aprobación.
 
 Las contradicciones relevantes deberán resolverse antes de implementar componentes afectados.
 
@@ -656,6 +664,7 @@ Este documento deberá interpretarse conjuntamente con:
 - `docs/00-gobierno/principios-ingenieria.md`
 - `docs/00-gobierno/metodologia-diseno.md`
 - `docs/00-gobierno/definicion-de-terminado.md`
+- `docs/00-gobierno/ESTADO-ACTUAL.md`
 - Los documentos de requisitos.
 - Las especificaciones arquitectónicas.
 - Los documentos de seguridad industrial.

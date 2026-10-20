@@ -3,8 +3,12 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Documento:** Definición de terminado  
 **Versión del documento:** 0.1  
-**Estado:** Propuesta para revisión y aprobación  
+**Estado:** Propuesta para aprobación  
+**Fase:** Ingeniería conceptual  
+**Fecha de revisión:** 2026-10-19  
+**Aprobación:** Pendiente — responsable del proyecto  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial
 
 ---
@@ -182,6 +186,8 @@ Un documento de gobierno podrá declararse terminado cuando:
 Un documento extenso no se considerará necesariamente completo.
 
 La calidad documental dependerá de su precisión, coherencia, utilidad y capacidad de orientar decisiones y actividades reales.
+
+La incorporación al repositorio, la ejecución de un commit o push y la actualización de la bitácora no constituyen aprobación. La aprobación requiere una decisión expresa del responsable del proyecto conforme a `metodologia-diseno.md`.
 
 No deberán introducirse reglas redundantes o contradictorias únicamente para aumentar el nivel de detalle.
 
@@ -715,6 +721,8 @@ Su propósito será permitir la continuidad del proyecto sin perder el contexto 
 
 La actualización de la bitácora no deberá utilizarse para declarar terminados trabajos que todavía no cumplan sus criterios de aceptación.
 
+Tampoco constituye aprobación de documentos, decisiones ni entregables.
+
 ## 28. Lista general de comprobación
 
 Antes de proponer el cierre de una actividad, deberá comprobarse lo siguiente:
@@ -753,6 +761,7 @@ Este documento deberá aplicarse conjuntamente con:
 - `docs/00-gobierno/principios-ingenieria.md`
 - `docs/00-gobierno/metodologia-diseno.md`
 - `docs/00-gobierno/criterios-calidad.md`
+- `docs/00-gobierno/ESTADO-ACTUAL.md`
 - `docs/01-requisitos/`
 - `docs/02-arquitectura/`
 - `docs/03-seguridad-industrial/`

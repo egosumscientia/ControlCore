@@ -1,10 +1,13 @@
 # ControlCore — Visión del producto
 
+**Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Visión del producto  
 **Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
-**Fase:** Ingeniería conceptual
+**Fase:** Ingeniería conceptual  
+**Fecha de revisión:** 2026-10-19  
+**Aprobación:** Pendiente — responsable del proyecto
 
 ---
 
@@ -193,6 +196,9 @@ Las definiciones detalladas se encontrarán en:
 
 - `docs/00-gobierno/principios-ingenieria.md`
 - `docs/00-gobierno/metodologia-diseno.md`
+- `docs/00-gobierno/criterios-calidad.md`
+- `docs/00-gobierno/definicion-de-terminado.md`
+- `docs/00-gobierno/ESTADO-ACTUAL.md`
 - `docs/01-requisitos/`
 - `docs/02-arquitectura/`
 - `docs/03-seguridad-industrial/`

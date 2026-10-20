@@ -1,10 +1,13 @@
 # ControlCore — Metodología de diseño e ingeniería
 
+**Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Metodología de diseño e ingeniería  
 **Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
-**Fase:** Ingeniería conceptual
+**Fase:** Ingeniería conceptual  
+**Fecha de revisión:** 2026-10-19  
+**Aprobación:** Pendiente — responsable del proyecto
 
 ---
 
@@ -468,6 +471,8 @@ Si el asistente no dispone de autorización o capacidad para modificar directame
 
 No afirmará que GitHub está actualizado hasta que se haya confirmado la publicación de los cambios.
 
+La actualización de `ESTADO-ACTUAL.md` no constituye aprobación de documentos, decisiones ni entregables.
+
 ## 23. Inicio de una nueva conversación
 
 Para retomar el proyecto, el responsable podrá utilizar el siguiente mensaje:
@@ -486,23 +491,117 @@ Para retomar el proyecto, el responsable podrá utilizar el siguiente mensaje:
 
 Este mensaje podrá reutilizarse en cualquier conversación nueva.
 
-## 24. Control de versiones documentales
+## 24. Control documental y aprobación
 
-Los documentos deberán disponer de un estado identificable.
+### 24.1. Estados de los documentos
+
+Todo documento de gobierno, requisitos, arquitectura, decisiones o validación deberá disponer de un estado identificable.
 
 Se utilizarán, según corresponda:
 
-- Borrador.
-- Propuesta para aprobación.
-- Aprobado.
-- En revisión.
-- Sustituido.
+- **Borrador:** contenido en elaboración; no apto para uso como referencia.
+- **Propuesta para aprobación:** contenido completo para revisión, pero no aprobado.
+- **Aprobado:** el responsable del proyecto ha aceptado expresamente la versión indicada.
+- **En revisión:** una versión aprobada se encuentra sujeta a revisión por nueva evidencia o cambio de alcance.
+- **Sustituido:** existe una versión posterior aprobada que reemplaza formalmente la anterior.
+
+Estos estados se aplican a documentos. Los estados de las decisiones se rigen por la sección 9 y no deberán confundirse con los estados documentales.
+
+### 24.2. Autoridad y evidencia de aprobación
+
+La aprobación de documentos y decisiones corresponde al responsable del proyecto.
+
+La aprobación deberá ser expresa y registrar, como mínimo:
+
+- Documento o decisión aprobada.
+- Versión o alcance aprobado.
+- Fecha.
+- Autoridad que aprueba.
+- Condiciones o limitaciones, cuando existan.
+
+La incorporación de un documento al repositorio, la realización de un commit o push, la recomendación de un agente de IA, la ausencia de objeciones o el transcurso del tiempo no constituirán aprobación.
+
+Mientras un documento permanezca en estado **Propuesta para aprobación**, su contenido podrá utilizarse como referencia de trabajo, pero no como especificación aprobada para implementación.
+
+### 24.3. Registro y trazabilidad
+
+El estado de aprobación deberá reflejarse en el encabezado del documento y en `ESTADO-ACTUAL.md`.
+
+Las decisiones formales se registrarán en `docs/06-decisiones/`. La bitácora de continuidad no sustituye ese registro.
+
+Los cambios sobre documentos aprobados deberán:
+
+1. Identificar el motivo y el alcance.
+2. Pasar el documento al estado **En revisión** o generar una nueva versión.
+3. Evaluar el impacto sobre requisitos, arquitectura, implementación, pruebas y validación.
+4. Obtener una nueva aprobación antes de utilizar la versión modificada como base de implementación.
 
 Los cambios relevantes deberán conservar trazabilidad mediante Git.
 
 La numeración de versiones documentales no deberá confundirse con la versión comercial del producto.
 
-## 25. Mejora de la metodología
+## 25. Gestión de requisitos
+
+Los requisitos deberán gestionarse como elementos identificables y controlados, no como texto disperso en documentos.
+
+### 25.1. Registro
+
+Los requisitos funcionales, no funcionales y las restricciones se mantendrán en `docs/01-requisitos/`, según su naturaleza.
+
+Cada requisito deberá disponer, cuando corresponda, de:
+
+- Identificador único y estable.
+- Enunciado verificable.
+- Justificación o necesidad de origen.
+- Fuente o autoridad que lo solicita.
+- Prioridad.
+- Condiciones y límites aplicables.
+- Método de verificación.
+- Criterio de aceptación.
+- Estado.
+- Relaciones de trazabilidad.
+
+El esquema definitivo de identificación se aprobará al iniciar el bloque de requisitos y se mantendrá estable durante el proyecto.
+
+Los criterios de calidad aplicables a los requisitos y la cadena de trazabilidad se establecen en `criterios-calidad.md` (secciones 3 y 13).
+
+### 25.2. Estados y línea base
+
+Los requisitos utilizarán los siguientes estados:
+
+- **Propuesto:** identificado, pero no aprobado.
+- **Aprobado:** aceptado como base de diseño, implementación o verificación.
+- **En revisión:** aprobado previamente y sujeto a modificación.
+- **Sustituido:** reemplazado formalmente por otro requisito aprobado.
+- **Rechazado:** evaluado y descartado, conservando el registro de la decisión.
+
+Un conjunto de requisitos aprobados para un alcance constituye una línea base. Las modificaciones posteriores a la línea base deberán someterse a control de cambios y conservar trazabilidad.
+
+### 25.3. Requisitos pendientes
+
+Los requisitos no definidos, no aprobados o en revisión deberán permanecer identificados como tales.
+
+No deberá implementarse una funcionalidad cuyo requisito esencial permanezca pendiente, salvo que exista una autorización expresa para realizar un experimento delimitado y se registre su carácter exploratorio.
+
+## 26. Resolución de contradicciones documentales
+
+Cuando se detecte una contradicción entre requisitos, decisiones, arquitectura, criterios de calidad, documentos de seguridad o instrucciones de trabajo, el agente deberá:
+
+1. Identificarla de forma explícita, citando los documentos y secciones afectados.
+2. Determinar su alcance e impacto potencial.
+3. Abstenerse de aplicar una interpretación silenciosa.
+4. Registrarla como asunto pendiente en `ESTADO-ACTUAL.md` y, cuando corresponda, en `docs/06-decisiones/pendientes.md`.
+5. Suspender la implementación afectada hasta que exista una resolución aprobada, cuando la contradicción comprometa requisitos, seguridad o contratos.
+
+La resolución deberá ser adoptada por el responsable del proyecto y registrada con su justificación.
+
+Una contradicción que afecte condiciones de seguridad se tratará como bloqueante hasta su resolución.
+
+La resolución deberá actualizar de forma coherente todos los documentos afectados y conservar trazabilidad del cambio.
+
+La antigüedad, el consenso aparente o la práctica previa no prevalecerán sobre una decisión aprobada vigente.
+
+## 27. Mejora de la metodología
 
 La metodología podrá revisarse cuando la experiencia del proyecto demuestre que existen procedimientos más eficientes o rigurosos.
 
@@ -519,7 +618,7 @@ Los cambios deberán preservar los principios fundamentales:
 
 Las modificaciones importantes deberán registrarse y aprobarse.
 
-## 26. Criterio rector
+## 28. Criterio rector
 
 **El diseño estará suficientemente maduro cuando las decisiones aprobadas permitan avanzar con claridad, sin trasladar incertidumbres fundamentales a la implementación y sin dejar riesgos relevantes sin tratamiento.**
 

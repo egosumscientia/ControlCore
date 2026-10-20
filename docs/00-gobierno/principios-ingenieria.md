@@ -1,10 +1,13 @@
 # ControlCore — Principios de ingeniería
 
+**Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Principios de ingeniería  
 **Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
-**Fase:** Ingeniería conceptual
+**Fase:** Ingeniería conceptual  
+**Fecha de revisión:** 2026-10-19  
+**Aprobación:** Pendiente — responsable del proyecto
 
 ---
 
@@ -58,6 +61,8 @@ Se procurará identificar:
 No deberán adoptarse decisiones técnicas fundamentales mediante suposiciones no documentadas.
 
 Los requisitos desconocidos deberán permanecer identificados como pendientes.
+
+Los requisitos no aprobados no deberán utilizarse como base para implementación ni para declarar conformidad.
 
 ## 4. Arquitectura modular
 
@@ -393,6 +398,8 @@ El registro deberá incluir:
 - Riesgos.
 - Estado de aprobación.
 - Dependencias y asuntos pendientes.
+
+La aprobación deberá ser expresa y quedar registrada con su alcance y versión. La inclusión de una propuesta en el repositorio, la recomendación de un agente o la ausencia de objeciones no constituirán aprobación.
 
 Las decisiones podrán revisarse cuando aparezca nueva evidencia, pero sus modificaciones deberán conservar trazabilidad.
 
