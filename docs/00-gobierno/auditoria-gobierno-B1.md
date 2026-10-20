@@ -3,11 +3,11 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Auditoría integral del gobierno documental  
-**Versión:** 0.2  
+**Versión:** 0.3  
 **Estado:** Informe de auditoría — no aprobatorio  
 **Fase:** Gobierno documental  
 **Fecha:** 2026-10-19  
-**Actualización:** B1.3 — resolución de hallazgos H-03 a H-06  
+**Actualización:** B1.4 — aprobación formal de la línea base  
 **Alcance:** cinco documentos sustantivos de gobierno
 
 ---
@@ -24,13 +24,15 @@ La auditoría es documental. No verifica la aptitud técnica, eléctrica, mecán
 
 | Documento | Versión | Estado | Fecha de revisión |
 |---|---|---|---|
-| `docs/00-gobierno/vision-producto.md` | 0.1 | Propuesta para aprobación | 2026-10-19 |
-| `docs/00-gobierno/principios-ingenieria.md` | 0.1 | Propuesta para aprobación | 2026-10-19 |
-| `docs/00-gobierno/metodologia-diseno.md` | 0.1 | Propuesta para aprobación | 2026-10-19 |
-| `docs/00-gobierno/criterios-calidad.md` | 0.1 | Propuesta para aprobación | 2026-10-19 |
-| `docs/00-gobierno/definicion-de-terminado.md` | 0.1 | Propuesta para aprobación | 2026-10-19 |
+| `docs/00-gobierno/vision-producto.md` | 0.1 | Aprobado | 2026-10-19 |
+| `docs/00-gobierno/principios-ingenieria.md` | 0.1 | Aprobado | 2026-10-19 |
+| `docs/00-gobierno/metodologia-diseno.md` | 0.1 | Aprobado | 2026-10-19 |
+| `docs/00-gobierno/criterios-calidad.md` | 0.1 | Aprobado | 2026-10-19 |
+| `docs/00-gobierno/definicion-de-terminado.md` | 0.1 | Aprobado | 2026-10-19 |
 
-Las correcciones de B1.3 no modificaron la versión ni el estado de aprobación de los cinco documentos.
+Las correcciones de B1.3 no modificaron la versión ni el contenido sustantivo de los cinco documentos. La aprobación formal se registró en B1.4.
+
+**Aprobación formal:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic. Fundamento: este informe, versión 0.2. Registro: DEC-GOB-009.
 
 Documentos de apoyo consultados: `README.md`, `AGENTS.md`, `docs/00-gobierno/ESTADO-ACTUAL.md`, `docs/06-decisiones/registro-decisiones.md` y `docs/04-modulos/README.md`.
 
@@ -221,20 +223,34 @@ H-07 se mantiene como brecha de fase: los documentos técnicos deberán desarrol
 
 Los cuatro hallazgos pendientes de B1.2 quedaron resueltos. No se identificaron hallazgos bloqueantes ni defectos que impidan la aprobación.
 
-Esta recomendación no constituye una aprobación. La decisión corresponde al responsable del proyecto y debe registrarse conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24).
+Esta recomendación no constituye una aprobación. La decisión correspondió al responsable del proyecto y quedó registrada conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). El resultado se documenta en la sección 11.
 
 ## 10. Conclusión
 
-Los cinco documentos sustantivos de gobierno se encuentran en condiciones de ser presentados para aprobación formal.
+Los cinco documentos sustantivos de gobierno fueron aprobados formalmente por el responsable del proyecto el 2026-10-19, en versión 0.1.
 
 La auditoría no encontró contradicciones críticas, decisiones técnicas prematuras, referencias específicas de proveedor en las reglas operativas ni hallazgos pendientes de H-01 a H-06.
 
-La aprobación formal, su alcance, sus condiciones y su registro corresponden exclusivamente al responsable del proyecto.
+La aprobación formal, su alcance, sus condiciones y su registro correspondieron exclusivamente al responsable del proyecto. Su registro se documenta en la sección 11 y en DEC-GOB-009.
 
-## 11. Historial de actualizaciones
+## 11. Aprobación formal y línea base
+
+El 2026-10-19, el responsable del proyecto ControlCore — makeAutomatic aprobó formalmente los cinco documentos sustantivos de gobierno en versión 0.1, sin condiciones documentales pendientes.
+
+- **Documentos aprobados:** `docs/00-gobierno/vision-producto.md`, `docs/00-gobierno/principios-ingenieria.md`, `docs/00-gobierno/metodologia-diseno.md`, `docs/00-gobierno/criterios-calidad.md` y `docs/00-gobierno/definicion-de-terminado.md`.
+- **Versiones:** 0.1.
+- **Fundamento:** auditoría B1, versión 0.2, sin hallazgos bloqueantes ni pendientes de H-01 a H-06.
+- **Alcance:** gobierno documental e inicio de la ingeniería de requisitos.
+- **Registro:** DEC-GOB-009 en `docs/06-decisiones/registro-decisiones.md`.
+- **Estado:** Aprobado.
+
+La aprobación establece la línea base documental de ControlCore. No autoriza la implementación de hardware, firmware o software; la implementación continúa no autorizada.
+
+## 12. Historial de actualizaciones
 
 - **v0.1 — B1.2:** auditoría inicial. Hallazgos H-01 a H-08. H-01 y H-02 corregidos; H-03 a H-06 pendientes no bloqueantes; H-07 brecha de fase; H-08 sin hallazgo.
 - **v0.2 — B1.3:** resolución de H-03 a H-06. Normalización de referencias, diferenciación de estados, esquema DEC-GOB/ADR y unificación de metadatos. Recomendación actualizada a presentar los cinco documentos para aprobación formal.
+- **v0.3 — B1.4:** aprobación formal de los cinco documentos en versión 0.1 por el responsable del proyecto, el 2026-10-19. Línea base documental establecida y registrada en DEC-GOB-009.
 
 ---
 

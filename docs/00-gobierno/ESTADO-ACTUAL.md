@@ -4,10 +4,10 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.5  
-**Fase actual:** Gobierno documental y preparación de ingeniería  
-**Bloque:** B1.3 — Resolución de hallazgos de auditoría  
-**Estado del bloque:** Hallazgos H-03 a H-06 resueltos; aprobación formal pendiente  
+**Versión del documento:** 0.6  
+**Fase actual:** Gobierno documental aprobado y preparación de ingeniería de requisitos  
+**Bloque:** B1.4 — Aprobación formal del gobierno documental  
+**Estado del bloque:** Gobierno documental aprobado; línea base establecida  
 **Estado del proyecto:** Ingeniería conceptual — implementación no autorizada
 
 ---
@@ -51,26 +51,29 @@ Las capacidades concretas y las tecnologías del producto deberán definirse dur
 
 ## 3. Estado general
 
-El proyecto se encuentra en la etapa de preparación documental y establecimiento de las reglas de ingeniería.
+El proyecto se encuentra en la etapa de gobierno documental aprobado y preparación de la ingeniería de requisitos.
 
-El trabajo documental comprende, como propuestas pendientes de aprobación:
+El trabajo documental de gobierno comprende los cinco documentos sustantivos, aprobados en versión 0.1:
 
-1. Gobierno del proyecto.
+1. Visión del producto.
 2. Principios de ingeniería.
 3. Metodología de diseño.
 4. Criterios de calidad.
 5. Definición de terminado.
-6. Procedimientos de revisión y aceptación.
 
-Esta etapa busca establecer una base técnica y metodológica sólida antes de comenzar el diseño detallado y la implementación.
+Los procedimientos de revisión y aceptación quedan establecidos en esos documentos.
+
+El gobierno documental aprobado establece la base técnica y metodológica para el diseño detallado y la implementación futura.
 
 Durante la sesión del 19 de octubre de 2026 se consolidó el gobierno documental (bloque B1): se revisaron y armonizaron los documentos de visión, principios, metodología, criterios de calidad y definición de terminado, y se actualizó esta bitácora. La consolidación documental no equivale a aprobación formal.
 
-En la misma fecha se ejecutó el bloque B1.1: se generalizaron las reglas de agentes en `README.md` y `AGENTS.md`, se creó el directorio `docs/04-modulos/` con su índice inicial y se incorporaron las reglas DEC-GOB-001 a DEC-GOB-007 al registro formal de decisiones. Los cinco documentos sustantivos de gobierno permanecen como propuestas.
+En la misma fecha se ejecutó el bloque B1.1: se generalizaron las reglas de agentes en `README.md` y `AGENTS.md`, se creó el directorio `docs/04-modulos/` con su índice inicial y se incorporaron las reglas DEC-GOB-001 a DEC-GOB-007 al registro formal de decisiones. Los cinco documentos sustantivos de gobierno permanecían como propuestas al cierre de B1.1.
 
-También en esa fecha se ejecutó el bloque B1.2: se generalizaron las referencias de herramienta de `docs/00-gobierno/metodologia-diseno.md`, se registró DEC-GOB-008 y se realizó la auditoría integral de los cinco documentos sustantivos de gobierno. Las correcciones aplicadas son editoriales y no modifican decisiones, obligaciones ni alcance. Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+También en esa fecha se ejecutó el bloque B1.2: se generalizaron las referencias de herramienta de `docs/00-gobierno/metodologia-diseno.md`, se registró DEC-GOB-008 y se realizó la auditoría integral de los cinco documentos sustantivos de gobierno. Las correcciones aplicadas son editoriales y no modifican decisiones, obligaciones ni alcance. Los cinco documentos permanecían en estado **Propuesta para aprobación** al cierre de B1.2.
 
-En la misma fecha se ejecutó el bloque B1.3, autorizado por el responsable del proyecto, para resolver los hallazgos H-03 a H-06 de la auditoría: normalización de referencias internas, diferenciación de estados, armonización del esquema DEC-GOB/ADR y unificación de metadatos. No se modificaron decisiones técnicas, requisitos del producto, obligaciones sustantivas ni estados de aprobación. Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+En la misma fecha se ejecutó el bloque B1.3, autorizado por el responsable del proyecto, para resolver los hallazgos H-03 a H-06 de la auditoría: normalización de referencias internas, diferenciación de estados, armonización del esquema DEC-GOB/ADR y unificación de metadatos. No se modificaron decisiones técnicas, requisitos del producto, obligaciones sustantivas ni estados de aprobación.
+
+En la misma fecha se ejecutó el bloque B1.4: el responsable del proyecto aprobó formalmente los cinco documentos de gobierno en versión 0.1, con base en la auditoría B1 versión 0.2, sin condiciones documentales pendientes. La aprobación se registró como DEC-GOB-009 y establece la línea base documental para iniciar la ingeniería de requisitos (B2). La implementación de hardware, firmware y software continúa no autorizada.
 
 No se ha aprobado todavía una arquitectura definitiva.
 
@@ -100,19 +103,21 @@ Durante B1.1 se incorporaron además:
 
 Durante B1.2 se incorporó:
 
-- `docs/00-gobierno/auditoria-gobierno-B1.md` — informe de auditoría integral del gobierno documental, actualizado en B1.3.
+- `docs/00-gobierno/auditoria-gobierno-B1.md` — informe de auditoría integral del gobierno documental, actualizado en B1.3 y B1.4.
 
 `README.md` y `AGENTS.md` no fueron modificados durante B1; fueron actualizados en B1.1 para generalizar las reglas de agentes.
 
-Los cinco documentos sustantivos de gobierno se encuentran en estado **Propuesta para aprobación**. Esta bitácora es un registro de continuidad y no un documento de aprobación.
+Los cinco documentos sustantivos de gobierno se encuentran en estado **Aprobado** en versión 0.1, conforme a DEC-GOB-009. Esta bitácora es un registro de continuidad y no un documento de aprobación.
 
 ### 4.2. Estado de incorporación, aprobación y registro
 
 Los documentos de gobierno se encuentran incorporados al repositorio y versionados mediante Git. Su incorporación y publicación no constituyen aprobación formal.
 
-La aprobación formal de cada documento deberá ser otorgada de forma expresa por el responsable del proyecto, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). Mientras no exista ese registro, los documentos deberán tratarse como propuestas de referencia y no como especificaciones aprobadas.
+La aprobación formal de los cinco documentos fue otorgada de forma expresa por el responsable del proyecto el 2026-10-19, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). El registro se encuentra en DEC-GOB-009.
 
-El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y la decisión aprobada DEC-GOB-008. Su registro no implica la aprobación de los documentos sustantivos de gobierno.
+El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y las decisiones aprobadas DEC-GOB-008 y DEC-GOB-009. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental.
+
+Las aprobaciones futuras de documentos requerirán el mismo registro expreso.
 
 El directorio `docs/04-modulos/` fue creado con un archivo índice que describe su propósito y su estado pendiente. No contiene especificaciones de módulos.
 
@@ -138,6 +143,22 @@ La referencia del `README.md` a `docs/04-modulos/` quedó resuelta con la creaci
 `docs/00-gobierno/ESTADO-ACTUAL.md` registra la continuidad del proyecto y facilita el inicio de nuevas sesiones de ingeniería.
 
 Su actualización no sustituye los registros formales de decisiones ni constituye aprobación de documentos, decisiones o entregables.
+
+### 4.5. Línea base documental
+
+La línea base de gobierno documental, aprobada el 2026-10-19, está constituida por:
+
+- `docs/00-gobierno/vision-producto.md` — versión 0.1.
+- `docs/00-gobierno/principios-ingenieria.md` — versión 0.1.
+- `docs/00-gobierno/metodologia-diseno.md` — versión 0.1.
+- `docs/00-gobierno/criterios-calidad.md` — versión 0.1.
+- `docs/00-gobierno/definicion-de-terminado.md` — versión 0.1.
+
+**Fundamento:** auditoría B1, versión 0.2, sin hallazgos bloqueantes ni pendientes de H-01 a H-06.
+
+**Registro:** DEC-GOB-009.
+
+La línea base habilita el inicio de la ingeniería de requisitos (B2). No autoriza la implementación de hardware, firmware o software.
 
 ## 5. Metodología de ingeniería
 
@@ -212,7 +233,7 @@ Las pruebas de laboratorio no equivaldrán automáticamente a validación indust
 
 Las siguientes reglas de trabajo están confirmadas por la documentación existente y por las instrucciones establecidas durante la sesión.
 
-Las referencias DEC-GOB-001 a DEC-GOB-008 se conservan como reglas y decisiones de gobierno. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1 y B1.2. Su registro no aprueba los documentos sustantivos de gobierno, que permanecen como propuestas.
+Las referencias DEC-GOB-001 a DEC-GOB-009 se conservan como reglas y decisiones de gobierno. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1, B1.2 y B1.4. DEC-GOB-009 registra la aprobación formal de los cinco documentos sustantivos.
 
 **DEC-GOB-001 — Naturaleza del producto**
 
@@ -250,32 +271,35 @@ Las instrucciones, procedimientos y reglas de ingeniería de ControlCore deberá
 
 Estado: Aprobada. Origen: aprobación expresa del responsable del proyecto durante B1.1 y autorización de formalización durante B1.2.
 
+**DEC-GOB-009 — Aprobación de la línea base de gobierno documental**
+
+El responsable del proyecto aprobó formalmente los cinco documentos sustantivos de gobierno en versión 0.1 el 2026-10-19, con base en la auditoría B1 versión 0.2, sin hallazgos bloqueantes ni pendientes de H-01 a H-06. Alcance: gobierno documental e inicio de la ingeniería de requisitos.
+
+Estado: Aprobada. Registro: `docs/06-decisiones/registro-decisiones.md`, DEC-GOB-009.
+
+La aprobación no autoriza la implementación de hardware, firmware o software.
+
 Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
 ## 9. Asuntos pendientes
 
-### 9.1. Aprobación formal de documentos
+### 9.1. Línea base de gobierno
 
-- Aprobar o rechazar formalmente `docs/00-gobierno/vision-producto.md`.
-- Aprobar o rechazar formalmente `docs/00-gobierno/principios-ingenieria.md`.
-- Aprobar o rechazar formalmente `docs/00-gobierno/metodologia-diseno.md`.
-- Aprobar o rechazar formalmente `docs/00-gobierno/criterios-calidad.md`.
-- Aprobar o rechazar formalmente `docs/00-gobierno/definicion-de-terminado.md`.
-- Registrar cada decisión con versión, fecha y autoridad, y actualizar el estado en el encabezado del documento correspondiente.
-
-Mientras no se realice esta aprobación, los documentos permanecen como propuestas.
+La línea base documental fue aprobada el 2026-10-19 mediante DEC-GOB-009. No quedan aprobaciones documentales pendientes para el alcance del gobierno.
 
 ### 9.2. Coherencia documental
 
 - Verificar, al iniciar el próximo bloque documental, que las referencias entre documentos y la numeración de secciones sigan siendo válidas.
 
-Los hallazgos H-03 a H-06 quedaron resueltos en B1.3 y documentados en el informe de auditoría actualizado. La generalización de `docs/00-gobierno/metodologia-diseno.md`, la referencia a `docs/04-modulos/`, la incorporación de DEC-GOB-001 a DEC-GOB-007 y el registro de DEC-GOB-008 quedaron resueltos en B1.1, B1.2 y B1.3.
+No quedan hallazgos pendientes de H-01 a H-06. Los hallazgos H-03 a H-06 quedaron resueltos en B1.3 y documentados en el informe de auditoría actualizado. La generalización de `docs/00-gobierno/metodologia-diseno.md`, la referencia a `docs/04-modulos/`, la incorporación de DEC-GOB-001 a DEC-GOB-007 y el registro de DEC-GOB-008 quedaron resueltos en B1.1, B1.2 y B1.3.
 
-### 9.3. Requisitos
+### 9.3. Requisitos — B2
 
-Pendiente desarrollar las especificaciones funcionales, no funcionales y las restricciones del sistema.
+B2 — Ingeniería de requisitos está autorizado para iniciar. No se inició en B1.4.
 
-Pendiente definir y aprobar el esquema de identificadores de requisitos al iniciar el bloque correspondiente.
+Pendiente desarrollar las especificaciones funcionales, no funcionales y las restricciones del sistema, y definir y aprobar el esquema de identificadores de requisitos.
+
+La autorización de B2 no autoriza la implementación del producto.
 
 ### 9.4. Arquitectura
 
@@ -329,6 +353,10 @@ Tomar decisiones durante conversaciones sin registrarlas posteriormente en el re
 
 Interpretar resultados de laboratorio como evidencia suficiente para operación industrial.
 
+**Confusión entre aprobación de gobierno e implementación**
+
+Interpretar la aprobación de la línea base documental o la autorización de B2 como autorización para implementar hardware, firmware o software.
+
 **Implementación anticipada**
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
@@ -341,7 +369,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La consolidación documental de los bloques B1, B1.1, B1.2 y B1.3 no modifica este estado.
+La aprobación del gobierno documental en B1.4 no modifica este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -368,7 +396,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Resultados:** se avanzó en las condiciones generales de calidad y aceptación del producto. No se aprobaron tecnologías ni arquitecturas. No se realizaron actividades de implementación ni pruebas.
 
-**Estado actual de sus pendientes:** la incorporación al repositorio, el commit y el push se completaron en sesiones posteriores y se verificaron el 2026-10-19. La aprobación formal de los documentos continúa pendiente.
+**Estado actual de sus pendientes:** la incorporación al repositorio, el commit y el push se completaron en sesiones posteriores y se verificaron el 2026-10-19. La aprobación formal de los documentos quedó pendiente al cierre de esa sesión y se resolvió en B1.4.
 
 ### 12.2. Sesión 2026-10-19 — B1: Consolidación del gobierno documental
 
@@ -391,7 +419,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 - No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
 - No se modificaron `README.md` ni `AGENTS.md`.
 - No se realizó implementación, prueba de hardware ni validación industrial.
-- La aprobación formal de los documentos de gobierno permanece pendiente.
+- La aprobación formal de los documentos de gobierno permanecía pendiente al cierre de B1 y se resolvió en B1.4.
 
 **Verificaciones ejecutadas:** revisión del diff, comprobación de referencias internas y archivos citados, búsqueda de estados de aprobación inconsistentes, verificación de que los archivos modificados pertenecen al alcance autorizado y comprobación del estado del árbol de trabajo.
 
@@ -419,7 +447,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 - Reglas de agentes independientes del proveedor, modelo o herramienta en `README.md` y `AGENTS.md`.
 - Referencia a `docs/04-modulos/` resuelta mediante un índice inicial.
 - Registro formal de decisiones de gobierno incorporado.
-- Los cinco documentos sustantivos de gobierno permanecen en estado **Propuesta para aprobación**.
+- Los cinco documentos sustantivos de gobierno permanecían en estado **Propuesta para aprobación** al cierre de B1.1.
 - No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
 - No se realizó implementación ni validación industrial.
 
@@ -452,7 +480,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 - Auditoría integral completada sin hallazgos bloqueantes.
 - Correcciones editoriales aplicadas sin modificar decisiones, obligaciones ni alcance.
 - Hallazgos no bloqueantes H-03 a H-06 documentados; resueltos en B1.3.
-- Los cinco documentos sustantivos de gobierno permanecen en estado **Propuesta para aprobación**.
+- Los cinco documentos sustantivos de gobierno permanecían en estado **Propuesta para aprobación** al cierre de B1.2.
 - No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
 - No se realizó implementación ni validación industrial.
 
@@ -486,7 +514,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 - Esquema DEC-GOB/ADR definido; los ocho registros DEC-GOB permanecen intactos.
 - Metadatos uniformes en los cinco documentos.
 - Informe de auditoría actualizado; recomienda presentar los cinco documentos para aprobación formal.
-- Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+- Los cinco documentos permanecían en estado **Propuesta para aprobación** al cierre de B1.3.
 - No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
 - No se realizó implementación ni validación industrial.
 
@@ -496,21 +524,47 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.6. Sesión 2026-10-19 — B1.4: Aprobación formal del gobierno documental
+
+**Objetivo:** Registrar la aprobación formal de los cinco documentos de gobierno y establecer la línea base documental para iniciar B2 — Ingeniería de requisitos.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B1.3 `19f6098`.
+2. Se leyeron `README.md`, `AGENTS.md`, los cinco documentos de gobierno, el informe de auditoría, esta bitácora y el registro de decisiones.
+3. Se actualizaron los encabezados de los cinco documentos a estado **Aprobado** y aprobación del 2026-10-19 por el Responsable del proyecto ControlCore, makeAutomatic, conservando la versión 0.1 y el contenido sustantivo.
+4. Se registró DEC-GOB-009 en el registro formal de decisiones.
+5. Se actualizó el informe de auditoría a la versión 0.3.
+6. Se actualizó esta bitácora y se estableció la línea base documental.
+7. Se revisó el diff y se ejecutaron las verificaciones.
+
+**Resultados:**
+
+- Cinco documentos de gobierno aprobados formalmente en versión 0.1.
+- Línea base documental establecida y registrada en DEC-GOB-009.
+- Bloque B1 cerrado.
+- Hallazgos H-01 a H-06 resueltos; H-07 brecha de fase; H-08 sin hallazgo.
+- B2 — Ingeniería de requisitos autorizado para iniciar; no iniciado en B1.4.
+- Implementación de hardware, firmware y software no autorizada.
+- No se aprobaron tecnologías, arquitecturas ni requisitos funcionales.
+
+**Verificaciones ejecutadas:** revisión del diff, versiones 0.1 conservadas, estados **Aprobado**, contenido sustantivo sin cambios, registro DEC-GOB-009, decisiones anteriores intactas, referencias documentales, coherencia entre documentos, auditoría y bitácora, ausencia de autorización de implementación y alcance limitado a B1.4.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-Los bloques B1, B1.1, B1.2 y B1.3 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
+El bloque B1 quedó cerrado con la aprobación formal de la línea base documental el 2026-10-19.
 
-La siguiente actividad recomendada es:
+La próxima etapa autorizada es **B2 — Ingeniería de requisitos**. B2 no se inicia automáticamente en B1.4; requiere instrucciones del responsable del proyecto.
 
-1. Revisar el informe actualizado `docs/00-gobierno/auditoria-gobierno-B1.md` y decidir la aprobación formal de los cinco documentos.
-2. Registrar cada aprobación con versión, fecha y autoridad, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24).
-3. Una vez aprobado el gobierno, autorizar el bloque de requisitos y definir el esquema de identificadores.
+La autorización de B2 habilita la ingeniería de requisitos, no la implementación del producto. La implementación de hardware, firmware y software continúa no autorizada.
 
-El informe de auditoría recomienda presentar los cinco documentos para aprobación formal. Esta recomendación no constituye aprobación.
+Al iniciar B2 deberán consultarse `README.md`, `AGENTS.md`, la línea base de gobierno, el registro de decisiones y esta bitácora.
 
-Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo, el registro de decisiones y el informe de auditoría.
-
-No deberán modificarse decisiones aprobadas sin autorización.
+No deberán modificarse decisiones aprobadas ni documentos de la línea base sin control de cambios y autorización.
 
 ## 14. Criterio de continuidad
 

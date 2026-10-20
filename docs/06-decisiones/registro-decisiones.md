@@ -4,7 +4,7 @@
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
 **Versión del documento:** 0.1  
-**Estado:** Registro de decisiones de gobierno — reglas confirmadas y decisión aprobada  
+**Estado:** Registro de decisiones de gobierno — reglas confirmadas y decisiones aprobadas  
 **Fase:** Gobierno documental  
 **Fecha de incorporación:** 2026-10-19
 
@@ -41,6 +41,7 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 | DEC-GOB-006 | Repositorio como fuente de referencia | Confirmada — regla de gobierno vigente |
 | DEC-GOB-007 | Bitácora al cierre de sesión | Confirmada — regla de gobierno vigente |
 | DEC-GOB-008 | Independencia de proveedores y herramientas de IA | Aprobada |
+| DEC-GOB-009 | Aprobación de la línea base de gobierno documental | Aprobada |
 
 ## 4. Decisiones registradas
 
@@ -100,19 +101,33 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 - **Estado:** Aprobada.
 - **Referencia de origen:** Aprobación expresa del responsable del proyecto durante B1.1 y autorización de formalización durante B1.2.
 
-## 5. Documentos de gobierno que permanecen como propuestas
+### DEC-GOB-009 — Aprobación de la línea base de gobierno documental
 
-El registro de estas reglas y la aprobación de DEC-GOB-008 no implican la aprobación de los documentos sustantivos de gobierno.
+- **Contenido:** El responsable del proyecto aprobó formalmente los cinco documentos sustantivos de gobierno en versión 0.1.
+- **Documentos aprobados:** `docs/00-gobierno/vision-producto.md`, `docs/00-gobierno/principios-ingenieria.md`, `docs/00-gobierno/metodologia-diseno.md`, `docs/00-gobierno/criterios-calidad.md` y `docs/00-gobierno/definicion-de-terminado.md`.
+- **Versiones:** 0.1 para los cinco documentos.
+- **Fecha:** 2026-10-19.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Justificación documentada:** La auditoría B1, versión 0.2, no identificó hallazgos bloqueantes ni pendientes de H-01 a H-06 y recomendó presentar los cinco documentos para aprobación formal.
+- **Fundamento de auditoría:** `docs/00-gobierno/auditoria-gobierno-B1.md`, versión 0.2.
+- **Alcance:** Gobierno documental e inicio de la ingeniería de requisitos. No autoriza la implementación de hardware, firmware o software.
+- **Condiciones:** Sin condiciones documentales pendientes.
+- **Estado:** Aprobada.
+- **Referencia de origen:** Aprobación formal del responsable del proyecto durante B1.4.
 
-A la fecha de incorporación de este registro, los siguientes documentos permanecen en estado **Propuesta para aprobación**:
+## 5. Estado de los documentos de gobierno
 
-- `docs/00-gobierno/vision-producto.md`
-- `docs/00-gobierno/principios-ingenieria.md`
-- `docs/00-gobierno/metodologia-diseno.md`
-- `docs/00-gobierno/criterios-calidad.md`
-- `docs/00-gobierno/definicion-de-terminado.md`
+En el momento de la incorporación inicial de este registro, los cinco documentos sustantivos de gobierno se encontraban en estado **Propuesta para aprobación**.
 
-La aprobación formal deberá registrarse conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24), con versión, fecha y autoridad.
+El 2026-10-19, el responsable del proyecto aprobó formalmente los cinco documentos en versión 0.1 mediante DEC-GOB-009. La aprobación quedó registrada conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24), con versión, fecha y autoridad.
+
+| Documento | Versión | Estado |
+|---|---|---|
+| `docs/00-gobierno/vision-producto.md` | 0.1 | Aprobado |
+| `docs/00-gobierno/principios-ingenieria.md` | 0.1 | Aprobado |
+| `docs/00-gobierno/metodologia-diseno.md` | 0.1 | Aprobado |
+| `docs/00-gobierno/criterios-calidad.md` | 0.1 | Aprobado |
+| `docs/00-gobierno/definicion-de-terminado.md` | 0.1 | Aprobado |
 
 ## 6. Identificadores y decisiones futuras
 

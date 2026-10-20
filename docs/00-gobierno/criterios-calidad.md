@@ -6,10 +6,10 @@
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Criterios de calidad  
 **Versión:** 0.1  
-**Estado:** Propuesta para aprobación  
+**Estado:** Aprobado  
 **Fase:** Ingeniería conceptual  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto
+**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
 
 ---
 
