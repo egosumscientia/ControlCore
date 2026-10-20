@@ -11,7 +11,7 @@
 
 Este documento establece las reglas obligatorias para cualquier agente de inteligencia artificial que participe en actividades de análisis, diseño, documentación, programación, pruebas o mantenimiento del proyecto ControlCore.
 
-Las instrucciones se aplican a Codex y a cualquier otro agente que trabaje sobre el repositorio.
+Las instrucciones se aplican a cualquier agente de inteligencia artificial que trabaje sobre el repositorio, independientemente de su proveedor, modelo o herramienta.
 
 ControlCore es un producto de automatización industrial destinado a evolucionar hacia aplicaciones comerciales reales. No debe tratarse como un ejercicio académico ni como una demostración de software sin exigencias industriales.
 
@@ -56,11 +56,11 @@ Cuando existan contradicciones entre documentos, el agente deberá señalarlas y
 
 ## 4. Inspección obligatoria del repositorio
 
-Cuando el trabajo se realice desde una conversación de ChatGPT, la URL oficial del repositorio ControlCore es:
+La URL oficial del repositorio ControlCore es:
 
 https://github.com/egosumscientia/ControlCore.git
 
-**Consulta obligatoriamente el repositorio actualizado mediante el conector de GitHub disponible directamente en la conversación de ChatGPT antes de comenzar cualquier trabajo sobre el proyecto.**
+**Consulta obligatoriamente el repositorio actualizado mediante el mecanismo de acceso disponible en el entorno del agente antes de comenzar cualquier trabajo sobre el proyecto.** El mecanismo podrá ser un conector de repositorio, una copia local bajo control de versiones u otro medio autorizado.
 
 La consulta deberá incluir, según corresponda:
 
@@ -71,15 +71,15 @@ La consulta deberá incluir, según corresponda:
 
 Recupera las decisiones aprobadas, los asuntos pendientes y el siguiente paso autorizado. No dependas exclusivamente de recuerdos de conversaciones anteriores ni solicites al usuario que repita información disponible en el repositorio.
 
-**No redirijas al usuario a Work para sustituir una consulta que puede realizarse mediante el conector de GitHub disponible en ChatGPT.**
+**No redirijas al usuario a otra herramienta o entorno para sustituir una consulta que pueda realizarse mediante el mecanismo de acceso disponible.**
 
-Si el conector no permite acceder al repositorio o no permite consultar algún archivo necesario, informa expresamente de la limitación. No afirmes que consultaste contenido al que no pudiste acceder ni inventes información para completar los vacíos.
+Si el mecanismo de acceso no permite consultar el repositorio o algún archivo necesario, informa expresamente de la limitación. No afirmes que consultaste contenido al que no pudiste acceder ni inventes información para completar los vacíos.
 
 **Está prohibido inventar archivos, clases, métodos, endpoints, interfaces o funcionalidades y asumir que ya existen.**
 
-Cuando el trabajo se realice desde una conversación de ChatGPT y el usuario proporcione la URL del repositorio GitHub, se deberá utilizar primero el conector de GitHub disponible en esa conversación para consultar el estado real del proyecto.
+Cuando el usuario proporcione la URL del repositorio, se deberá utilizar primero el mecanismo de acceso disponible en el entorno para consultar el estado real del proyecto.
 
-No se deberá redirigir automáticamente al usuario a otro entorno para realizar una consulta que pueda resolverse mediante dicho conector.
+No se deberá redirigir automáticamente al usuario a otro entorno para realizar una consulta que pueda resolverse mediante el mecanismo de acceso disponible.
 
 Si el acceso no está disponible, deberá informarse la limitación y solicitarse el contexto necesario.
 

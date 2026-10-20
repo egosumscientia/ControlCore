@@ -110,6 +110,8 @@ Los documentos inicialmente vacíos se completarán progresivamente a medida que
 
 Los agentes de IA podrán apoyar las actividades de investigación, evaluación técnica, documentación, implementación, revisión y pruebas.
 
+Estas reglas se aplican a cualquier agente de inteligencia artificial, independientemente de su proveedor, modelo o herramienta.
+
 Su participación estará sujeta a las siguientes condiciones:
 
 - Consultar la documentación vigente antes de proponer modificaciones.
@@ -132,7 +134,9 @@ El archivo:
 
 registrará el bloque activo, las decisiones aprobadas, los asuntos pendientes, el grado de madurez del diseño y el siguiente paso.
 
-Al comenzar una nueva conversación de ingeniería, se deberá consultar el repositorio actualizado mediante el conector de GitHub disponible en ChatGPT, revisar el estado vigente y recuperar los documentos relevantes antes de continuar.
+Al comenzar una nueva conversación de ingeniería, se deberá consultar el repositorio actualizado mediante el mecanismo de acceso disponible en el entorno del agente (conector de repositorio, control de versiones local u otro medio autorizado), revisar el estado vigente y recuperar los documentos relevantes antes de continuar.
+
+Si el mecanismo de acceso no está disponible, deberá informarse la limitación y no deberá inventarse información para completar los vacíos.
 
 Las decisiones no documentadas no deberán considerarse automáticamente aprobadas.
 

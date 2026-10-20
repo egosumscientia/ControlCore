@@ -4,10 +4,10 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.2  
+**Versión del documento:** 0.3  
 **Fase actual:** Gobierno documental y preparación de ingeniería  
-**Bloque:** B1 — Consolidación del gobierno documental  
-**Estado del bloque:** Documentación consolidada; aprobación formal pendiente  
+**Bloque:** B1.1 — Cierre de coherencia documental  
+**Estado del bloque:** Asuntos de B1 resueltos; aprobación formal y generalización de metodología pendientes  
 **Estado del proyecto:** Ingeniería conceptual — implementación no autorizada
 
 ---
@@ -66,6 +66,8 @@ Esta etapa busca establecer una base técnica y metodológica sólida antes de c
 
 Durante la sesión del 19 de octubre de 2026 se consolidó el gobierno documental (bloque B1): se revisaron y armonizaron los documentos de visión, principios, metodología, criterios de calidad y definición de terminado, y se actualizó esta bitácora. La consolidación documental no equivale a aprobación formal.
 
+En la misma fecha se ejecutó el bloque B1.1: se generalizaron las reglas de agentes en `README.md` y `AGENTS.md`, se creó el directorio `docs/04-modulos/` con su índice inicial y se incorporaron las reglas DEC-GOB-001 a DEC-GOB-007 al registro formal de decisiones. Los cinco documentos sustantivos de gobierno permanecen como propuestas.
+
 No se ha aprobado todavía una arquitectura definitiva.
 
 No se ha autorizado la implementación del producto.
@@ -87,31 +89,41 @@ En la revisión del repositorio realizada el 19 de octubre de 2026 se confirmó 
 - `docs/00-gobierno/definicion-de-terminado.md`
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
 
-`README.md` y `AGENTS.md` no fueron modificados durante el bloque B1.
+Durante B1.1 se incorporaron además:
+
+- `docs/04-modulos/README.md` — índice inicial del directorio de módulos.
+- `docs/06-decisiones/registro-decisiones.md` — registro formal de decisiones de gobierno.
+
+`README.md` y `AGENTS.md` no fueron modificados durante B1; fueron actualizados en B1.1 para generalizar las reglas de agentes.
 
 Los cinco documentos sustantivos de gobierno se encuentran en estado **Propuesta para aprobación**. Esta bitácora es un registro de continuidad y no un documento de aprobación.
 
-### 4.2. Estado de incorporación y aprobación
+### 4.2. Estado de incorporación, aprobación y registro
 
 Los documentos de gobierno se encuentran incorporados al repositorio y versionados mediante Git. Su incorporación y publicación no constituyen aprobación formal.
 
 La aprobación formal de cada documento deberá ser otorgada de forma expresa por el responsable del proyecto, conforme a `metodologia-diseno.md` (sección 24). Mientras no exista ese registro, los documentos deberán tratarse como propuestas de referencia y no como especificaciones aprobadas.
 
+El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007, incorporadas desde esta bitácora. Su registro no implica la aprobación de los documentos sustantivos de gobierno.
+
+El directorio `docs/04-modulos/` fue creado con un archivo índice que describe su propósito y su estado pendiente. No contiene especificaciones de módulos.
+
 ### 4.3. Documentos pendientes de contenido
 
-Permanecen sin contenido los documentos de:
+Permanecen sin contenido:
 
-- `docs/01-requisitos/`
-- `docs/02-arquitectura/`
-- `docs/03-seguridad-industrial/`
-- `docs/05-validacion/`
-- `docs/06-decisiones/`
-- `docs/07-roadmap/`
-- `docs/08-prompts/`
+- `docs/01-requisitos/` — requisitos funcionales, no funcionales y restricciones.
+- `docs/02-arquitectura/` — arquitectura general, hardware, firmware, software e interfaces.
+- `docs/03-seguridad-industrial/` — análisis de riesgos, normas y requisitos de seguridad.
+- `docs/05-validacion/` — estrategia de pruebas, criterios de aceptación y registro de validaciones.
+- `docs/06-decisiones/pendientes.md` — asuntos pendientes; el registro de decisiones ya está incorporado.
+- `docs/07-roadmap/` — fases y planificación de implementación.
+- `docs/08-prompts/` — contratos e instrucciones de trabajo para agentes.
+- `docs/04-modulos/` — solo el índice inicial; no contiene especificaciones de módulos.
 
 Los archivos vacíos no deberán interpretarse como especificaciones ni decisiones aprobadas.
 
-`README.md` referencia `docs/04-modulos/`, pero ese directorio no existe en el repositorio. La discrepancia se registra como asunto pendiente en la sección 9 y no se corrige en B1 porque `README.md` no forma parte del alcance autorizado.
+La referencia del `README.md` a `docs/04-modulos/` quedó resuelta con la creación del directorio y su índice.
 
 ### 4.4. Función de esta bitácora
 
@@ -192,7 +204,7 @@ Las pruebas de laboratorio no equivaldrán automáticamente a validación indust
 
 Las siguientes reglas de trabajo están confirmadas por la documentación existente y por las instrucciones establecidas durante la sesión.
 
-Las referencias DEC-GOB-001 a DEC-GOB-007 se conservan como reglas de gobierno confirmadas en esta bitácora. No constituyen ADR formales mientras no se registren en `docs/06-decisiones/registro-decisiones.md`.
+Las referencias DEC-GOB-001 a DEC-GOB-007 se conservan como reglas de gobierno confirmadas. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en el bloque B1.1. Su registro no aprueba los documentos sustantivos de gobierno, que permanecen como propuestas.
 
 **DEC-GOB-001 — Naturaleza del producto**
 
@@ -224,7 +236,13 @@ La continuidad del proyecto deberá basarse en la documentación vigente del rep
 
 `ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
 
-Estas referencias identifican las reglas confirmadas en esta bitácora. No sustituyen el registro formal de decisiones del repositorio.
+**Decisión aprobada en B1.1 — Generalización de las instrucciones de agentes**
+
+Las reglas operativas para agentes de IA deberán ser independientes del proveedor, modelo o herramienta y aplicarse a cualquier agente que participe en ControlCore.
+
+Esta decisión fue aprobada por el responsable del proyecto en el bloque B1.1 y se refleja en `README.md` y `AGENTS.md`. No modifica las reglas DEC-GOB-001 a DEC-GOB-007 ni implica la aprobación de los documentos sustantivos de gobierno.
+
+Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
 ## 9. Asuntos pendientes
 
@@ -241,9 +259,11 @@ Mientras no se realice esta aprobación, los documentos permanecen como propuest
 
 ### 9.2. Coherencia documental
 
-- Resolver la referencia a `docs/04-modulos/` en `README.md`: crear el directorio con el propósito previsto o corregir la referencia. Requiere autorización porque `README.md` no fue modificable en B1.
-- Decidir si las referencias específicas a ChatGPT y Codex en `README.md`, `AGENTS.md` y `metodologia-diseno.md` deben mantenerse o generalizarse. Requiere autorización por afectar `README.md` y `AGENTS.md`.
-- Migrar las reglas DEC-GOB-001 a DEC-GOB-007 al registro formal `docs/06-decisiones/registro-decisiones.md` o confirmar que la bitácora es su ubicación definitiva. El registro formal se encuentra vacío.
+- Generalizar las referencias específicas de herramienta que permanecen en `metodologia-diseno.md` (secciones 17, 19, 21 y 23), para mantener la coherencia con las reglas neutrales de `README.md` y `AGENTS.md`. Requiere autorización específica porque el alcance de B1.1 no incluyó ese documento.
+- Incorporar la decisión de generalización aprobada en B1.1 al registro formal con un identificador propio, si el responsable lo considera necesario.
+- Verificar, al iniciar el próximo bloque documental, que las referencias entre documentos y la numeración de secciones sigan siendo válidas.
+
+La referencia a `docs/04-modulos/` y la incorporación de DEC-GOB-001 a DEC-GOB-007 quedaron resueltas en B1.1.
 
 ### 9.3. Requisitos
 
@@ -371,17 +391,47 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.3. Sesión 2026-10-19 — B1.1: Cierre de coherencia documental
+
+**Objetivo:** Resolver los asuntos pendientes de coherencia documental identificados en B1 y preparar el cierre del gobierno documental.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio y la coincidencia de `HEAD` con `origin/main` en el commit B1 `8923b37`.
+2. Se leyeron `README.md`, `AGENTS.md`, los documentos de `docs/00-gobierno/` y el registro de decisiones.
+3. Se generalizaron las reglas de agentes en `README.md` y `AGENTS.md`, eliminando la dependencia de proveedor, modelo o herramienta.
+4. Se creó `docs/04-modulos/README.md` como índice del directorio, sin definir módulos ni especificaciones técnicas.
+5. Se incorporaron las reglas DEC-GOB-001 a DEC-GOB-007 en `docs/06-decisiones/registro-decisiones.md`.
+6. Se actualizó esta bitácora con los resultados y asuntos pendientes.
+7. Se revisó el diff y se ejecutaron las comprobaciones disponibles.
+
+**Resultados:**
+
+- Decisión aprobada de generalizar las instrucciones de agentes, registrada en esta bitácora.
+- Reglas de agentes independientes del proveedor, modelo o herramienta en `README.md` y `AGENTS.md`.
+- Referencia a `docs/04-modulos/` resuelta mediante un índice inicial.
+- Registro formal de decisiones de gobierno incorporado.
+- Los cinco documentos sustantivos de gobierno permanecen en estado **Propuesta para aprobación**.
+- No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
+- No se realizó implementación ni validación industrial.
+
+**Verificaciones ejecutadas:** revisión del diff, comprobación de referencias internas y rutas, verificación de identificadores únicos, comprobación de ausencia de referencias específicas de proveedor en `README.md` y `AGENTS.md`, verificación del alcance autorizado y comprobación del estado del árbol de trabajo.
+
+**Limitaciones:** no se ejecutaron pruebas de software porque no existe código en esta fase. La generalización de `metodologia-diseno.md` no formó parte del alcance autorizado y permanece pendiente.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-El bloque B1 quedó consolidado documentalmente. No se inicia B2 sin autorización expresa.
+Los bloques B1 y B1.1 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
 
 La siguiente actividad recomendada es:
 
-1. Revisar y aprobar formalmente los documentos de gobierno, registrando versión, fecha y autoridad.
-2. Resolver los asuntos de coherencia documental de la sección 9.2.
+1. Revisar y aprobar formalmente los cinco documentos de gobierno, registrando versión, fecha y autoridad.
+2. Autorizar, si se considera necesaria, la generalización de las referencias de herramienta que permanecen en `metodologia-diseno.md`.
 3. Una vez aprobado el gobierno, autorizar el bloque de requisitos y definir el esquema de identificadores.
 
-Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo y los documentos del bloque correspondiente.
+Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo, el registro de decisiones y los documentos del bloque correspondiente.
 
 No deberán modificarse decisiones aprobadas sin autorización.
 
