@@ -1,14 +1,14 @@
 # Escenarios de uso — ControlCore
 
-**Proyecto:** ControlCore  
-**Empresa:** makeAutomatic  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial  
-**Documento:** Escenarios de uso  
-**Versión:** 0.3  
-**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
-**Fase:** Ingeniería conceptual y de requisitos  
-**Fecha de revisión:** 2026-10-20  
-**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
+**Proyecto:** ControlCore
+**Empresa:** makeAutomatic
+**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Documento:** Escenarios de uso
+**Versión:** 0.4
+**Estado:** Revisión de documento aprobado — actualización B2.4 pendiente de aprobación
+**Fase:** Ingeniería de requisitos
+**Fecha de revisión:** 2026-10-20
+**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.4 pendiente de aprobación
 
 ---
 
@@ -19,6 +19,8 @@ Este documento registra los escenarios aprobados como base conceptual de utiliza
 Los escenarios fueron propuestos en B2.2.1 y aprobados en B2.2.2. Su finalidad es facilitar la derivación de requisitos concretos a partir de condiciones de uso trazables.
 
 La versión 0.3 actualiza únicamente las referencias de estado afectadas por las decisiones conceptuales de B2.3 (`DEC-GOB-022` a `DEC-GOB-030`). No modifica los escenarios aprobados ni las decisiones `DEC-GOB-016` a `DEC-GOB-021`.
+
+La versión 0.4 actualiza la referencia de estado de los requisitos candidatos de B2.4. No modifica los escenarios aprobados.
 
 ## 2. Alcance
 
@@ -253,7 +255,7 @@ Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estos escenarios 
 - No se han definido interfaces, protocolos, tiempos ni algoritmos.
 - Las decisiones conceptuales de B2.3 fueron consolidadas en `DEC-GOB-022` a `DEC-GOB-030`.
 - Las preguntas técnicas derivadas de la sección 6.2 permanecen abiertas.
-- No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
+- B2.4 propuso 39 requisitos candidatos `RF-###`, `RNF-###` y `RES-###`; ninguno está aprobado.
 - Las preguntas técnicas pendientes se registran en `docs/06-decisiones/pendientes.md`.
 
 ## 9. Referencias
@@ -272,12 +274,15 @@ Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estos escenarios 
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
 - `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** propuesta inicial de escenarios de uso. Hipótesis pendientes de validación y aprobación.
 - **0.2 — 2026-10-20 — B2.2.2:** aprobación de los diez escenarios como base conceptual de ingeniería (DEC-GOB-016); incorporación de las decisiones `DEC-GOB-017` a `DEC-GOB-021` y de las preguntas técnicas derivadas.
 - **0.3 — 2026-10-20 — B2.3:** actualización de las referencias de estado afectadas por `DEC-GOB-022` a `DEC-GOB-030`; precisión de la familia inicial, del alcance funcional del primer incremento y de las respuestas condicionadas por riesgos. Los escenarios y las decisiones anteriores no se modifican. Versión pendiente de aprobación.
+- **0.4 — 2026-10-20 — B2.4:** actualización de la referencia de estado sobre requisitos candidatos. Los escenarios no se modifican. Versión pendiente de aprobación.
 
 ---
 

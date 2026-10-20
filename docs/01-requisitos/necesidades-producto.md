@@ -1,14 +1,14 @@
 # Necesidades del producto — ControlCore
 
-**Proyecto:** ControlCore  
-**Empresa:** makeAutomatic  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial  
-**Documento:** Necesidades del producto  
-**Versión:** 0.3  
-**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
-**Fase:** Ingeniería conceptual y de requisitos  
-**Fecha de revisión:** 2026-10-20  
-**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
+**Proyecto:** ControlCore
+**Empresa:** makeAutomatic
+**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Documento:** Necesidades del producto
+**Versión:** 0.4
+**Estado:** Revisión de documento aprobado — actualización B2.4 pendiente de aprobación
+**Fase:** Ingeniería de requisitos
+**Fecha de revisión:** 2026-10-20
+**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.4 pendiente de aprobación
 
 ---
 
@@ -19,6 +19,8 @@ Este documento identifica las necesidades del producto a partir de la visión ap
 Las necesidades fueron propuestas en B2.2.1 y aprobadas en B2.2.2. Su finalidad es proporcionar una base trazable para la definición posterior de requisitos, sin convertir posibilidades conceptuales en requisitos obligatorios.
 
 La versión 0.3 actualiza únicamente las referencias de estado afectadas por las decisiones conceptuales de B2.3 (`DEC-GOB-022` a `DEC-GOB-030`). No modifica las necesidades aprobadas ni las decisiones `DEC-GOB-016` a `DEC-GOB-021`.
+
+La versión 0.4 actualiza la referencia de estado de los requisitos candidatos de B2.4. No modifica las necesidades aprobadas.
 
 ## 2. Alcance
 
@@ -254,8 +256,8 @@ Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estas necesidades
 - Las quince preguntas de B2.2.1 fueron resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021).
 - Las decisiones conceptuales de B2.3 fueron consolidadas en `DEC-GOB-022` a `DEC-GOB-030`.
 - Permanecen abiertas las preguntas técnicas derivadas de la sección 6.2.
-- No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
-- No se han definido requisitos concretos ni una línea base de requisitos.
+- B2.4 propuso 39 requisitos candidatos `RF-###`, `RNF-###` y `RES-###`; ninguno está aprobado.
+- No se han aprobado requisitos concretos ni una línea base de requisitos.
 - Las preguntas técnicas pendientes se registran en `docs/06-decisiones/pendientes.md`.
 
 ## 9. Referencias
@@ -274,12 +276,15 @@ Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estas necesidades
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
 - `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** identificación inicial de necesidades candidatas y preguntas abiertas. Propuesta pendiente de validación y aprobación.
 - **0.2 — 2026-10-20 — B2.2.2:** aprobación de las diez necesidades (DEC-GOB-016); resolución conceptual de `PREG-P-01` a `PREG-P-15` (DEC-GOB-017 a DEC-GOB-021); incorporación de las preguntas técnicas derivadas que permanecen abiertas.
 - **0.3 — 2026-10-20 — B2.3:** actualización de las referencias de estado afectadas por `DEC-GOB-022` a `DEC-GOB-030`; precisión de la familia inicial y del alcance funcional del primer incremento. Las necesidades y las decisiones anteriores no se modifican. Versión pendiente de aprobación.
+- **0.4 — 2026-10-20 — B2.4:** actualización de la referencia de estado sobre requisitos candidatos. Las necesidades no se modifican. Versión pendiente de aprobación.
 
 ---
 

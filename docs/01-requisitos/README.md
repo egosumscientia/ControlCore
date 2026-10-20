@@ -1,14 +1,14 @@
 # Índice y convenciones de requisitos — ControlCore
 
-**Proyecto:** ControlCore  
-**Empresa:** makeAutomatic  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial  
-**Documento:** Índice y convenciones de requisitos  
-**Versión:** 0.2  
-**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
-**Fase:** Ingeniería conceptual y de requisitos  
-**Fecha de revisión:** 2026-10-20  
-**Aprobación:** Versión 0.1 aprobada el 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.2 pendiente de aprobación
+**Proyecto:** ControlCore
+**Empresa:** makeAutomatic
+**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Documento:** Índice y convenciones de requisitos
+**Versión:** 0.3
+**Estado:** Revisión de documento aprobado — propuesta de requisitos candidatos B2.4
+**Fase:** Ingeniería de requisitos
+**Fecha de revisión:** 2026-10-20
+**Aprobación:** Versión 0.1 aprobada el 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
 
 ---
 
@@ -22,9 +22,9 @@ La creación de este índice evita duplicar las convenciones comunes en los tres
 
 ## 2. Alcance
 
-Este documento y los tres registros asociados constituyen la estructura inicial de la ingeniería de requisitos.
+Este documento y los tres registros asociados constituyen la estructura y los candidatos de la ingeniería de requisitos.
 
-No definen funcionalidades concretas, no seleccionan tecnologías, no establecen arquitecturas y no aprueban requisitos.
+No aprueban funcionalidades concretas, no seleccionan tecnologías, no establecen arquitecturas y no convierten los candidatos en línea base.
 
 Los requisitos se registrarán en:
 
@@ -33,6 +33,8 @@ Los requisitos se registrarán en:
 - `docs/01-requisitos/restricciones-sistema.md`
 
 La línea base de gestión de requisitos fue aprobada en B2.1.1 (DEC-GOB-010 a DEC-GOB-015). No existe todavía una línea base de requisitos concretos.
+
+B2.4 incorporó 39 requisitos candidatos: 27 `RF-###`, 5 `RNF-###` y 7 `RES-###`. Los candidatos están en estado **Propuesto**, no están aprobados y no sustituyen la línea base de gestión.
 
 ## 3. Convenciones
 
@@ -269,6 +271,7 @@ Reglas:
 - Los vínculos **Pendiente** deberán indicar qué falta y no podrán presentarse como evidencia de cobertura.
 - Los vínculos **No aplica** deberán justificarse.
 - Las decisiones se referencian mediante `DEC-GOB-###` o `ADR-###`.
+- Las decisiones de B2.4 se referencian como `B2.4-D##` por instrucción expresa de ese bloque. Esta referencia es de trazabilidad documental y no crea una nueva familia formal de decisiones ni sustituye `DEC-GOB` o `ADR`.
 - Los demás vínculos utilizarán el esquema que se defina cuando exista el elemento correspondiente.
 
 ### 7.3. Requisitos huérfanos, duplicados, contradictorios y no verificables
@@ -286,9 +289,9 @@ Las seis decisiones de B2.1 fueron aprobadas en B2.1.1 y registradas como DEC-GO
 
 B2.2 aprobó las necesidades, actores y escenarios (DEC-GOB-016) y resolvió conceptualmente las preguntas de producto (DEC-GOB-017 a DEC-GOB-021). B2.3 consolidó las decisiones conceptuales de alcance y comportamiento en DEC-GOB-022 a DEC-GOB-030.
 
-No se han definido requisitos funcionales, no funcionales ni restricciones. No existe línea base de requisitos concretos.
+B2.4 consolidó las 60 decisiones de la ronda posterior a B2.3 y preparó 27 requisitos funcionales, 5 no funcionales y 7 restricciones candidatas. Todos están en estado **Propuesto**. No existe línea base de requisitos concretos.
 
-El siguiente paso es la derivación y elaboración de requisitos verificables, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente.
+El siguiente paso es revisar y completar los criterios pendientes, aprobar o rechazar los candidatos y establecer una línea base. No se inicia automáticamente.
 
 ## 9. Referencias
 
@@ -303,6 +306,8 @@ El siguiente paso es la derivación y elaboración de requisitos verificables, p
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
 - `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/requisitos-no-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
@@ -314,6 +319,7 @@ El siguiente paso es la derivación y elaboración de requisitos verificables, p
 - **0.1 — 2026-10-19 — B2.1:** estructura inicial, convenciones, atributos, estados y trazabilidad propuestos.
 - **0.1 — 2026-10-19 — B2.1.1:** aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
 - **0.2 — 2026-10-20 — B2.3:** actualización del estado de avance y referencia a la consolidación de decisiones conceptuales. Las convenciones aprobadas no se modifican. Versión pendiente de aprobación.
+- **0.3 — 2026-10-20 — B2.4:** incorporación de 39 requisitos candidatos y referencia a la consolidación B2.4 y al análisis preliminar de riesgos. Las convenciones aprobadas no se modifican. Versión pendiente de aprobación.
 
 ---
 

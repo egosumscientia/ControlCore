@@ -3,9 +3,9 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
-**Versión del documento:** 0.3  
-**Estado:** Registro de decisiones de gobierno, gestión de requisitos, alcance conceptual y comportamiento conceptual — reglas confirmadas y decisiones aprobadas hasta DEC-GOB-030  
-**Fase:** Gobierno documental e ingeniería conceptual  
+**Versión del documento:** 0.4
+**Estado:** Registro de decisiones de gobierno, gestión de requisitos, alcance conceptual y comportamiento conceptual — decisiones DEC-GOB hasta 030; decisiones B2.4 en consolidación separada
+**Fase:** Gobierno documental e ingeniería de requisitos
 **Fecha de incorporación:** 2026-10-19  
 **Fecha de actualización:** 2026-10-20
 
@@ -540,6 +540,8 @@ El 2026-10-19, el responsable del proyecto aprobó formalmente los cinco documen
 El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno, de gestión de requisitos, de alcance conceptual y de comportamiento conceptual del producto aprobadas por el responsable del proyecto. El prefijo **ADR** queda reservado para decisiones arquitectónicas y técnicas futuras.
 
 Las decisiones DEC-GOB-022 a DEC-GOB-030 no son ADR: describen alcance y comportamiento conceptual, no una arquitectura seleccionada, un componente, un protocolo ni una tecnología de implementación. Las decisiones arquitectónicas y técnicas que se adopten en bloques posteriores deberán registrarse con su propio identificador, su justificación y su estado de aprobación. No deberán incorporarse a este registro como confirmadas sin una decisión expresa del responsable del proyecto.
+
+Las 60 decisiones de B2.4 se consolidan en `docs/06-decisiones/consolidacion-decisiones-B2.4.md` con referencias `B2.4-D01` a `B2.4-D60`. No reciben identificadores `DEC-GOB` adicionales: son criterios técnicos y metodológicos cuya consolidación es documental y no selecciona arquitectura, tecnología ni componente.
 
 Los asuntos pendientes se mantienen en `docs/06-decisiones/pendientes.md` y en `docs/00-gobierno/ESTADO-ACTUAL.md`.
 

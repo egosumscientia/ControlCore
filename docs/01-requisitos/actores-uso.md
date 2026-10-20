@@ -3,12 +3,12 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
-**Documento:** Actores y uso  
-**Versión:** 0.2  
-**Estado:** Aprobado  
-**Fase:** Ingeniería de requisitos  
-**Fecha de revisión:** 2026-10-20  
-**Aprobación:** 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic
+**Documento:** Actores y uso
+**Versión:** 0.3
+**Estado:** Revisión de documento aprobado — actualización B2.4 pendiente de aprobación
+**Fase:** Ingeniería de requisitos
+**Fecha de revisión:** 2026-10-20
+**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
 
 ---
 
@@ -17,6 +17,8 @@
 Este documento identifica los actores aprobados de ControlCore, sus responsabilidades generales, sus necesidades, sus interacciones posibles y los aspectos técnicos que permanecen pendientes.
 
 Los actores fueron propuestos en B2.2.1 y aprobados en B2.2.2. Su finalidad es servir de base para derivar requisitos concretos.
+
+La versión 0.3 actualiza únicamente las referencias de estado afectadas por los requisitos candidatos de B2.4. No modifica los actores ni sus responsabilidades aprobadas.
 
 ## 2. Alcance
 
@@ -180,7 +182,7 @@ Estos vínculos son de trazabilidad documental. No constituyen requisitos aproba
 - Los tres perfiles funcionales de acceso están aprobados (DEC-GOB-020); la autenticación, la matriz detallada de permisos y su asignación a actores permanecen pendientes.
 - Los límites de responsabilidad por aplicación entre ControlCore, la máquina y los sistemas externos permanecen pendientes de delimitación concreta.
 - Las preguntas técnicas derivadas de la sección 6.2 permanecen abiertas.
-- No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
+- B2.4 propuso 39 requisitos candidatos `RF-###`, `RNF-###` y `RES-###`; ninguno está aprobado.
 - Las preguntas técnicas pendientes se registran en `docs/06-decisiones/pendientes.md`.
 
 ## 9. Referencias
@@ -198,11 +200,14 @@ Estos vínculos son de trazabilidad documental. No constituyen requisitos aproba
 - `docs/01-requisitos/escenarios-uso.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** identificación inicial de actores y responsabilidades potenciales. Propuesta pendiente de validación y aprobación.
 - **0.2 — 2026-10-20 — B2.2.2:** aprobación de los siete actores y sus responsabilidades generales (DEC-GOB-016); incorporación de los perfiles funcionales de acceso de `PREG-P-11` (DEC-GOB-020) y de las preguntas técnicas derivadas.
+- **0.3 — 2026-10-20 — B2.4:** actualización de la referencia de estado sobre identificadores candidatos. Los actores y sus responsabilidades no se modifican. Versión pendiente de aprobación.
 
 ---
 

@@ -4,9 +4,9 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Registro de asuntos de decisión  
-**Versión:** 0.3  
-**Estado:** Registro de asuntos de decisión — B2.1, B2.2.1 y B2.3 resueltos conceptualmente; preguntas técnicas derivadas pendientes  
-**Fase:** Ingeniería conceptual y de requisitos  
+**Versión:** 0.4
+**Estado:** Registro de asuntos de decisión — B2.1, B2.2.1 y B2.3 resueltos conceptualmente; B2.4 con candidatos y datos técnicos pendientes
+**Fase:** Ingeniería de requisitos
 **Fecha de revisión:** 2026-10-20  
 **Aprobación:** No aplica — registro de asuntos de decisión
 
@@ -14,13 +14,13 @@
 
 ## 1. Propósito
 
-Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1, B2.2.1 y B2.3, sus resoluciones en B2.1.1, B2.2.2 y B2.3, y las preguntas técnicas que permanecen abiertas.
+Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1, B2.2.1, B2.3 y B2.4, sus resoluciones y las preguntas técnicas que permanecen abiertas.
 
 Conserva las alternativas consideradas y la trazabilidad hacia el registro formal de decisiones.
 
 ## 2. Alcance
 
-Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos, sus resoluciones en B2.1.1; las preguntas de B2.2.1 — Identificación de necesidades, actores y escenarios de uso, y sus resoluciones conceptuales en B2.2.2; y las decisiones conceptuales consolidadas en B2.3.
+Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos, sus resoluciones en B2.1.1; las preguntas de B2.2.1 — Identificación de necesidades, actores y escenarios de uso, y sus resoluciones conceptuales en B2.2.2; las decisiones conceptuales consolidadas en B2.3; y los datos técnicos pendientes de B2.4.
 
 No contiene requisitos del producto. Las decisiones aprobadas se registran en `docs/06-decisiones/registro-decisiones.md`.
 
@@ -152,7 +152,7 @@ Las 63 decisiones de la sesión de B2.3 fueron adoptadas por el responsable del 
 | `DEC-GOB-029` | Verificación, evidencia y cierre de incrementos | `D22`, `D23`, `D58`, `D59`, `D60`, `D61`, `D62` | Resuelto conceptualmente |
 | `DEC-GOB-030` | Cierre de las decisiones conceptuales | `D63` | Resuelto |
 
-La resolución conceptual no equivale a una especificación técnica completa. No se han definido requisitos `RF-###`, `RNF-###` o `RES-###`, arquitectura, tecnologías, protocolos ni criterios cuantitativos de aceptación.
+La resolución conceptual no equivale a una especificación técnica completa. No se han aprobado requisitos `RF-###`, `RNF-###` o `RES-###`; B2.4 propuso 39 candidatos. La arquitectura, las tecnologías, los protocolos y los criterios cuantitativos de aceptación permanecen pendientes.
 
 ## 6. Preguntas técnicas derivadas que permanecen abiertas
 
@@ -175,12 +175,33 @@ Las decisiones DEC-GOB-017 a DEC-GOB-030 resuelven el marco conceptual, pero no 
 
 Estos asuntos no son decisiones aprobadas. Deberán resolverse antes de implementar el alcance afectado.
 
+### 6.1. Datos técnicos pendientes de B2.4
+
+Las 60 decisiones de B2.4 se consolidan en `docs/06-decisiones/consolidacion-decisiones-B2.4.md`. Los requisitos candidatos se registran en los tres documentos de requisitos. Permanecen pendientes, sin valores asignados:
+
+| Dato pendiente | Requisitos afectados |
+|---|---|
+| Tensión, corriente, potencia y límites térmicos del motor y la etapa de potencia | RF-015; RF-016; RF-019 |
+| Rango de velocidad, aceleración y desaceleración | RF-005–RF-007; RNF-001 |
+| Umbrales y tiempos de sobrecorriente, sobretensión, subtensión y protección térmica | RF-015; RF-016 |
+| Indicadores y umbrales de bloqueo, pérdida de carga, aceleración e inversión inesperadas | RF-017; RF-018 |
+| Ganancias PI, límites de salida, anti-windup y saturación persistente | RF-009; RF-010 |
+| Filtro, frecuencia de muestreo, obsolescencia y timeouts de comunicación | RF-011; RF-014 |
+| Umbral y tiempo de verificación de parada | RF-004 |
+| Métricas de estabilidad, error, sobreimpulso y respuesta | RNF-001 |
+| Matriz de criticidad de parámetros y permisos de cambio | RF-025; RNF-004 |
+| Escala y criterios de aceptación de riesgos | RES-001; RES-002; RES-004 |
+| Procedimiento, criterios de interrupción y autorización de pruebas físicas | RES-003; RES-005 |
+
+Estos datos no son decisiones aprobadas. No se declaran verificables los requisitos que dependen de ellos.
+
 ## 7. Reglas de gestión
 
 - Los asuntos de B2.1 fueron resueltos en B2.1.1 y registrados en DEC-GOB-010 a DEC-GOB-015.
 - Las preguntas de B2.2.1 fueron resueltas conceptualmente en B2.2.2 y registradas en DEC-GOB-017 a DEC-GOB-021.
 - La aprobación de las necesidades, actores y escenarios se registró en DEC-GOB-016.
 - Las decisiones conceptuales de B2.3 fueron consolidadas en DEC-GOB-022 a DEC-GOB-030.
+- Las decisiones de B2.4 se consolidan con referencias `B2.4-D01` a `B2.4-D60`; no crean una nueva familia formal de decisiones.
 - La resolución conceptual no equivale a una especificación técnica completa. Las preguntas técnicas derivadas de la sección 6 permanecen abiertas.
 - La aprobación correspondió al responsable del proyecto. Las preguntas técnicas pendientes requieren su decisión.
 - Las alternativas no seleccionadas se conservan como historial.
@@ -192,6 +213,8 @@ Estos asuntos no son decisiones aprobadas. Deberán resolverse antes de implemen
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
 - `docs/01-requisitos/README.md`
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/requisitos-no-funcionales.md`
@@ -207,6 +230,7 @@ Estos asuntos no son decisiones aprobadas. Deberán resolverse antes de implemen
 - **0.1 — 2026-10-19 — B2.2.1:** incorporación de las quince preguntas pendientes de necesidades, actores y escenarios de uso.
 - **0.2 — 2026-10-20 — B2.2.2:** resolución conceptual de las quince preguntas y registro DEC-GOB-016 a DEC-GOB-021; incorporación de las preguntas técnicas derivadas que permanecen abiertas.
 - **0.3 — 2026-10-20 — B2.3:** consolidación de las 63 decisiones conceptuales y registro DEC-GOB-022 a DEC-GOB-030; actualización de las preguntas técnicas abiertas y remisión a la matriz de consolidación.
+- **0.4 — 2026-10-20 — B2.4:** consolidación de las 60 decisiones de la ronda posterior a B2.3; incorporación de los datos técnicos pendientes y remisión a los requisitos candidatos.
 
 ---
 

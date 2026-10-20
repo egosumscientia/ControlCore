@@ -3,17 +3,18 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
-**Fecha de actualización:** 2026-10-20  
-**Versión del documento:** 0.11  
-**Fase actual:** Ingeniería conceptual y de requisitos (B2)  
-**Bloque:** B2.3 — Consolidación de decisiones conceptuales  
-**Estado del bloque:** Decisiones conceptuales consolidadas; formalización documental en revisión; requisitos concretos pendientes  
-**Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)  
-**Convenciones de requisitos:** Aprobadas — DEC-GOB-010 a DEC-GOB-015  
-**Necesidades, actores y escenarios:** Aprobados — DEC-GOB-016 (2026-10-20)  
-**Decisiones conceptuales:** Aprobadas — DEC-GOB-017 a DEC-GOB-021; consolidadas — DEC-GOB-022 a DEC-GOB-030 (B2.3)  
-**Requisitos concretos:** No definidos ni aprobados  
-**Arquitectura:** No definida  
+**Fecha de actualización:** 2026-10-20
+**Versión del documento:** 0.12
+**Fase actual:** Ingeniería de requisitos (B2)
+**Bloque:** B2.4 — Consolidación de decisiones y especificación preliminar
+**Estado del bloque:** Decisiones consolidadas; 39 requisitos candidatos propuestos; requisitos no aprobados
+**Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)
+**Convenciones de requisitos:** Aprobadas — DEC-GOB-010 a DEC-GOB-015
+**Necesidades, actores y escenarios:** Aprobados — DEC-GOB-016 (2026-10-20)
+**Decisiones conceptuales:** Aprobadas — DEC-GOB-017 a DEC-GOB-021; consolidadas — DEC-GOB-022 a DEC-GOB-030 (B2.3)
+**Decisiones B2.4:** D01–D60 consolidadas en documento de propuesta
+**Requisitos candidatos:** 27 RF, 5 RNF y 7 RES — propuestos, no aprobados
+**Arquitectura:** No definida
 **Implementación:** No autorizada
 
 ---
@@ -57,7 +58,7 @@ Las capacidades concretas y las tecnologías del producto deberán definirse dur
 
 ## 3. Estado general
 
-El proyecto se encuentra en la etapa de gobierno documental aprobado, gestión de requisitos aprobada, necesidades, actores y escenarios aprobados, y decisiones conceptuales consolidadas. Los requisitos concretos permanecen pendientes de definición.
+El proyecto se encuentra en la etapa de gobierno documental aprobado, gestión de requisitos aprobada, necesidades, actores y escenarios aprobados, decisiones conceptuales consolidadas y requisitos candidatos propuestos. Los requisitos concretos permanecen pendientes de aprobación.
 
 El trabajo documental de gobierno comprende los cinco documentos sustantivos, aprobados en versión 0.1:
 
@@ -89,7 +90,9 @@ En la misma fecha se inició B2.2 con el bloque B2.2.1: se identificaron diez ne
 
 El 20 de octubre de 2026 se ejecutó B2.2.2: el responsable del proyecto formalizó la aprobación de las diez necesidades, los siete actores y los diez escenarios, registrada como DEC-GOB-016, y las respuestas a las quince preguntas PREG-P-01 a PREG-P-15, registradas como DEC-GOB-017 a DEC-GOB-021. Las decisiones son conceptuales: no constituyen requisitos concretos, arquitectura, selección tecnológica, certificación ni autorización de implementación.
 
-En la misma fecha se ejecutó B2.3: se consolidaron las 63 decisiones conceptuales de la sesión, agrupadas en DEC-GOB-022 a DEC-GOB-030, se delimitó funcionalmente el primer incremento y se actualizaron los asuntos técnicos abiertos. Las decisiones conceptuales no constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación ni autorización de implementación. Los cambios documentales de B2.3 quedan preparados para revisión, sin commit ni push.
+En la misma fecha se ejecutó B2.3: se consolidaron las 63 decisiones conceptuales de la sesión, agrupadas en DEC-GOB-022 a DEC-GOB-030, se delimitó funcionalmente el primer incremento y se actualizaron los asuntos técnicos abiertos. Las decisiones conceptuales no constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación ni autorización de implementación.
+
+En la misma fecha se ejecutó B2.4: se consolidaron las 60 decisiones de la ronda posterior a B2.3, se preparó el análisis preliminar de riesgos y se propusieron 27 requisitos funcionales, 5 no funcionales y 7 restricciones candidatas. Los candidatos están en estado **Propuesto**, no aprobados, y no autorizan pruebas físicas ni implementación.
 
 No se ha aprobado todavía una arquitectura definitiva.
 
@@ -135,6 +138,8 @@ El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las regl
 
 La consolidación, la matriz de las 63 decisiones y el alcance funcional del primer incremento se documentan en `docs/06-decisiones/consolidacion-decisiones-B2.3.md`.
 
+Las 60 decisiones de B2.4 se documentan en `docs/06-decisiones/consolidacion-decisiones-B2.4.md` con referencias `B2.4-D01` a `B2.4-D60`. No reciben identificadores `DEC-GOB` adicionales porque son criterios técnicos y metodológicos ya aprobados; su consolidación es documental.
+
 Las aprobaciones futuras de documentos requerirán el mismo registro expreso.
 
 El directorio `docs/04-modulos/` fue creado con un archivo índice que describe su propósito y su estado pendiente. No contiene especificaciones de módulos.
@@ -144,7 +149,7 @@ El directorio `docs/04-modulos/` fue creado con un archivo índice que describe 
 Permanecen sin contenido:
 
 - `docs/02-arquitectura/` — arquitectura general, hardware, firmware, software e interfaces.
-- `docs/03-seguridad-industrial/` — análisis de riesgos, normas y requisitos de seguridad.
+- `docs/03-seguridad-industrial/normas-aplicables.md` y `docs/03-seguridad-industrial/requisitos-seguridad.md` — evaluación normativa y requisitos de seguridad específicos. `analisis-riesgos.md` contiene una propuesta preliminar.
 - `docs/05-validacion/` — estrategia de pruebas, criterios de aceptación y registro de validaciones.
 - `docs/07-roadmap/` — fases y planificación de implementación.
 - `docs/08-prompts/` — contratos e instrucciones de trabajo para agentes.
@@ -152,7 +157,7 @@ Permanecen sin contenido:
 
 Los archivos vacíos no deberán interpretarse como especificaciones ni decisiones aprobadas.
 
-`docs/06-decisiones/pendientes.md` contiene los asuntos de B2.1 y B2.2.1 resueltos y las preguntas técnicas derivadas que permanecen abiertas. No es un documento vacío.
+`docs/06-decisiones/pendientes.md` contiene los asuntos de B2.1, B2.2.1 y B2.3 resueltos, los datos técnicos pendientes de B2.4 y las preguntas que permanecen abiertas. No es un documento vacío.
 
 La referencia del `README.md` a `docs/04-modulos/` quedó resuelta con la creación del directorio y su índice.
 
@@ -217,6 +222,24 @@ En B2.3 se actualizaron únicamente las referencias de estado afectadas por `DEC
 - `docs/01-requisitos/actores-uso.md` — versión 0.2, sin cambios; no contenía referencias de estado afectadas por B2.3.
 
 Se incorporó `docs/06-decisiones/consolidacion-decisiones-B2.3.md` como documento de consolidación, trazabilidad y delimitación del primer incremento, en estado **Propuesta para aprobación**.
+
+### 4.8. Documentos de B2.4
+
+En B2.4 se incorporaron o actualizaron como propuestas:
+
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md` — consolidación de las 60 decisiones y matriz de trazabilidad.
+- `docs/03-seguridad-industrial/analisis-riesgos.md` — estructura preliminar de peligros, FMEA y funciones de protección.
+- `docs/01-requisitos/requisitos-funcionales.md` — 27 requisitos candidatos.
+- `docs/01-requisitos/requisitos-no-funcionales.md` — 5 requisitos candidatos.
+- `docs/01-requisitos/restricciones-sistema.md` — 7 restricciones candidatas.
+- `docs/01-requisitos/README.md` — actualización de estado y referencias.
+- `docs/06-decisiones/registro-decisiones.md` — referencia a la consolidación B2.4; sin nuevos `DEC-GOB`.
+- `docs/06-decisiones/pendientes.md` — datos técnicos pendientes de B2.4.
+- `docs/01-requisitos/necesidades-producto.md` — versión 0.4, actualización de referencias de estado.
+- `docs/01-requisitos/escenarios-uso.md` — versión 0.4, actualización de referencias de estado.
+- `docs/01-requisitos/actores-uso.md` — versión 0.3, actualización de referencias de estado.
+
+Los tres registros de requisitos conservan la aprobación de su estructura en versión 0.1; sus versiones 0.2 están en **Revisión de documento aprobado**. El índice está en versión 0.3; las necesidades y los escenarios, en 0.4; los actores, en 0.3. Todos están pendientes de aprobación. Los 39 candidatos están en estado **Propuesto**.
 
 ## 5. Metodología de ingeniería
 
@@ -385,6 +408,12 @@ Estado: Aprobadas — alcance conceptual. Registro: `docs/06-decisiones/registro
 
 Estas decisiones delimitan el alcance funcional del primer incremento y el comportamiento conceptual del producto. No aprueban requisitos concretos, arquitectura, tecnologías, protocolos, componentes, prestaciones cuantitativas ni funciones de seguridad certificadas, y no autorizan la implementación.
 
+**Decisiones B2.4 — D01 a D60**
+
+Las 60 decisiones de la ronda posterior a B2.3 se consolidan en `docs/06-decisiones/consolidacion-decisiones-B2.4.md` con referencias `B2.4-D01` a `B2.4-D60`. No crean una nueva familia formal de decisiones ni sustituyen `DEC-GOB` o `ADR`.
+
+Estas decisiones orientan el análisis preliminar de riesgos y los requisitos candidatos. No aprueban los documentos, los requisitos candidatos, la arquitectura, las pruebas físicas ni la implementación.
+
 Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
 ## 9. Asuntos pendientes
@@ -412,13 +441,21 @@ B2.2 inició con B2.2.1, que propuso diez necesidades, siete actores, diez escen
 
 B2.3 consolidó las 63 decisiones conceptuales en `DEC-GOB-022` a `DEC-GOB-030`. La familia inicial del primer incremento queda definida como motores DC con escobillas y su alcance funcional comprende un motor, arranque/parada, PWM, regulación de velocidad, inversión de giro, medición de velocidad y control en lazo abierto y cerrado, junto con PI con anti-windup, filtrado configurable, rampas configurables, transiciones supervisadas y límites validados, conforme a `DEC-GOB-022`.
 
-Permanecen abiertos los asuntos técnicos: modelo y parámetros del motor DC, electrónica de potencia, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación, autenticación y permisos, retención y almacenamiento, actualización de firmware, secuencia de incrementos posteriores y aplicación del piloto industrial.
+B2.4 consolidó las 60 decisiones de la ronda posterior a B2.3, preparó la estructura del análisis preliminar de riesgos y propuso 39 requisitos candidatos:
 
-No hay requisitos concretos definidos ni aprobados. No existe línea base de requisitos concretos.
+- 27 requisitos funcionales `RF-001` a `RF-027`.
+- 5 requisitos no funcionales `RNF-001` a `RNF-005`.
+- 7 restricciones `RES-001` a `RES-007`.
 
-El próximo bloque recomendado es la derivación y elaboración de requisitos verificables, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente.
+Todos los candidatos están en estado **Propuesto**. Ninguno está aprobado.
 
-La aprobación de la línea base de gestión, de las necesidades, de los actores, de los escenarios y de las decisiones conceptuales no autoriza la implementación del producto. Los cambios documentales de B2.3 se prepararon para revisión, sin commit ni push.
+Permanecen abiertos los datos técnicos y las decisiones necesarias para completar los criterios: límites eléctricos, térmicos y mecánicos; rangos de velocidad y rampas; umbrales y tiempos de protección; ganancias y límites PI; filtros y tiempos de comunicación; métricas de estabilidad y desempeño; matriz de criticidad de parámetros; escala y criterios de aceptación de riesgos; y autorización de pruebas físicas.
+
+No hay requisitos aprobados ni línea base de requisitos concretos.
+
+El próximo paso recomendado es revisar y completar los criterios pendientes, aprobar o rechazar los candidatos y establecer una línea base. No se inicia automáticamente.
+
+La aprobación de la línea base de gestión, de las necesidades, de los actores, de los escenarios y de las decisiones conceptuales no autoriza la implementación del producto. B2.4 no autoriza pruebas físicas ni implementación.
 
 ### 9.4. Arquitectura
 
@@ -426,7 +463,7 @@ Pendiente definir la arquitectura general y las arquitecturas de hardware, firmw
 
 ### 9.5. Seguridad industrial
 
-Pendiente desarrollar el análisis de riesgos, los requisitos específicos de seguridad y la evaluación de normas aplicables.
+La estructura preliminar de análisis de riesgos está preparada en `docs/03-seguridad-industrial/analisis-riesgos.md`, con peligros, FMEA y funciones de protección candidatas. Permanecen pendientes la escala y los criterios de aceptación de riesgos, los estados seguros por escenario, los umbrales de protección, la arquitectura de seguridad, la evaluación de normas aplicables y la autorización de pruebas físicas.
 
 ### 9.6. Módulos
 
@@ -434,7 +471,7 @@ Pendiente definir los módulos del producto, sus responsabilidades, interfaces y
 
 ### 9.7. Validación
 
-Pendiente establecer la estrategia de pruebas, los criterios específicos de aceptación y los procedimientos de registro de evidencias.
+Pendiente establecer la estrategia de pruebas, los criterios específicos de aceptación y los procedimientos de registro de evidencias. B2.4 preparó la compuerta documental de autorización y el registro de pruebas, pero no autoriza ensayos físicos.
 
 ### 9.8. Planificación
 
@@ -520,7 +557,23 @@ Interpretar que la familia DC con escobillas define el modelo, las prestaciones 
 
 Interpretar que las respuestas condicionadas por riesgos de `DEC-GOB-024` definen estados seguros, niveles de integridad o conformidad.
 
-Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1. El riesgo de necesidades, actores y escenarios no aprobados quedó resuelto en B2.2.2. El riesgo de decisiones conceptuales dispersas quedó atendido por la consolidación de B2.3; la aprobación documental de esa consolidación permanece pendiente.
+**Requisitos candidatos tratados como aprobados**
+
+Interpretar los 39 requisitos propuestos de B2.4 como línea base o autorización de implementación.
+
+**Valores de riesgo o protección inventados**
+
+Asignar umbrales, tiempos, tolerancias o niveles de riesgo sin análisis y decisión documentada.
+
+**Pruebas físicas anticipadas**
+
+Interpretar la estructura de análisis de riesgos o la compuerta documental como autorización para energizar el banco.
+
+**Confusión entre D01–D60 de B2.4 y D01–D63 de B2.3**
+
+Citar un identificador de decisión sin indicar el bloque de origen.
+
+Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1. El riesgo de necesidades, actores y escenarios no aprobados quedó resuelto en B2.2.2. El riesgo de decisiones conceptuales dispersas quedó atendido por la consolidación de B2.3; la aprobación documental de esa consolidación permanece pendiente. B2.4 añade candidatos y estructura de riesgos, no aprobaciones.
 
 Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los controles documentales establecidos.
 
@@ -528,7 +581,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1, el inicio de B2.2.1, la formalización de B2.2.2 y la consolidación de B2.3 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
+La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1, el inicio de B2.2.1, la formalización de B2.2.2, la consolidación de B2.3 y la preparación de candidatos de B2.4 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -879,19 +932,51 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre:** los cambios quedan preparados en el árbol de trabajo para revisión del responsable del proyecto. No se realizó commit ni push.
 
+### 12.12. Sesión 2026-10-20 — B2.4: Consolidación y especificación preliminar
+
+**Objetivo:** Consolidar las 60 decisiones de la ronda posterior a B2.3, preparar la estructura del análisis preliminar de riesgos y proponer requisitos candidatos verificables.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio y la sincronización con `origin/main` en el commit B2.3 `9b18a33`.
+2. Se leyeron `README.md`, `AGENTS.md`, la bitácora, el registro de decisiones, la consolidación B2.3, las necesidades, actores, escenarios y los registros de requisitos.
+3. Se creó `docs/06-decisiones/consolidacion-decisiones-B2.4.md` con la matriz de las 60 decisiones, redundancias, dependencias, compatibilidad con B2.3 y datos pendientes.
+4. Se preparó `docs/03-seguridad-industrial/analisis-riesgos.md` con identificación de peligros, FMEA, funciones de protección y compuerta de pruebas.
+5. Se incorporaron 27 requisitos funcionales, 5 no funcionales y 7 restricciones candidatas en los registros correspondientes.
+6. Se actualizaron el índice de requisitos y el registro de asuntos pendientes.
+7. Se actualizó esta bitácora.
+8. Se revisó el diff y se ejecutaron las verificaciones documentales.
+
+**Resultados:**
+
+- 60 decisiones consolidadas y trazadas.
+- 23 peligros, 12 análisis FMEA y 14 funciones de protección candidatas.
+- 39 requisitos candidatos: 27 `RF`, 5 `RNF` y 7 `RES`.
+- Ningún requisito aprobado ni línea base de requisitos.
+- Sin valores cuantitativos inventados.
+- Sin selección de arquitectura, componentes, protocolos o tecnologías.
+- Sin declaración de conformidad ni aceptación de riesgos.
+- Sin autorización de pruebas físicas ni implementación.
+
+**Verificaciones ejecutadas:** revisión del diff; cobertura D01–D60; unicidad de identificadores `RF`, `RNF`, `RES`, `HZ`, `FMEA` y `PF`; trazabilidad entre decisiones, peligros y requisitos; ausencia de duplicados; compatibilidad con B2.3; integridad de referencias; `git diff --check`; estado del árbol y sincronización con el remoto.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware. El análisis de riesgos es preliminar y no sustituye la evaluación completa, la arquitectura de seguridad ni la validación industrial. Los requisitos candidatos no están aprobados.
+
+**Cierre:** los cambios se prepararon y verificaron; el commit y el push se realizan al final del bloque conforme a la autorización del responsable del proyecto.
+
 ## 13. Próximo paso
 
-B2.3 consolidó las 63 decisiones conceptuales, delimitó funcionalmente el primer incremento y actualizó los asuntos técnicos abiertos.
+B2.4 consolidó las 60 decisiones de la ronda posterior a B2.3, preparó la estructura del análisis preliminar de riesgos y propuso 39 requisitos candidatos.
 
-El próximo bloque recomendado es la **derivación y elaboración de requisitos verificables del primer incremento**, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente; requiere instrucciones del responsable del proyecto.
+El próximo paso recomendado es **revisar y completar los criterios pendientes, aprobar o rechazar los candidatos y establecer una línea base de requisitos del primer incremento**. No se inicia automáticamente; requiere instrucciones del responsable del proyecto.
 
-Antes de derivar requisitos deberán resolverse o registrarse los asuntos técnicos de la sección 9.3: modelo y parámetros del motor DC, electrónica de potencia, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación, autenticación y permisos, retención y almacenamiento, actualización de firmware, secuencia de incrementos posteriores y aplicación del piloto industrial.
+Antes de aprobar requisitos deberán resolverse o registrarse los datos de la sección 9.3 y de `docs/06-decisiones/pendientes.md`: límites eléctricos, térmicos y mecánicos; rangos de velocidad y rampas; umbrales y tiempos de protección; ganancias y límites PI; filtros y tiempos de comunicación; métricas de estabilidad y desempeño; matriz de criticidad de parámetros; escala y criterios de aceptación de riesgos; y autorización de pruebas físicas.
 
-La aprobación de necesidades, actores, escenarios y decisiones conceptuales no autoriza la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
+La aprobación de necesidades, actores, escenarios y decisiones no autoriza la implementación. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada. B2.4 no autoriza pruebas físicas.
 
-Al iniciar el próximo bloque deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, `docs/06-decisiones/consolidacion-decisiones-B2.3.md`, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+Al iniciar el próximo bloque deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, `docs/01-requisitos/requisitos-funcionales.md`, `docs/01-requisitos/requisitos-no-funcionales.md`, `docs/01-requisitos/restricciones-sistema.md`, `docs/03-seguridad-industrial/analisis-riesgos.md`, `docs/06-decisiones/consolidacion-decisiones-B2.4.md`, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
 
-Las respuestas a las preguntas técnicas pendientes deberán registrarse como decisiones aprobadas; no deberán asumirse.
+Las respuestas a los datos pendientes deberán registrarse como decisiones aprobadas; no deberán asumirse.
 
 ## 14. Criterio de continuidad
 

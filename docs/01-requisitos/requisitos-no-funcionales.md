@@ -1,20 +1,20 @@
 # Requisitos no funcionales — ControlCore
 
-**Proyecto:** ControlCore  
-**Empresa:** makeAutomatic  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial  
-**Documento:** Requisitos no funcionales  
-**Versión:** 0.1  
-**Estado:** Aprobado  
-**Fase:** Ingeniería de requisitos  
-**Fecha de revisión:** 2026-10-19  
-**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
+**Proyecto:** ControlCore
+**Empresa:** makeAutomatic
+**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Documento:** Requisitos no funcionales
+**Versión:** 0.2
+**Estado:** Revisión de documento aprobado — propuesta de requisitos candidatos
+**Fase:** Ingeniería de requisitos
+**Fecha de revisión:** 2026-10-20
+**Aprobación:** Versión 0.1 aprobada el 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.2 pendiente de aprobación
 
 ---
 
 ## 1. Propósito
 
-Este documento constituye el registro de los requisitos no funcionales de ControlCore.
+Este documento constituye el registro de los requisitos no funcionales candidatos de ControlCore para el primer incremento.
 
 Los requisitos no funcionales describen atributos medibles de calidad, comportamiento o restricción interna que el producto deberá satisfacer en condiciones definidas.
 
@@ -27,7 +27,7 @@ No comprende requisitos funcionales ni restricciones externas, que se registran 
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
 
-No se ha definido ningún requisito no funcional. No se ha asignado ningún identificador `RNF-###`. La línea base de gestión de requisitos está aprobada; no existe una línea base de requisitos no funcionales concretos.
+Los requisitos de este documento son **candidatos propuestos**. No constituyen una línea base, no están aprobados y no autorizan implementación.
 
 ## 3. Convenciones
 
@@ -41,84 +41,139 @@ Se aplican las convenciones comunes de `docs/01-requisitos/README.md` (sección 
 - La versión de este documento es independiente de la versión de cada requisito individual.
 - Las referencias documentales utilizan rutas relativas a la raíz del repositorio.
 
-## 4. Estructura de registro
+## 4. Atributos comunes de los candidatos
 
-La ficha normalizada y la obligatoriedad de cada atributo se definen en `docs/01-requisitos/README.md` (sección 4).
+Todos los candidatos de este documento tienen:
 
-El registro de requisitos no funcionales utiliza la siguiente estructura:
+- **Tipo:** `RNF`.
+- **Estado:** Propuesto.
+- **Versión:** 0.1.
+- **Prioridad:** Pendiente de determinar.
+- **Evidencia de verificación:** Pendiente.
+- **Responsable de aprobación:** Responsable del proyecto.
 
-| Identificador | Título | Atributo de calidad | Estado | Versión | Prioridad | Criterio de aceptación | Método de verificación |
-|---|---|---|---|---|---|---|---|
-| — | — | — | — | — | — | — | — |
+La verificabilidad se indica en cada ficha. Un requisito con criterio incompleto no se declara verificable ni aprobable.
 
-**No hay requisitos no funcionales registrados.** La fila anterior es únicamente una referencia de columnas y no constituye un requisito.
+## 5. Índice de requisitos candidatos
 
-## 5. Estados
+| Identificador | Título | Atributo de calidad | Origen | Verificabilidad |
+|---|---|---|---|---|
+| RNF-001 | Estabilidad y desempeño del lazo de velocidad | Desempeño y estabilidad | D51; D52; D53; D54 | Parcial — métricas pendientes |
+| RNF-002 | Integridad y recuperabilidad de la configuración | Integridad y recuperabilidad | D55; D56 | Parcial — mecanismo pendiente |
+| RNF-003 | Integridad y trazabilidad de la auditoría | Auditabilidad | D58 | Parcial — mecanismo pendiente |
+| RNF-004 | Control de acceso a parámetros críticos | Seguridad de configuración | D57; D59 | Parcial — autenticación pendiente |
+| RNF-005 | Detección de fallas internas y disponibilidad de protecciones | Confiabilidad | D32 | Parcial — cobertura pendiente |
 
-Se aplica el ciclo de vida y las transiciones definidos en `docs/01-requisitos/README.md` (sección 5).
+## 6. Requisitos candidatos
 
-La aprobación corresponde al responsable del proyecto. No se establecen aprobaciones automáticas.
+### RNF-001 — Estabilidad y desempeño del lazo de velocidad
 
-## 6. Criterios de calidad
+- **Descripción verificable:** El lazo de velocidad deberá cumplir criterios definidos de estabilidad, error de seguimiento, tiempo de respuesta, sobreimpulso, oscilaciones y respuesta ante cambios de carga, en condiciones de operación especificadas.
+- **Justificación:** Asegurar que el control PI no solo funcione, sino que mantenga un comportamiento estable y predecible.
+- **Origen:** B2.4-D51; B2.4-D52; B2.4-D53; B2.4-D54.
+- **Decisiones relacionadas:** B2.3-D26; B2.3-D35; `DEC-GOB-023`; `DEC-GOB-021`.
+- **Dependencias:** RF-009; RF-010; RF-011; RF-013.
+- **Riesgos relacionados:** HZ-004.
+- **Condiciones de aplicación:** Lazo cerrado, referencias representativas, cambios de carga y perturbaciones controladas.
+- **Criterio de aceptación:** Los criterios de estabilidad, error, respuesta, sobreimpulso y oscilación se cumplen en las condiciones aprobadas. Métricas, valores y tolerancias pendientes.
+- **Método de verificación:** Análisis, simulación y prueba con cargas y referencias representativas.
+- **Verificabilidad:** Parcial — faltan métricas y valores.
+- **Pendientes técnicos:** Definir métricas, valores, tolerancias, condiciones de carga y criterios de estabilidad.
 
-Además de los criterios generales de `docs/01-requisitos/README.md` (sección 6), cada requisito no funcional deberá:
+### RNF-002 — Integridad y recuperabilidad de la configuración
 
-- Identificar el atributo de calidad correspondiente.
-- Definir una métrica o condición observable.
-- Especificar las condiciones de medición o verificación.
-- Evitar adjetivos ambiguos como único criterio.
-- Disponer de un criterio de aceptación objetivo y de un método de verificación.
-- No introducir umbrales de seguridad sin análisis de riesgos y justificación documentada.
-- No imponer una solución de diseño, tecnología o implementación no aprobada.
-- No duplicar ni contradecir otros requisitos.
-- Ser trazable hacia su origen y hacia su verificación.
+- **Descripción verificable:** La configuración deberá almacenarse con comprobaciones de integridad y permitir la recuperación de una configuración válida cuando la configuración activa sea inválida o esté corrupta.
+- **Justificación:** Evitar que una falla de almacenamiento o una configuración inválida impida una operación segura.
+- **Origen:** B2.4-D55; B2.4-D56.
+- **Decisiones relacionadas:** B2.3-D36; `DEC-GOB-026`.
+- **Dependencias:** RF-023; RF-024.
+- **Riesgos relacionados:** HZ-017.
+- **Condiciones de aplicación:** Guardado, carga, actualización y recuperación de configuración.
+- **Criterio de aceptación:** La corrupción o invalidez se detecta; existe una configuración válida recuperable; la recuperación no habilita el motor sin verificar condiciones de seguridad. Mecanismo pendiente.
+- **Método de verificación:** Inspección y prueba con corrupción e invalidez inducidas.
+- **Verificabilidad:** Parcial — falta el mecanismo de integridad.
+- **Pendientes técnicos:** Definir mecanismo de integridad, versionado, respaldo y recuperación.
 
-No se establecerán umbrales cuantitativos de seguridad, prestaciones o confiabilidad sin la justificación y la evidencia correspondientes.
+### RNF-003 — Integridad y trazabilidad de la auditoría
+
+- **Descripción verificable:** Los registros de cambios de configuración deberán ser completos, ordenados, atribuibles y protegidos contra alteraciones no detectadas, de modo que permitan reconstruir el historial.
+- **Justificación:** Sostener la trazabilidad de cambios que afectan el comportamiento del sistema.
+- **Origen:** B2.4-D58.
+- **Decisiones relacionadas:** B2.3-D42; `DEC-GOB-026`.
+- **Dependencias:** RF-026.
+- **Riesgos relacionados:** HZ-017.
+- **Condiciones de aplicación:** Todo cambio de configuración y toda consulta del historial.
+- **Criterio de aceptación:** Cada registro contiene los campos exigidos; el historial es reconstruible; las alteraciones no detectadas se evitan o se detectan. Mecanismo pendiente.
+- **Método de verificación:** Inspección de registros y prueba de integridad.
+- **Verificabilidad:** Parcial — falta el mecanismo de protección.
+- **Pendientes técnicos:** Definir formato, orden, protección de integridad, retención y consulta.
+
+### RNF-004 — Control de acceso a parámetros críticos
+
+- **Descripción verificable:** Solo los perfiles autorizados podrán modificar parámetros críticos, y todo cambio deberá quedar registrado y sujeto a las condiciones operativas aprobadas.
+- **Justificación:** Evitar cambios no autorizados que alteren el comportamiento seguro del sistema.
+- **Origen:** B2.4-D57; B2.4-D59.
+- **Decisiones relacionadas:** B2.3-D15; `DEC-GOB-020`; `DEC-GOB-026`.
+- **Dependencias:** RF-025; RNF-003.
+- **Riesgos relacionados:** HZ-017; HZ-023.
+- **Condiciones de aplicación:** Cambio de parámetros críticos y acceso a funciones de configuración.
+- **Criterio de aceptación:** Los cambios no autorizados son rechazados y registrados; los cambios autorizados cumplen las condiciones operativas. Mecanismo de autenticación y matriz de permisos pendientes.
+- **Método de verificación:** Inspección y prueba con perfiles autorizados y no autorizados.
+- **Verificabilidad:** Parcial — faltan autenticación y matriz de permisos.
+- **Pendientes técnicos:** Definir perfiles, autenticación, permisos y condiciones de cambio.
+
+### RNF-005 — Detección de fallas internas y disponibilidad de protecciones
+
+- **Descripción verificable:** El sistema deberá detectar fallas internas del controlador que puedan afectar funciones de control o protección y aplicar una respuesta acorde con su criticidad.
+- **Justificación:** Evitar que una falla interna elimine silenciosamente funciones necesarias para la seguridad.
+- **Origen:** B2.4-D32.
+- **Decisiones relacionadas:** B2.3-D38; B2.3-D47; `DEC-GOB-024`.
+- **Dependencias:** RF-020.
+- **Riesgos relacionados:** HZ-016.
+- **Condiciones de aplicación:** Operación normal y condiciones anómalas del controlador.
+- **Criterio de aceptación:** Las clases de falla detectables se detectan y la respuesta aprobada se ejecuta; las funciones de protección requeridas permanecen disponibles o el sistema pasa a un estado seguro definido. Cobertura y tiempos pendientes.
+- **Método de verificación:** Análisis, simulación de fallas y prueba controlada.
+- **Verificabilidad:** Parcial — faltan cobertura y tiempos.
+- **Pendientes técnicos:** Definir clases de falla, cobertura, tiempos y estado seguro.
 
 ## 7. Trazabilidad
 
-Se aplica el mecanismo de trazabilidad de `docs/01-requisitos/README.md` (sección 7).
-
-Cada requisito no funcional deberá permitir relacionar, cuando corresponda:
-
-**Necesidad u objetivo de calidad → `RNF-###` → Decisión → Elemento de arquitectura → Implementación → Prueba → Evidencia.**
-
-No existen todavía vínculos registrados porque no se han definido requisitos ni elementos de arquitectura, implementación, prueba o evidencia.
-
-Los vínculos se registrarán como **Existente**, **Pendiente** o **No aplica** según el índice común. No se presupone que todos los elementos existan.
+| Requisito | Decisiones B2.4 | Decisiones B2.3 | Peligros | Verificación |
+|---|---|---|---|---|
+| RNF-001 | D51; D52; D53; D54 | B2.3-D26; B2.3-D35 | HZ-004 | Análisis y prueba |
+| RNF-002 | D55; D56 | B2.3-D36 | HZ-017 | Inspección y prueba |
+| RNF-003 | D58 | B2.3-D42 | HZ-017 | Inspección |
+| RNF-004 | D57; D59 | B2.3-D15 | HZ-017; HZ-023 | Inspección y prueba |
+| RNF-005 | D32 | B2.3-D38; B2.3-D47 | HZ-016 | Análisis y prueba |
 
 ## 8. Pendientes
 
-- No se han definido requisitos no funcionales.
-- No se ha asignado ningún identificador `RNF-###`.
-- Las convenciones de identificación, versiones, estados, prioridad y trazabilidad están aprobadas (DEC-GOB-010 a DEC-GOB-014).
-- La estructura documental está aprobada (DEC-GOB-015).
-- Los umbrales de seguridad, prestaciones y confiabilidad requieren análisis y justificación posteriores.
-- No existe línea base de requisitos no funcionales concretos.
+- Todos los requisitos son candidatos y están en estado **Propuesto**.
+- Las prioridades no están determinadas.
+- Los valores cuantitativos y las métricas no están definidos.
+- Varios criterios de aceptación están incompletos y por ello no se declaran verificables.
+- No existe línea base de requisitos no funcionales.
+- La aprobación corresponde al responsable del proyecto.
 
 ## 9. Referencias
 
 - `README.md`
 - `AGENTS.md`
-- `docs/01-requisitos/README.md`
-- `docs/00-gobierno/vision-producto.md`
-- `docs/00-gobierno/principios-ingenieria.md`
-- `docs/00-gobierno/metodologia-diseno.md` (secciones 24, 25 y 26)
-- `docs/00-gobierno/criterios-calidad.md` (secciones 3, 9, 10 y 13)
-- `docs/00-gobierno/definicion-de-terminado.md` (secciones 7, 19 y 20)
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
+- `docs/00-gobierno/metodologia-diseno.md`
+- `docs/00-gobierno/definicion-de-terminado.md`
+- `docs/01-requisitos/README.md`
+- `docs/01-requisitos/necesidades-producto.md`
+- `docs/01-requisitos/actores-uso.md`
+- `docs/01-requisitos/escenarios-uso.md`
+- `docs/03-seguridad-industrial/analisis-riesgos.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.4.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
-- `docs/02-arquitectura/` (futuro)
-- `docs/03-seguridad-industrial/` (futuro)
-- `docs/05-validacion/` (futuro)
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.1:** estructura inicial del registro de requisitos no funcionales. Sin requisitos definidos.
 - **0.1 — 2026-10-19 — B2.1.1:** aprobación de la estructura y de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
-
----
-
-**ControlCore — makeAutomatic**  
-*Ingeniería, automatización y desarrollo de soluciones industriales.*
+- **0.2 — 2026-10-20 — B2.4:** incorporación de cinco requisitos no funcionales candidatos y trazabilidad a D01–D60. Ningún requisito aprobado.
