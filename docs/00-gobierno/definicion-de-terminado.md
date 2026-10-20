@@ -765,6 +765,7 @@ Este documento deberá aplicarse conjuntamente con:
 - `docs/01-requisitos/`
 - `docs/02-arquitectura/`
 - `docs/03-seguridad-industrial/`
+- `docs/04-modulos/`
 - `docs/05-validacion/`
 - `docs/06-decisiones/`
 - `docs/07-roadmap/`

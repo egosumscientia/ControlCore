@@ -202,6 +202,7 @@ Las definiciones detalladas se encontrarán en:
 - `docs/01-requisitos/`
 - `docs/02-arquitectura/`
 - `docs/03-seguridad-industrial/`
+- `docs/04-modulos/`
 - `docs/05-validacion/`
 - `docs/06-decisiones/`
 

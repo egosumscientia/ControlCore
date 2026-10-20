@@ -4,10 +4,10 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.3  
+**Versión del documento:** 0.4  
 **Fase actual:** Gobierno documental y preparación de ingeniería  
-**Bloque:** B1.1 — Cierre de coherencia documental  
-**Estado del bloque:** Asuntos de B1 resueltos; aprobación formal y generalización de metodología pendientes  
+**Bloque:** B1.2 — Generalización completa y auditoría de gobierno  
+**Estado del bloque:** Auditoría completada; correcciones editoriales aplicadas; aprobación formal pendiente  
 **Estado del proyecto:** Ingeniería conceptual — implementación no autorizada
 
 ---
@@ -68,6 +68,8 @@ Durante la sesión del 19 de octubre de 2026 se consolidó el gobierno documenta
 
 En la misma fecha se ejecutó el bloque B1.1: se generalizaron las reglas de agentes en `README.md` y `AGENTS.md`, se creó el directorio `docs/04-modulos/` con su índice inicial y se incorporaron las reglas DEC-GOB-001 a DEC-GOB-007 al registro formal de decisiones. Los cinco documentos sustantivos de gobierno permanecen como propuestas.
 
+También en esa fecha se ejecutó el bloque B1.2: se generalizaron las referencias de herramienta de `docs/00-gobierno/metodologia-diseno.md`, se registró DEC-GOB-008 y se realizó la auditoría integral de los cinco documentos sustantivos de gobierno. Las correcciones aplicadas son editoriales y no modifican decisiones, obligaciones ni alcance. Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+
 No se ha aprobado todavía una arquitectura definitiva.
 
 No se ha autorizado la implementación del producto.
@@ -94,6 +96,10 @@ Durante B1.1 se incorporaron además:
 - `docs/04-modulos/README.md` — índice inicial del directorio de módulos.
 - `docs/06-decisiones/registro-decisiones.md` — registro formal de decisiones de gobierno.
 
+Durante B1.2 se incorporó:
+
+- `docs/00-gobierno/auditoria-gobierno-B1.md` — informe de auditoría integral del gobierno documental.
+
 `README.md` y `AGENTS.md` no fueron modificados durante B1; fueron actualizados en B1.1 para generalizar las reglas de agentes.
 
 Los cinco documentos sustantivos de gobierno se encuentran en estado **Propuesta para aprobación**. Esta bitácora es un registro de continuidad y no un documento de aprobación.
@@ -104,7 +110,7 @@ Los documentos de gobierno se encuentran incorporados al repositorio y versionad
 
 La aprobación formal de cada documento deberá ser otorgada de forma expresa por el responsable del proyecto, conforme a `metodologia-diseno.md` (sección 24). Mientras no exista ese registro, los documentos deberán tratarse como propuestas de referencia y no como especificaciones aprobadas.
 
-El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007, incorporadas desde esta bitácora. Su registro no implica la aprobación de los documentos sustantivos de gobierno.
+El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y la decisión aprobada DEC-GOB-008. Su registro no implica la aprobación de los documentos sustantivos de gobierno.
 
 El directorio `docs/04-modulos/` fue creado con un archivo índice que describe su propósito y su estado pendiente. No contiene especificaciones de módulos.
 
@@ -204,7 +210,7 @@ Las pruebas de laboratorio no equivaldrán automáticamente a validación indust
 
 Las siguientes reglas de trabajo están confirmadas por la documentación existente y por las instrucciones establecidas durante la sesión.
 
-Las referencias DEC-GOB-001 a DEC-GOB-007 se conservan como reglas de gobierno confirmadas. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en el bloque B1.1. Su registro no aprueba los documentos sustantivos de gobierno, que permanecen como propuestas.
+Las referencias DEC-GOB-001 a DEC-GOB-008 se conservan como reglas y decisiones de gobierno. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1 y B1.2. Su registro no aprueba los documentos sustantivos de gobierno, que permanecen como propuestas.
 
 **DEC-GOB-001 — Naturaleza del producto**
 
@@ -236,11 +242,11 @@ La continuidad del proyecto deberá basarse en la documentación vigente del rep
 
 `ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
 
-**Decisión aprobada en B1.1 — Generalización de las instrucciones de agentes**
+**DEC-GOB-008 — Independencia de proveedores y herramientas de IA**
 
-Las reglas operativas para agentes de IA deberán ser independientes del proveedor, modelo o herramienta y aplicarse a cualquier agente que participe en ControlCore.
+Las instrucciones, procedimientos y reglas de ingeniería de ControlCore deberán ser independientes de proveedores, modelos y herramientas específicas de inteligencia artificial. Cualquier agente que participe en el proyecto deberá cumplir las mismas obligaciones de consulta del repositorio, respeto por las decisiones aprobadas, trazabilidad, seguridad, calidad y autoridad del responsable del proyecto.
 
-Esta decisión fue aprobada por el responsable del proyecto en el bloque B1.1 y se refleja en `README.md` y `AGENTS.md`. No modifica las reglas DEC-GOB-001 a DEC-GOB-007 ni implica la aprobación de los documentos sustantivos de gobierno.
+Estado: Aprobada. Origen: aprobación expresa del responsable del proyecto durante B1.1 y autorización de formalización durante B1.2.
 
 Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
@@ -259,11 +265,10 @@ Mientras no se realice esta aprobación, los documentos permanecen como propuest
 
 ### 9.2. Coherencia documental
 
-- Generalizar las referencias específicas de herramienta que permanecen en `metodologia-diseno.md` (secciones 17, 19, 21 y 23), para mantener la coherencia con las reglas neutrales de `README.md` y `AGENTS.md`. Requiere autorización específica porque el alcance de B1.1 no incluyó ese documento.
-- Incorporar la decisión de generalización aprobada en B1.1 al registro formal con un identificador propio, si el responsable lo considera necesario.
+- Atender los hallazgos no bloqueantes H-03 a H-06 del informe de auditoría, aceptándolos formalmente o autorizando su corrección.
 - Verificar, al iniciar el próximo bloque documental, que las referencias entre documentos y la numeración de secciones sigan siendo válidas.
 
-La referencia a `docs/04-modulos/` y la incorporación de DEC-GOB-001 a DEC-GOB-007 quedaron resueltas en B1.1.
+La generalización de `metodologia-diseno.md`, la referencia a `docs/04-modulos/`, la incorporación de DEC-GOB-001 a DEC-GOB-007 y el registro de DEC-GOB-008 quedaron resueltos en B1.1 y B1.2.
 
 ### 9.3. Requisitos
 
@@ -315,6 +320,14 @@ Asumir que un documento incorporado al repositorio, publicado mediante Git o cit
 
 Mantener referencias a directorios, herramientas o documentos que no reflejan el estado real del repositorio.
 
+**Terminología de estados**
+
+Usar el término «En revisión» con alcances distintos para documentos, trabajos y requisitos, generando confusión en la bitácora o en los registros.
+
+**Hallazgos editoriales pendientes**
+
+Mantener observaciones no bloqueantes de estilo o metadatos sin una decisión expresa sobre su aceptación o corrección.
+
 **Pérdida de trazabilidad**
 
 Tomar decisiones durante conversaciones sin registrarlas posteriormente en el repositorio.
@@ -333,7 +346,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La consolidación documental del bloque B1 no modifica este estado.
+La consolidación documental de los bloques B1, B1.1 y B1.2 no modifica este estado.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -421,17 +434,50 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.4. Sesión 2026-10-19 — B1.2: Generalización completa y auditoría de gobierno
+
+**Objetivo:** Completar la generalización de las instrucciones para agentes de IA, registrar formalmente DEC-GOB-008 y realizar una auditoría integral de los cinco documentos sustantivos de gobierno.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B1.1 `3381967`.
+2. Se leyeron `README.md`, `AGENTS.md`, los documentos de `docs/00-gobierno/` y el registro de decisiones.
+3. Se generalizaron las referencias a proveedores y herramientas en `metodologia-diseno.md` (secciones 17, 19, 21 y 23).
+4. Se registró DEC-GOB-008 en `docs/06-decisiones/registro-decisiones.md`.
+5. Se auditaron los cinco documentos sustantivos contra los catorce criterios establecidos en el bloque.
+6. Se corrigieron las referencias incompletas a `docs/04-modulos/` en visión, criterios de calidad y definición de terminado.
+7. Se creó `docs/00-gobierno/auditoria-gobierno-B1.md` con hallazgos, correcciones, pendientes y recomendación.
+8. Se actualizó esta bitácora.
+9. Se revisó el diff y se ejecutaron las comprobaciones disponibles.
+
+**Resultados:**
+
+- Metodología independiente de proveedores, modelos y herramientas de IA.
+- DEC-GOB-008 aprobada y registrada formalmente.
+- Auditoría integral completada sin hallazgos bloqueantes.
+- Correcciones editoriales aplicadas sin modificar decisiones, obligaciones ni alcance.
+- Hallazgos no bloqueantes H-03 a H-06 documentados y pendientes de aceptación o corrección.
+- Los cinco documentos sustantivos de gobierno permanecen en estado **Propuesta para aprobación**.
+- No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
+- No se realizó implementación ni validación industrial.
+
+**Verificaciones ejecutadas:** revisión del diff, comprobación de referencias y rutas, verificación de estados documentales, comprobación de identificadores únicos DEC-GOB-001 a DEC-GOB-008, búsqueda de referencias específicas a proveedores de IA, verificación de conservación de obligaciones, comprobación de trazabilidad de los hallazgos y verificación del alcance autorizado.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. La auditoría es documental y no sustituye las evaluaciones técnicas, eléctricas, mecánicas, ambientales o de seguridad requeridas para una aplicación industrial.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-Los bloques B1 y B1.1 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
+Los bloques B1, B1.1 y B1.2 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
 
 La siguiente actividad recomendada es:
 
-1. Revisar y aprobar formalmente los cinco documentos de gobierno, registrando versión, fecha y autoridad.
-2. Autorizar, si se considera necesaria, la generalización de las referencias de herramienta que permanecen en `metodologia-diseno.md`.
+1. Revisar el informe `docs/00-gobierno/auditoria-gobierno-B1.md` y decidir la aprobación formal de los cinco documentos, aceptando o corrigiendo los hallazgos H-03 a H-06.
+2. Registrar cada aprobación con versión, fecha y autoridad, conforme a `metodologia-diseno.md` (sección 24).
 3. Una vez aprobado el gobierno, autorizar el bloque de requisitos y definir el esquema de identificadores.
 
-Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo, el registro de decisiones y los documentos del bloque correspondiente.
+Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo, el registro de decisiones y el informe de auditoría.
 
 No deberán modificarse decisiones aprobadas sin autorización.
 

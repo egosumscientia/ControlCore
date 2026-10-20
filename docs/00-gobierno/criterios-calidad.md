@@ -667,6 +667,7 @@ Este documento deberá interpretarse conjuntamente con:
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
 - Los documentos de requisitos.
 - Las especificaciones arquitectónicas.
+- Las especificaciones de módulos.
 - Los documentos de seguridad industrial.
 - Los planes y resultados de validación.
 - Los registros de decisiones aprobadas.

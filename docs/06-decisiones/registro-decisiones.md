@@ -4,7 +4,7 @@
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
 **Versión del documento:** 0.1  
-**Estado:** Registro inicial — reglas de gobierno confirmadas  
+**Estado:** Registro de decisiones de gobierno — reglas confirmadas y decisión aprobada  
 **Fase:** Gobierno documental  
 **Fecha de incorporación:** 2026-10-19
 
@@ -18,10 +18,12 @@ Las decisiones aquí registradas provienen de reglas ya confirmadas en `docs/00-
 
 ## 2. Convenciones y alcance
 
-- **DEC-GOB-###:** identificador de reglas de gobierno.
+- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno.
 - **ADR-###:** reservado para futuras decisiones arquitectónicas, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10).
-- **Estado:** situación de la regla en este registro.
-- **Referencia de origen:** documento y sección donde la regla fue confirmada.
+- **Estado:** situación de la regla o decisión en este registro.
+  - **Confirmada:** regla previamente confirmada en `ESTADO-ACTUAL.md`.
+  - **Aprobada:** decisión adoptada expresamente por el responsable del proyecto.
+- **Referencia de origen:** documento y sección donde la regla o decisión fue confirmada o aprobada.
 
 La fecha de incorporación al registro no se interpreta como fecha de aprobación original de la decisión.
 
@@ -38,6 +40,7 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 | DEC-GOB-005 | Calidad obligatoria | Confirmada — regla de gobierno vigente |
 | DEC-GOB-006 | Repositorio como fuente de referencia | Confirmada — regla de gobierno vigente |
 | DEC-GOB-007 | Bitácora al cierre de sesión | Confirmada — regla de gobierno vigente |
+| DEC-GOB-008 | Independencia de proveedores y herramientas de IA | Aprobada |
 
 ## 4. Decisiones registradas
 
@@ -90,9 +93,16 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 - **Estado:** Confirmada — regla de gobierno vigente.
 - **Referencia de origen:** `docs/00-gobierno/ESTADO-ACTUAL.md`, sección 8, DEC-GOB-007.
 
+### DEC-GOB-008 — Independencia de proveedores y herramientas de IA
+
+- **Contenido:** Las instrucciones, procedimientos y reglas de ingeniería de ControlCore deberán ser independientes de proveedores, modelos y herramientas específicas de inteligencia artificial. Cualquier agente que participe en el proyecto deberá cumplir las mismas obligaciones de consulta del repositorio, respeto por las decisiones aprobadas, trazabilidad, seguridad, calidad y autoridad del responsable del proyecto.
+- **Justificación documentada:** `README.md` (sección 7) y `AGENTS.md` (secciones 1 y 4) establecen reglas aplicables a cualquier agente, independientemente de su proveedor, modelo o herramienta; `docs/00-gobierno/metodologia-diseno.md` (secciones 3.2, 17, 19, 21 y 23) aplica la misma independencia a los procedimientos de ingeniería.
+- **Estado:** Aprobada.
+- **Referencia de origen:** Aprobación expresa del responsable del proyecto durante B1.1 y autorización de formalización durante B1.2.
+
 ## 5. Documentos de gobierno que permanecen como propuestas
 
-El registro de estas reglas no implica la aprobación de los documentos sustantivos de gobierno.
+El registro de estas reglas y la aprobación de DEC-GOB-008 no implican la aprobación de los documentos sustantivos de gobierno.
 
 A la fecha de incorporación de este registro, los siguientes documentos permanecen en estado **Propuesta para aprobación**:
 

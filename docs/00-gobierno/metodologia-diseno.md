@@ -352,7 +352,7 @@ La implementación comenzará únicamente cuando el responsable del proyecto la 
 
 Los agentes de programación deberán trabajar sobre especificaciones aprobadas y tareas delimitadas.
 
-## 17. Preparación de tareas para Codex
+## 17. Preparación de tareas de implementación
 
 Una vez que un bloque alcance suficiente madurez, podrá transformarse en tareas de implementación.
 
@@ -395,7 +395,7 @@ Una implementación funcional que incumpla requisitos estructurales relevantes n
 
 El repositorio GitHub será la referencia persistente del estado del proyecto.
 
-Las conversaciones de ChatGPT podrán utilizarse para realizar análisis y tomar decisiones, pero la continuidad no dependerá exclusivamente del historial de esas conversaciones.
+Las conversaciones con asistentes de IA podrán utilizarse para realizar análisis y tomar decisiones, pero la continuidad no dependerá exclusivamente del historial de esas conversaciones.
 
 El repositorio deberá conservar:
 
@@ -434,9 +434,9 @@ Deberá contener:
 
 Al iniciar una nueva conversación, el asistente deberá consultar este archivo y los documentos relacionados antes de continuar.
 
-## 21. Consulta de repositorios desde ChatGPT
+## 21. Consulta de repositorios por agentes de IA
 
-Cuando el responsable proporcione la URL de un repositorio GitHub, el asistente deberá utilizar primero el conector de GitHub disponible en la conversación para consultar el repositorio real.
+Cuando el responsable proporcione la URL de un repositorio, el agente deberá utilizar primero el mecanismo de acceso disponible en su entorno para consultar el repositorio real.
 
 Deberá:
 
@@ -447,7 +447,7 @@ Deberá:
 - Evitar inventar archivos, métodos o funcionalidades.
 - Recuperar decisiones documentadas antes de formular nuevas preguntas.
 
-No deberá redirigir automáticamente al usuario a Work para una consulta que pueda realizarse mediante el conector.
+No deberá redirigir automáticamente al usuario a otra herramienta o entorno para una consulta que pueda realizarse mediante el mecanismo de acceso disponible.
 
 Si existe una limitación de acceso, deberá explicarla con precisión.
 
@@ -481,9 +481,9 @@ Para retomar el proyecto, el responsable podrá utilizar el siguiente mensaje:
 >
 > Repositorio GitHub: [URL].
 >
-> Consulta primero el repositorio mediante el conector de GitHub disponible en ChatGPT. Lee `AGENTS.md`, `docs/00-gobierno/metodologia-diseno.md` y `docs/00-gobierno/ESTADO-ACTUAL.md`, además de los documentos relevantes para el bloque activo.
+> Consulta primero el repositorio mediante el mecanismo de acceso disponible en tu entorno. Lee `AGENTS.md`, `docs/00-gobierno/metodologia-diseno.md` y `docs/00-gobierno/ESTADO-ACTUAL.md`, además de los documentos relevantes para el bloque activo.
 >
-> Recupera las decisiones aprobadas, los asuntos pendientes y el próximo paso. No me pidas repetir decisiones documentadas ni me redirijas a Work.
+> Recupera las decisiones aprobadas, los asuntos pendientes y el próximo paso. No me pidas repetir decisiones documentadas ni me redirijas a otra herramienta o entorno.
 >
 > Trabajaremos una decisión de ingeniería por vez, preferiblemente con alternativas A/B/C, ventajas, desventajas y recomendación técnica. Yo apruebo las decisiones arquitectónicas.
 >
