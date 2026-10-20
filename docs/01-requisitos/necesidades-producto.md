@@ -4,11 +4,11 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Necesidades del producto  
-**Versión:** 0.2  
-**Estado:** Aprobado  
-**Fase:** Ingeniería de requisitos  
+**Versión:** 0.3  
+**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
+**Fase:** Ingeniería conceptual y de requisitos  
 **Fecha de revisión:** 2026-10-20  
-**Aprobación:** 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic
+**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
 
 ---
 
@@ -17,6 +17,8 @@
 Este documento identifica las necesidades del producto a partir de la visión aprobada y de los documentos de gobierno de ControlCore, y registra su aprobación formal.
 
 Las necesidades fueron propuestas en B2.2.1 y aprobadas en B2.2.2. Su finalidad es proporcionar una base trazable para la definición posterior de requisitos, sin convertir posibilidades conceptuales en requisitos obligatorios.
+
+La versión 0.3 actualiza únicamente las referencias de estado afectadas por las decisiones conceptuales de B2.3 (`DEC-GOB-022` a `DEC-GOB-030`). No modifica las necesidades aprobadas ni las decisiones `DEC-GOB-016` a `DEC-GOB-021`.
 
 ## 2. Alcance
 
@@ -163,10 +165,10 @@ La aprobación confirma la necesidad, no un conjunto concreto de requisitos, int
 
 ### 5.1. Límites vigentes
 
-La visión aprobada y las decisiones DEC-GOB-017 a DEC-GOB-021 mantienen los siguientes límites:
+La visión aprobada y las decisiones DEC-GOB-017 a DEC-GOB-030 mantienen los siguientes límites:
 
 - No existe selección definitiva de plataforma electrónica ni arquitectura de control.
-- No se ha seleccionado la familia de motores o actuadores del primer incremento; solo se aprobó un objetivo de extensibilidad.
+- La familia inicial del primer incremento está definida como motores DC con escobillas (`DEC-GOB-022`); el modelo, las prestaciones y la electrónica no están seleccionados.
 - No se han aprobado protocolos de comunicación, interfaces concretas ni arquitectura de backend o frontend.
 - No se han establecido prestaciones cuantitativas de control, supervisión o diagnóstico.
 - No se ha determinado la clasificación de seguridad de una aplicación concreta ni se han aprobado funciones de seguridad certificadas para la primera versión.
@@ -174,13 +176,13 @@ La visión aprobada y las decisiones DEC-GOB-017 a DEC-GOB-021 mantienen los sig
 
 Estos límites no se resuelven en este documento.
 
-### 5.2. Límites y definiciones pendientes tras B2.2.2
+### 5.2. Límites y definiciones pendientes tras B2.3
 
-| Tema | Estado tras B2.2.2 | Referencia |
+| Tema | Estado tras B2.3 | Referencia |
 |---|---|---|
-| Tipos de motores y actuadores | Objetivo de extensibilidad aprobado; familia inicial del primer incremento pendiente. | `DEC-GOB-018` |
+| Tipos de motores y actuadores | Objetivo de extensibilidad aprobado; familia inicial del primer incremento definida como motores DC con escobillas; modelo y parámetros pendientes. | `DEC-GOB-018`, `DEC-GOB-022` |
 | Aplicaciones industriales prioritarias | Plataforma genérica aprobada; aplicaciones concretas no seleccionadas. | `DEC-GOB-018` |
-| Alcance de la primera versión | Capacidades objetivo y exclusiones aprobadas; alcance exacto del primer incremento pendiente. | `DEC-GOB-019` |
+| Alcance de la primera versión | Capacidades objetivo y exclusiones aprobadas; alcance funcional del primer incremento delimitado; prestaciones y detalles pendientes. | `DEC-GOB-019`, `DEC-GOB-022` |
 | Límites de responsabilidad entre ControlCore y la máquina | Obligación de delimitación documental aprobada; asignación concreta pendiente. | `DEC-GOB-017` |
 | Funciones de seguridad y responsabilidades externas | Funciones certificadas excluidas de la primera versión; análisis de riesgos y arquitectura de seguridad pendientes. | `DEC-GOB-017`, `DEC-GOB-019` |
 | Condiciones de instalación | Entorno industrial real aprobado; condiciones cuantitativas pendientes. | `DEC-GOB-018` |
@@ -214,16 +216,16 @@ Las quince preguntas de B2.2.1 fueron resueltas conceptualmente por el responsab
 
 ### 6.2. Preguntas técnicas derivadas que permanecen abiertas
 
-Las decisiones anteriores resuelven el marco conceptual, pero no especifican los valores, interfaces, arquitecturas ni procedimientos necesarios para implementar y verificar. Permanecen abiertos, al menos:
+Las decisiones anteriores resuelven el marco conceptual, pero no especifican los valores, interfaces, arquitecturas ni procedimientos necesarios para implementar y verificar. B2.3 resolvió conceptualmente la familia inicial y el alcance funcional del primer incremento; los detalles técnicos asociados permanecen abiertos. Permanecen abiertos, al menos:
 
-1. **Familia de motores y actuadores del primer incremento implementable.** Derivada de `PREG-P-05` y `DEC-GOB-018`.
+1. **Modelo, parámetros y electrónica del motor DC del primer incremento.** La familia está definida como motores DC con escobillas; el modelo, la tensión, la corriente, la potencia y la electrónica de potencia permanecen pendientes. Derivado de `D01`, `D19` y `D25` (`DEC-GOB-022`, `DEC-GOB-028`).
 2. **Prestaciones cuantitativas de control, supervisión y diagnóstico.** Derivada de `PREG-P-13` y `DEC-GOB-021`.
 3. **Condiciones eléctricas, ambientales y de instalación cuantitativas.** Derivada de `PREG-P-06` y `DEC-GOB-018`.
-4. **Interfaces, protocolos y sistemas externos concretos.** Derivada de `PREG-P-10` y `DEC-GOB-020`.
-5. **Arquitectura de seguridad, funciones de seguridad y estados seguros por aplicación.** Derivada de `PREG-P-01`, `PREG-P-02`, `PREG-P-03` y `DEC-GOB-017`.
-6. **Métodos de verificación, criterios de aceptación cuantitativos y entorno de pruebas.** Derivada de `PREG-P-13`, `PREG-P-14` y `DEC-GOB-021`.
-7. **Alcance exacto del primer incremento y su priorización.** Derivada de `PREG-P-07`, `PREG-P-08`, `PREG-P-09` y `DEC-GOB-019`.
-8. **Autenticación, matriz detallada de permisos, retención y almacenamiento de información.** Derivada de `PREG-P-11`, `PREG-P-12` y `DEC-GOB-020`.
+4. **Interfaces, protocolos y sistemas externos concretos.** Derivada de `PREG-P-10` y `DEC-GOB-020`; los principios de desacoplamiento y versionado están aprobados, pero las interfaces concretas no.
+5. **Arquitectura de seguridad, funciones de seguridad y estados seguros por aplicación.** Derivada de `PREG-P-01`, `PREG-P-02`, `PREG-P-03` y `DEC-GOB-017`; las respuestas ante fallas están condicionadas por riesgos.
+6. **Métodos de verificación, criterios de aceptación cuantitativos y entorno de pruebas.** Derivada de `PREG-P-13`, `PREG-P-14` y `DEC-GOB-021`; la estrategia conceptual está aprobada, pero los procedimientos y valores no.
+7. **Límites cuantitativos, interfaces, medidas de protección y criterios de aceptación del primer incremento.** El alcance funcional está delimitado por `D25` (`DEC-GOB-022`); estos detalles permanecen abiertos. Derivado de `PREG-P-07`, `PREG-P-08`, `PREG-P-09` y `DEC-GOB-019`.
+8. **Autenticación, matriz detallada de permisos, retención y almacenamiento de información.** Derivada de `PREG-P-11`, `PREG-P-12` y `DEC-GOB-020`; los perfiles están aprobados, pero los mecanismos no.
 
 Estos asuntos no constituyen decisiones aprobadas. Deberán resolverse antes de implementar el alcance afectado.
 
@@ -244,10 +246,13 @@ Estos asuntos no constituyen decisiones aprobadas. Deberán resolverse antes de 
 
 Estos vínculos son de trazabilidad documental. No constituyen requisitos aprobados ni una matriz de trazabilidad de requisitos.
 
+Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estas necesidades a través de la matriz de `docs/06-decisiones/consolidacion-decisiones-B2.3.md`. Esa matriz es de trazabilidad conceptual y no crea requisitos.
+
 ## 8. Pendientes
 
 - Las diez necesidades están aprobadas (DEC-GOB-016).
 - Las quince preguntas de B2.2.1 fueron resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021).
+- Las decisiones conceptuales de B2.3 fueron consolidadas en `DEC-GOB-022` a `DEC-GOB-030`.
 - Permanecen abiertas las preguntas técnicas derivadas de la sección 6.2.
 - No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
 - No se han definido requisitos concretos ni una línea base de requisitos.
@@ -268,11 +273,13 @@ Estos vínculos son de trazabilidad documental. No constituyen requisitos aproba
 - `docs/01-requisitos/escenarios-uso.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** identificación inicial de necesidades candidatas y preguntas abiertas. Propuesta pendiente de validación y aprobación.
 - **0.2 — 2026-10-20 — B2.2.2:** aprobación de las diez necesidades (DEC-GOB-016); resolución conceptual de `PREG-P-01` a `PREG-P-15` (DEC-GOB-017 a DEC-GOB-021); incorporación de las preguntas técnicas derivadas que permanecen abiertas.
+- **0.3 — 2026-10-20 — B2.3:** actualización de las referencias de estado afectadas por `DEC-GOB-022` a `DEC-GOB-030`; precisión de la familia inicial y del alcance funcional del primer incremento. Las necesidades y las decisiones anteriores no se modifican. Versión pendiente de aprobación.
 
 ---
 

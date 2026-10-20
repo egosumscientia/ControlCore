@@ -4,11 +4,11 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Escenarios de uso  
-**Versión:** 0.2  
-**Estado:** Aprobado  
-**Fase:** Ingeniería de requisitos  
+**Versión:** 0.3  
+**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
+**Fase:** Ingeniería conceptual y de requisitos  
 **Fecha de revisión:** 2026-10-20  
-**Aprobación:** 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic
+**Aprobación:** Versión 0.2 aprobada el 2026-10-20 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.3 pendiente de aprobación
 
 ---
 
@@ -17,6 +17,8 @@
 Este documento registra los escenarios aprobados como base conceptual de utilización industrial de ControlCore.
 
 Los escenarios fueron propuestos en B2.2.1 y aprobados en B2.2.2. Su finalidad es facilitar la derivación de requisitos concretos a partir de condiciones de uso trazables.
+
+La versión 0.3 actualiza únicamente las referencias de estado afectadas por las decisiones conceptuales de B2.3 (`DEC-GOB-022` a `DEC-GOB-030`). No modifica los escenarios aprobados ni las decisiones `DEC-GOB-016` a `DEC-GOB-021`.
 
 ## 2. Alcance
 
@@ -179,11 +181,13 @@ Los escenarios identifican condiciones anormales de forma conceptual. No definen
 
 `DEC-GOB-017` aprobó que los estados seguros dependen del análisis de riesgos de cada aplicación y que no debe asumirse que detener un motor o cortar su alimentación constituye siempre una condición segura. `DEC-GOB-019` excluyó las funciones de seguridad certificadas de la primera versión mientras no exista el proceso de análisis y evaluación de conformidad correspondiente.
 
+B2.3 aprobó conceptualmente respuestas diferenciadas ante fallas, recuperación configurable tras interrupciones, respuesta ante pérdida de comunicaciones o realimentación, watchdog y recuperación supervisada (`D07`, `D11`, `D17`, `D30`, `D38`, `D51`; `DEC-GOB-024`). Todas ellas están condicionadas por la evaluación de riesgos y no definen estados seguros ni procedimientos concretos.
+
 Cualquier comportamiento asociado a condiciones anormales deberá derivarse de:
 
 - El análisis de riesgos de la aplicación.
 - La delimitación de responsabilidades entre ControlCore y la máquina.
-- Las decisiones DEC-GOB-017 y DEC-GOB-019.
+- Las decisiones `DEC-GOB-017`, `DEC-GOB-019` y `DEC-GOB-024`.
 - Los requisitos de seguridad que se aprueben posteriormente.
 
 ## 6. Decisiones aprobadas y preguntas técnicas derivadas
@@ -212,14 +216,14 @@ Las quince preguntas de B2.2.1 fueron resueltas conceptualmente (DEC-GOB-017 a D
 
 ### 6.2. Preguntas técnicas derivadas que permanecen abiertas
 
-1. Familia de motores y actuadores del primer incremento implementable. Derivada de `PREG-P-05` y `DEC-GOB-018`.
+1. Modelo, parámetros y electrónica del motor DC del primer incremento. La familia está definida como motores DC con escobillas; el modelo, la tensión, la corriente, la potencia y la electrónica de potencia permanecen pendientes. Derivado de `D01`, `D19` y `D25` (`DEC-GOB-022`, `DEC-GOB-028`).
 2. Prestaciones cuantitativas de control, supervisión y diagnóstico. Derivadas de `PREG-P-13` y `DEC-GOB-021`.
 3. Condiciones eléctricas, ambientales y de instalación cuantitativas. Derivadas de `PREG-P-06` y `DEC-GOB-018`.
-4. Interfaces, protocolos y sistemas externos concretos. Derivados de `PREG-P-10` y `DEC-GOB-020`.
-5. Arquitectura de seguridad, funciones de seguridad y estados seguros por aplicación. Derivada de `PREG-P-01`, `PREG-P-02`, `PREG-P-03` y `DEC-GOB-017`.
-6. Métodos de verificación, criterios de aceptación cuantitativos y entorno de pruebas. Derivados de `PREG-P-13`, `PREG-P-14` y `DEC-GOB-021`.
-7. Alcance exacto del primer incremento y su priorización. Derivado de `PREG-P-07`, `PREG-P-08`, `PREG-P-09` y `DEC-GOB-019`.
-8. Autenticación, matriz detallada de permisos, retención y almacenamiento de información. Derivados de `PREG-P-11`, `PREG-P-12` y `DEC-GOB-020`.
+4. Interfaces, protocolos y sistemas externos concretos. Derivados de `PREG-P-10` y `DEC-GOB-020`; los principios de desacoplamiento y versionado están aprobados, pero las interfaces concretas no.
+5. Arquitectura de seguridad, funciones de seguridad y estados seguros por aplicación. Derivada de `PREG-P-01`, `PREG-P-02`, `PREG-P-03` y `DEC-GOB-017`; las respuestas ante fallas están condicionadas por riesgos.
+6. Métodos de verificación, criterios de aceptación cuantitativos y entorno de pruebas. Derivados de `PREG-P-13`, `PREG-P-14` y `DEC-GOB-021`; la estrategia conceptual está aprobada, pero los procedimientos y valores no.
+7. Límites cuantitativos, interfaces, medidas de protección y criterios de aceptación del primer incremento. El alcance funcional está delimitado por `D25` (`DEC-GOB-022`); estos detalles permanecen abiertos. Derivado de `PREG-P-07`, `PREG-P-08`, `PREG-P-09` y `DEC-GOB-019`.
+8. Autenticación, matriz detallada de permisos, retención y almacenamiento de información. Derivados de `PREG-P-11`, `PREG-P-12` y `DEC-GOB-020`; los perfiles están aprobados, pero los mecanismos no.
 
 Estos asuntos no constituyen decisiones aprobadas. Deberán resolverse antes de implementar el alcance afectado.
 
@@ -240,11 +244,14 @@ Estos asuntos no constituyen decisiones aprobadas. Deberán resolverse antes de 
 
 Estos vínculos son de trazabilidad documental. No constituyen requisitos aprobados ni una matriz de trazabilidad de requisitos.
 
+Las decisiones `DEC-GOB-022` a `DEC-GOB-030` se relacionan con estos escenarios a través de la matriz de `docs/06-decisiones/consolidacion-decisiones-B2.3.md`. Esa matriz es de trazabilidad conceptual y no crea requisitos.
+
 ## 8. Pendientes
 
 - Los diez escenarios están aprobados como base conceptual (DEC-GOB-016).
 - No se han definido comportamientos de seguridad, recuperación o parada para una aplicación concreta.
 - No se han definido interfaces, protocolos, tiempos ni algoritmos.
+- Las decisiones conceptuales de B2.3 fueron consolidadas en `DEC-GOB-022` a `DEC-GOB-030`.
 - Las preguntas técnicas derivadas de la sección 6.2 permanecen abiertas.
 - No se han asignado identificadores `RF-###`, `RNF-###` o `RES-###`.
 - Las preguntas técnicas pendientes se registran en `docs/06-decisiones/pendientes.md`.
@@ -264,11 +271,13 @@ Estos vínculos son de trazabilidad documental. No constituyen requisitos aproba
 - `docs/01-requisitos/actores-uso.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
 
 ## 10. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.2.1:** propuesta inicial de escenarios de uso. Hipótesis pendientes de validación y aprobación.
 - **0.2 — 2026-10-20 — B2.2.2:** aprobación de los diez escenarios como base conceptual de ingeniería (DEC-GOB-016); incorporación de las decisiones `DEC-GOB-017` a `DEC-GOB-021` y de las preguntas técnicas derivadas.
+- **0.3 — 2026-10-20 — B2.3:** actualización de las referencias de estado afectadas por `DEC-GOB-022` a `DEC-GOB-030`; precisión de la familia inicial, del alcance funcional del primer incremento y de las respuestas condicionadas por riesgos. Los escenarios y las decisiones anteriores no se modifican. Versión pendiente de aprobación.
 
 ---
 

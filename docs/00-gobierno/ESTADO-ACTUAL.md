@@ -4,14 +4,14 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-20  
-**Versión del documento:** 0.10  
-**Fase actual:** Ingeniería de requisitos (B2)  
-**Bloque:** B2.2.2 — Formalización de necesidades, actores, escenarios y decisiones  
-**Estado del bloque:** Aprobaciones formalizadas; requisitos concretos pendientes  
+**Versión del documento:** 0.11  
+**Fase actual:** Ingeniería conceptual y de requisitos (B2)  
+**Bloque:** B2.3 — Consolidación de decisiones conceptuales  
+**Estado del bloque:** Decisiones conceptuales consolidadas; formalización documental en revisión; requisitos concretos pendientes  
 **Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)  
 **Convenciones de requisitos:** Aprobadas — DEC-GOB-010 a DEC-GOB-015  
 **Necesidades, actores y escenarios:** Aprobados — DEC-GOB-016 (2026-10-20)  
-**Decisiones conceptuales:** Aprobadas — DEC-GOB-017 a DEC-GOB-021  
+**Decisiones conceptuales:** Aprobadas — DEC-GOB-017 a DEC-GOB-021; consolidadas — DEC-GOB-022 a DEC-GOB-030 (B2.3)  
 **Requisitos concretos:** No definidos ni aprobados  
 **Arquitectura:** No definida  
 **Implementación:** No autorizada
@@ -57,7 +57,7 @@ Las capacidades concretas y las tecnologías del producto deberán definirse dur
 
 ## 3. Estado general
 
-El proyecto se encuentra en la etapa de gobierno documental aprobado, gestión de requisitos aprobada y necesidades, actores y escenarios aprobados. Los requisitos concretos permanecen pendientes de definición.
+El proyecto se encuentra en la etapa de gobierno documental aprobado, gestión de requisitos aprobada, necesidades, actores y escenarios aprobados, y decisiones conceptuales consolidadas. Los requisitos concretos permanecen pendientes de definición.
 
 El trabajo documental de gobierno comprende los cinco documentos sustantivos, aprobados en versión 0.1:
 
@@ -88,6 +88,8 @@ En la misma fecha se ejecutó B2.1.1: el responsable del proyecto aprobó las se
 En la misma fecha se inició B2.2 con el bloque B2.2.1: se identificaron diez necesidades candidatas, siete actores y diez escenarios de uso, y se consolidaron quince preguntas abiertas. Los documentos quedaron como propuestas pendientes de validación y aprobación. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
 
 El 20 de octubre de 2026 se ejecutó B2.2.2: el responsable del proyecto formalizó la aprobación de las diez necesidades, los siete actores y los diez escenarios, registrada como DEC-GOB-016, y las respuestas a las quince preguntas PREG-P-01 a PREG-P-15, registradas como DEC-GOB-017 a DEC-GOB-021. Las decisiones son conceptuales: no constituyen requisitos concretos, arquitectura, selección tecnológica, certificación ni autorización de implementación.
+
+En la misma fecha se ejecutó B2.3: se consolidaron las 63 decisiones conceptuales de la sesión, agrupadas en DEC-GOB-022 a DEC-GOB-030, se delimitó funcionalmente el primer incremento y se actualizaron los asuntos técnicos abiertos. Las decisiones conceptuales no constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación ni autorización de implementación. Los cambios documentales de B2.3 quedan preparados para revisión, sin commit ni push.
 
 No se ha aprobado todavía una arquitectura definitiva.
 
@@ -129,7 +131,9 @@ Los documentos de gobierno se encuentran incorporados al repositorio y versionad
 
 La aprobación formal de los cinco documentos fue otorgada de forma expresa por el responsable del proyecto el 2026-10-19, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). El registro se encuentra en DEC-GOB-009.
 
-El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y las decisiones aprobadas DEC-GOB-008 a DEC-GOB-021. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015, la línea base de gestión de requisitos; DEC-GOB-016, la aprobación de necesidades, actores y escenarios; y DEC-GOB-017 a DEC-GOB-021, las respuestas a PREG-P-01 a PREG-P-15.
+El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y las decisiones aprobadas DEC-GOB-008 a DEC-GOB-030. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015, la línea base de gestión de requisitos; DEC-GOB-016, la aprobación de necesidades, actores y escenarios; DEC-GOB-017 a DEC-GOB-021, las respuestas a PREG-P-01 a PREG-P-15; y DEC-GOB-022 a DEC-GOB-030, la consolidación de las decisiones conceptuales de B2.3.
+
+La consolidación, la matriz de las 63 decisiones y el alcance funcional del primer incremento se documentan en `docs/06-decisiones/consolidacion-decisiones-B2.3.md`.
 
 Las aprobaciones futuras de documentos requerirán el mismo registro expreso.
 
@@ -205,6 +209,15 @@ En B2.2.2 fueron aprobados en versión 0.2 (DEC-GOB-016):
 
 Estado: **Aprobado**. Contienen necesidades, actores y escenarios aprobados como base conceptual. No contienen requisitos `RF-###`, `RNF-###` o `RES-###`, no constituyen una línea base de requisitos concretos y no sustituyen la línea base de gestión de requisitos.
 
+En B2.3 se actualizaron únicamente las referencias de estado afectadas por `DEC-GOB-022` a `DEC-GOB-030`:
+
+- `docs/01-requisitos/necesidades-producto.md` — versión 0.3, estado **Revisión de documento aprobado**, pendiente de aprobación.
+- `docs/01-requisitos/escenarios-uso.md` — versión 0.3, estado **Revisión de documento aprobado**, pendiente de aprobación.
+- `docs/01-requisitos/README.md` — versión 0.2, estado **Revisión de documento aprobado**, pendiente de aprobación.
+- `docs/01-requisitos/actores-uso.md` — versión 0.2, sin cambios; no contenía referencias de estado afectadas por B2.3.
+
+Se incorporó `docs/06-decisiones/consolidacion-decisiones-B2.3.md` como documento de consolidación, trazabilidad y delimitación del primer incremento, en estado **Propuesta para aprobación**.
+
 ## 5. Metodología de ingeniería
 
 ControlCore seguirá una metodología de diseño previo e implementación incremental.
@@ -278,7 +291,7 @@ Las pruebas de laboratorio no equivaldrán automáticamente a validación indust
 
 Las siguientes reglas de trabajo están confirmadas por la documentación existente y por las instrucciones establecidas durante la sesión.
 
-Las referencias DEC-GOB-001 a DEC-GOB-021 se conservan como reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1, B1.2, B1.4, B2.1.1 y B2.2.2. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos; DEC-GOB-016 aprueba necesidades, actores y escenarios; DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a PREG-P-01 a PREG-P-15.
+Las referencias DEC-GOB-001 a DEC-GOB-030 se conservan como reglas y decisiones de gobierno, de gestión de requisitos, de alcance conceptual y de comportamiento conceptual. Fueron incorporadas al registro formal `docs/06-decisiones/registro-decisiones.md` en los bloques B1.1, B1.2, B1.4, B2.1.1, B2.2.2 y B2.3. DEC-GOB-009 registra la aprobación de la línea base de gobierno documental; DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos; DEC-GOB-016 aprueba necesidades, actores y escenarios; DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a PREG-P-01 a PREG-P-15; DEC-GOB-022 a DEC-GOB-030 consolidan las decisiones conceptuales de B2.3.
 
 **DEC-GOB-001 — Naturaleza del producto**
 
@@ -354,6 +367,24 @@ Estado: Aprobadas. Registro: `docs/06-decisiones/registro-decisiones.md`.
 
 Estas decisiones formalizan aprobaciones conceptuales. No aprueban requisitos concretos, arquitectura, tecnologías, protocolos, prestaciones cuantitativas ni funciones de seguridad certificadas, y no autorizan la implementación.
 
+**DEC-GOB-022 a DEC-GOB-030 — Consolidación de decisiones conceptuales de B2.3**
+
+En B2.3 se consolidaron las 63 decisiones conceptuales adoptadas por el responsable del proyecto:
+
+- DEC-GOB-022 — Alcance, evolución y primer incremento.
+- DEC-GOB-023 — Control de movimiento y adquisición.
+- DEC-GOB-024 — Supervisión, fallas, alarmas y recuperación.
+- DEC-GOB-025 — Operación, mando y estados.
+- DEC-GOB-026 — Configuración, persistencia, registros y acceso.
+- DEC-GOB-027 — Diagnóstico, mantenimiento y actualización de firmware.
+- DEC-GOB-028 — Interfaces, modularidad y simulación.
+- DEC-GOB-029 — Verificación, evidencia y cierre de incrementos.
+- DEC-GOB-030 — Cierre de las decisiones conceptuales.
+
+Estado: Aprobadas — alcance conceptual. Registro: `docs/06-decisiones/registro-decisiones.md`; matriz completa en `docs/06-decisiones/consolidacion-decisiones-B2.3.md`.
+
+Estas decisiones delimitan el alcance funcional del primer incremento y el comportamiento conceptual del producto. No aprueban requisitos concretos, arquitectura, tecnologías, protocolos, componentes, prestaciones cuantitativas ni funciones de seguridad certificadas, y no autorizan la implementación.
+
 Estas referencias se mantienen en la bitácora como origen y resumen. El registro formal se encuentra en `docs/06-decisiones/registro-decisiones.md`.
 
 ## 9. Asuntos pendientes
@@ -379,13 +410,15 @@ B2.2 inició con B2.2.1, que propuso diez necesidades, siete actores, diez escen
 - Los diez escenarios `ESC-P-01` a `ESC-P-10` están aprobados como base conceptual (DEC-GOB-016).
 - Las quince preguntas `PREG-P-01` a `PREG-P-15` están resueltas conceptualmente (DEC-GOB-017 a DEC-GOB-021).
 
-Permanecen abiertos los asuntos técnicos: familia de motores del primer incremento, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación y alcance exacto del primer incremento, además de autenticación, permisos y retención de información.
+B2.3 consolidó las 63 decisiones conceptuales en `DEC-GOB-022` a `DEC-GOB-030`. La familia inicial del primer incremento queda definida como motores DC con escobillas y su alcance funcional comprende un motor, arranque/parada, PWM, regulación de velocidad, inversión de giro, medición de velocidad y control en lazo abierto y cerrado, junto con PI con anti-windup, filtrado configurable, rampas configurables, transiciones supervisadas y límites validados, conforme a `DEC-GOB-022`.
+
+Permanecen abiertos los asuntos técnicos: modelo y parámetros del motor DC, electrónica de potencia, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación, autenticación y permisos, retención y almacenamiento, actualización de firmware, secuencia de incrementos posteriores y aplicación del piloto industrial.
 
 No hay requisitos concretos definidos ni aprobados. No existe línea base de requisitos concretos.
 
-El próximo bloque recomendado es la derivación y elaboración de requisitos verificables, previa delimitación del primer incremento. No se inicia automáticamente.
+El próximo bloque recomendado es la derivación y elaboración de requisitos verificables, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente.
 
-La aprobación de la línea base de gestión, de las necesidades, de los actores, de los escenarios y de las decisiones conceptuales no autoriza la implementación del producto.
+La aprobación de la línea base de gestión, de las necesidades, de los actores, de los escenarios y de las decisiones conceptuales no autoriza la implementación del producto. Los cambios documentales de B2.3 se prepararon para revisión, sin commit ni push.
 
 ### 9.4. Arquitectura
 
@@ -471,7 +504,23 @@ Presentar las decisiones de seguridad como certificación, o considerar que una 
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
 
-Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1. El riesgo de necesidades, actores y escenarios no aprobados quedó resuelto en B2.2.2.
+**Consolidación conceptual tratada como arquitectura o requisito**
+
+Interpretar las decisiones `DEC-GOB-022` a `DEC-GOB-030` como arquitectura aprobada, requisitos verificables o especificaciones de implementación.
+
+**Alcance del primer incremento tratado como autorización**
+
+Interpretar la delimitación funcional del primer incremento como autorización para implementar hardware, firmware o software.
+
+**Familia de motores tratada como selección de componente**
+
+Interpretar que la familia DC con escobillas define el modelo, las prestaciones o la electrónica de potencia del producto.
+
+**Respuestas ante fallas tratadas como funciones de seguridad aprobadas**
+
+Interpretar que las respuestas condicionadas por riesgos de `DEC-GOB-024` definen estados seguros, niveles de integridad o conformidad.
+
+Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3. El riesgo de convenciones de requisitos no aprobadas quedó resuelto en B2.1.1. El riesgo de necesidades, actores y escenarios no aprobados quedó resuelto en B2.2.2. El riesgo de decisiones conceptuales dispersas quedó atendido por la consolidación de B2.3; la aprobación documental de esa consolidación permanece pendiente.
 
 Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los controles documentales establecidos.
 
@@ -479,7 +528,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1, el inicio de B2.2.1 y la formalización de B2.2.2 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
+La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1, el inicio de B2.2.1, la formalización de B2.2.2 y la consolidación de B2.3 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -797,17 +846,50 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.11. Sesión 2026-10-20 — B2.3: Consolidación de decisiones conceptuales
+
+**Objetivo:** Consolidar y formalizar las 63 decisiones conceptuales adoptadas, delimitar el primer incremento y preparar la documentación para revisión, sin implementar ni seleccionar tecnologías.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y el commit B2.2.2 `7e72b55`.
+2. Se leyeron `README.md`, `AGENTS.md`, los documentos de gobierno, los documentos de requisitos, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+3. Se identificaron las convenciones `DEC-GOB` y `ADR` y se optó por consolidar las decisiones conceptuales en `DEC-GOB-022` a `DEC-GOB-030`, conservando los identificadores `D01` a `D63`.
+4. Se creó `docs/06-decisiones/consolidacion-decisiones-B2.3.md` con la matriz de las 63 decisiones, el alcance del primer incremento, las capacidades pendientes, las redundancias y los asuntos abiertos.
+5. Se actualizaron `docs/06-decisiones/registro-decisiones.md`, `docs/06-decisiones/pendientes.md`, `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/escenarios-uso.md` y `docs/01-requisitos/README.md`.
+6. Se actualizó esta bitácora.
+7. Se revisó el diff y se ejecutaron las verificaciones disponibles.
+
+**Resultados:**
+
+- 63 decisiones conceptuales consolidadas y trazadas.
+- Nueve registros formales `DEC-GOB-022` a `DEC-GOB-030`.
+- Primer incremento delimitado funcionalmente: un motor DC con escobillas, arranque/parada, PWM, regulación de velocidad, inversión de giro, medición de velocidad y control en lazo abierto y cerrado, con PI con anti-windup, filtrado configurable, rampas configurables, transiciones supervisadas y límites validados.
+- Familia inicial de motores resuelta conceptualmente; modelo, parámetros y electrónica pendientes.
+- Ningún requisito concreto definido ni aprobado.
+- Ningún identificador `RF-###`, `RNF-###` o `RES-###` asignado.
+- Sin selección de arquitectura, tecnologías, protocolos, componentes ni prestaciones cuantitativas.
+- Sin declaración de conformidad o certificación industrial.
+- Asuntos técnicos abiertos conservados y actualizados.
+- Cambios preparados para revisión; sin commit ni push.
+
+**Verificaciones ejecutadas:** revisión del diff; comprobación de 63 decisiones y de su correspondencia única con `DEC-GOB-022` a `DEC-GOB-030`; unicidad de identificadores; trazabilidad entre `D`, `DEC-GOB`, necesidades y escenarios; coherencia entre documentos; ausencia de requisitos concretos; ausencia de tecnologías o componentes seleccionados; ausencia de declaraciones de conformidad; integridad de las decisiones previamente aprobadas; alcance limitado a B2.3.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. La consolidación es documental y no sustituye el análisis de riesgos, la arquitectura, la verificación ni la validación industrial. La aprobación documental de la consolidación y de las versiones en revisión permanece pendiente.
+
+**Cierre:** los cambios quedan preparados en el árbol de trabajo para revisión del responsable del proyecto. No se realizó commit ni push.
+
 ## 13. Próximo paso
 
-B2.2.2 formalizó la aprobación de diez necesidades, siete actores, diez escenarios y quince decisiones conceptuales.
+B2.3 consolidó las 63 decisiones conceptuales, delimitó funcionalmente el primer incremento y actualizó los asuntos técnicos abiertos.
 
-El próximo bloque recomendado es la **derivación y elaboración de requisitos verificables**, previa delimitación del primer incremento. No se inicia automáticamente; requiere instrucciones del responsable del proyecto.
+El próximo bloque recomendado es la **derivación y elaboración de requisitos verificables del primer incremento**, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente; requiere instrucciones del responsable del proyecto.
 
-Antes de derivar requisitos deberán delimitarse o resolverse los asuntos técnicos de la sección 9.3: familia de motores del primer incremento, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación y alcance exacto del primer incremento, además de autenticación, permisos y retención de información.
+Antes de derivar requisitos deberán resolverse o registrarse los asuntos técnicos de la sección 9.3: modelo y parámetros del motor DC, electrónica de potencia, prestaciones cuantitativas, condiciones industriales específicas, interfaces y protocolos concretos, arquitectura de seguridad, métodos de verificación, autenticación y permisos, retención y almacenamiento, actualización de firmware, secuencia de incrementos posteriores y aplicación del piloto industrial.
 
 La aprobación de necesidades, actores, escenarios y decisiones conceptuales no autoriza la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
 
-Al iniciar el próximo bloque deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+Al iniciar el próximo bloque deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, `docs/06-decisiones/consolidacion-decisiones-B2.3.md`, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
 
 Las respuestas a las preguntas técnicas pendientes deberán registrarse como decisiones aprobadas; no deberán asumirse.
 

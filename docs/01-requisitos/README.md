@@ -4,11 +4,11 @@
 **Empresa:** makeAutomatic  
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Índice y convenciones de requisitos  
-**Versión:** 0.1  
-**Estado:** Aprobado  
-**Fase:** Ingeniería de requisitos  
-**Fecha de revisión:** 2026-10-19  
-**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
+**Versión:** 0.2  
+**Estado:** Revisión de documento aprobado — actualización B2.3 pendiente de aprobación  
+**Fase:** Ingeniería conceptual y de requisitos  
+**Fecha de revisión:** 2026-10-20  
+**Aprobación:** Versión 0.1 aprobada el 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic; versión 0.2 pendiente de aprobación
 
 ---
 
@@ -284,9 +284,11 @@ No quedan convenciones pendientes de aprobación para la estructura de requisito
 
 Las seis decisiones de B2.1 fueron aprobadas en B2.1.1 y registradas como DEC-GOB-010 a DEC-GOB-015.
 
+B2.2 aprobó las necesidades, actores y escenarios (DEC-GOB-016) y resolvió conceptualmente las preguntas de producto (DEC-GOB-017 a DEC-GOB-021). B2.3 consolidó las decisiones conceptuales de alcance y comportamiento en DEC-GOB-022 a DEC-GOB-030.
+
 No se han definido requisitos funcionales, no funcionales ni restricciones. No existe línea base de requisitos concretos.
 
-El siguiente paso es la definición y elaboración de requisitos en B2.2, que no se inicia automáticamente.
+El siguiente paso es la derivación y elaboración de requisitos verificables, previa resolución de los asuntos técnicos abiertos. No se inicia automáticamente.
 
 ## 9. Referencias
 
@@ -300,6 +302,7 @@ El siguiente paso es la definición y elaboración de requisitos en B2.2, que no
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
 - `docs/06-decisiones/registro-decisiones.md`
 - `docs/06-decisiones/pendientes.md`
+- `docs/06-decisiones/consolidacion-decisiones-B2.3.md`
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/requisitos-no-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
@@ -310,6 +313,7 @@ El siguiente paso es la definición y elaboración de requisitos en B2.2, que no
 
 - **0.1 — 2026-10-19 — B2.1:** estructura inicial, convenciones, atributos, estados y trazabilidad propuestos.
 - **0.1 — 2026-10-19 — B2.1.1:** aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
+- **0.2 — 2026-10-20 — B2.3:** actualización del estado de avance y referencia a la consolidación de decisiones conceptuales. Las convenciones aprobadas no se modifican. Versión pendiente de aprobación.
 
 ---
 

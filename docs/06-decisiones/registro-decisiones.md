@@ -3,9 +3,9 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
-**Versión del documento:** 0.2  
-**Estado:** Registro de decisiones de gobierno, gestión de requisitos y alcance conceptual — reglas confirmadas y decisiones aprobadas hasta DEC-GOB-021  
-**Fase:** Gobierno documental e ingeniería de requisitos  
+**Versión del documento:** 0.3  
+**Estado:** Registro de decisiones de gobierno, gestión de requisitos, alcance conceptual y comportamiento conceptual — reglas confirmadas y decisiones aprobadas hasta DEC-GOB-030  
+**Fase:** Gobierno documental e ingeniería conceptual  
 **Fecha de incorporación:** 2026-10-19  
 **Fecha de actualización:** 2026-10-20
 
@@ -13,24 +13,29 @@
 
 ## 1. Propósito
 
-Este documento constituye el registro formal de las decisiones de gobierno, de gestión de requisitos y de alcance conceptual de ControlCore.
+Este documento constituye el registro formal de las decisiones de gobierno, de gestión de requisitos, de alcance conceptual y de comportamiento conceptual del producto de ControlCore.
 
-Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones aprobadas por el responsable del proyecto. Su incorporación no crea decisiones nuevas ni modifica su contenido. La aprobación de los documentos sustantivos de gobierno se registra en DEC-GOB-009. Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos. DEC-GOB-016 aprueba las necesidades, actores y escenarios del producto. DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a las preguntas `PREG-P-01` a `PREG-P-15`.
+Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones aprobadas por el responsable del proyecto. Su incorporación no crea decisiones nuevas ni modifica su contenido. La aprobación de los documentos sustantivos de gobierno se registra en DEC-GOB-009. Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos. DEC-GOB-016 aprueba las necesidades, actores y escenarios del producto. DEC-GOB-017 a DEC-GOB-021 formalizan las respuestas a las preguntas `PREG-P-01` a `PREG-P-15`. DEC-GOB-022 a DEC-GOB-030 consolidan las decisiones conceptuales `D01` a `D63` adoptadas en B2.3, conservando su identificador de origen y sin convertirlas en requisitos, arquitectura o autorización de implementación.
 
 ## 2. Convenciones y alcance
 
-- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
+- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno, de gestión de requisitos, de alcance conceptual y de comportamiento conceptual del producto, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
 - **ADR-###:** identificador de decisiones arquitectónicas y técnicas, conforme al formato completo de `docs/00-gobierno/metodologia-diseno.md` (sección 10.2).
 - **Estado:** situación de la regla o decisión en este registro.
   - **Confirmada:** regla previamente confirmada en `docs/00-gobierno/ESTADO-ACTUAL.md`.
   - **Aprobada:** decisión adoptada expresamente por el responsable del proyecto.
+  - **Aprobada — alcance conceptual:** decisión adoptada expresamente, limitada a alcance o comportamiento conceptual; no aprueba arquitectura, requisitos concretos ni implementación.
 - **Referencia de origen:** documento y sección donde la regla o decisión fue confirmada o aprobada.
 
 La fecha de incorporación al registro no se interpreta como fecha de aprobación original de la decisión.
 
-Este registro contiene decisiones de gobierno y de gestión de requisitos, pero no decisiones técnicas, arquitectónicas ni de selección de componentes. Tampoco sustituye los documentos de requisitos, arquitectura o seguridad industrial.
+Este registro contiene decisiones de gobierno, gestión de requisitos, alcance conceptual y comportamiento conceptual del producto. No contiene arquitectura aprobada, selección de componentes, protocolos, lenguajes, herramientas ni tecnologías de implementación. Tampoco sustituye los documentos de requisitos, arquitectura o seguridad industrial.
 
-Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones y alcances conceptuales del producto. Se registran en la familia DEC-GOB por autorización expresa del responsable del proyecto. No seleccionan arquitecturas, tecnologías ni componentes concretos y no sustituyen los futuros registros ADR.
+Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones y alcances conceptuales del producto; DEC-GOB-022 a DEC-GOB-030 consolidan el alcance y el comportamiento conceptual de B2.3. Se registran en la familia DEC-GOB por autorización expresa del responsable del proyecto. No seleccionan arquitecturas, tecnologías ni componentes concretos y no sustituyen los futuros registros ADR.
+
+Las decisiones DEC-GOB-016 a DEC-GOB-021 conservan su contenido y su estado; B2.3 no las modifica.
+
+Las decisiones DEC-GOB-022 a DEC-GOB-030 se registran con fecha de formalización 2026-10-20. La sesión de B2.3 no consignó una fecha de adopción distinta. Esa fecha de formalización no se interpreta como aprobación de arquitectura, requisitos concretos o implementación.
 
 ## 3. Resumen de decisiones registradas
 
@@ -57,6 +62,15 @@ Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones y alcances conc
 | DEC-GOB-019 | Capacidades y exclusiones de la primera versión | Aprobada |
 | DEC-GOB-020 | Integración, perfiles funcionales y registro de información | Aprobada |
 | DEC-GOB-021 | Aceptación, validación y documentación | Aprobada |
+| DEC-GOB-022 | Alcance, evolución y primer incremento | Aprobada — alcance conceptual |
+| DEC-GOB-023 | Control de movimiento y adquisición | Aprobada — alcance conceptual |
+| DEC-GOB-024 | Supervisión, fallas, alarmas y recuperación | Aprobada — alcance conceptual |
+| DEC-GOB-025 | Operación, mando y estados | Aprobada — alcance conceptual |
+| DEC-GOB-026 | Configuración, persistencia, registros y acceso | Aprobada — alcance conceptual |
+| DEC-GOB-027 | Diagnóstico, mantenimiento y actualización de firmware | Aprobada — alcance conceptual |
+| DEC-GOB-028 | Interfaces, modularidad y simulación | Aprobada — alcance conceptual |
+| DEC-GOB-029 | Verificación, evidencia y cierre de incrementos | Aprobada — alcance conceptual |
+| DEC-GOB-030 | Cierre de las decisiones conceptuales | Aprobada |
 
 ## 4. Decisiones registradas
 
@@ -334,6 +348,179 @@ Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de 
 
 Las decisiones DEC-GOB-016 a DEC-GOB-021 formalizan aprobaciones conceptuales. No constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación industrial ni autorización de implementación.
 
+### DEC-GOB-022 — Alcance, evolución y primer incremento
+
+- **Asunto:** Familia inicial de motores, extensibilidad, estrategia incremental y alcance funcional del primer incremento.
+- **Contenido aprobado:**
+  - **D01 —** La primera familia de motores es la de motores DC con escobillas.
+  - **D04 —** La solución deberá ser extensible a varios motores; la implementación inicial considerará un solo motor.
+  - **D12 —** La validación se realizará primero en laboratorio y posteriormente mediante un piloto industrial.
+  - **D13 —** La implementación será incremental.
+  - **D24 —** Se mantendrá el alcance objetivo de la primera versión, distribuido en incrementos verificables.
+  - **D25 —** El primer incremento comprenderá un motor DC, arranque y parada, control por PWM, regulación de velocidad, inversión de giro, medición de velocidad y control en lazo abierto y cerrado.
+- **Justificación documentada:** Delimita el primer alcance implementable y la estrategia de evolución sin seleccionar hardware, electrónica de potencia, sensores ni prestaciones cuantitativas. Es coherente con `DEC-GOB-018` y `DEC-GOB-019`, que aprobaron la extensibilidad y el desarrollo incremental, y resuelve conceptualmente la familia inicial que `DEC-GOB-018` había dejado pendiente.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D01`, `D04`, `D12`, `D13`, `D24` y `D25` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D01`, `D04`, `D12`, `D13`, `D24`, `D25`; `DEC-GOB-018`, `DEC-GOB-019`, `DEC-GOB-021`; `NEC-P-01`, `NEC-P-04`, `NEC-P-07`; `ESC-P-02`, `ESC-P-03`.
+- **Condiciones y límites:** No selecciona modelo de motor, tensión, corriente, potencia, electrónica de potencia, sensor de velocidad, plataforma de control ni parámetros cuantitativos. No define medidas de protección ni estados seguros. La validación en laboratorio y el piloto industrial no autorizan por sí solos el uso industrial. No autoriza la implementación.
+
+### DEC-GOB-023 — Control de movimiento y adquisición
+
+- **Asunto:** Funciones de control, regulación de velocidad, adquisición y ajuste del controlador.
+- **Contenido aprobado:**
+  - **D02 —** El alcance comprende arranque, parada, PWM, inversión de giro y transiciones controladas.
+  - **D03 —** El control podrá operar en lazo abierto y en lazo cerrado.
+  - **D05 —** Se supervisarán velocidad, dirección, tensión, corriente, temperatura y anomalías.
+  - **D26 —** La estructura de algoritmos será extensible; el primer algoritmo implementado será PI.
+  - **D27 —** La salida del PI incorporará limitación y anti-windup.
+  - **D28 —** La interfaz de adquisición será compatible con distintos sensores de velocidad.
+  - **D29 —** El filtrado de la velocidad medida será configurable.
+  - **D31 —** Las rampas de aceleración y desaceleración serán configurables.
+  - **D32 —** La inversión de giro será configurable y estará condicionada por la evaluación de riesgos.
+  - **D33 —** Los límites de velocidad serán configurables, validados y sujetos a permisos.
+  - **D34 —** La transición entre lazo abierto y lazo cerrado será supervisada.
+  - **D35 —** El ajuste del PI podrá ser manual y asistido, con validación.
+- **Justificación documentada:** Define el comportamiento conceptual de control y adquisición necesario para el primer incremento y para la evolución del producto, sin fijar algoritmos concretos, parámetros ni tecnología. Se apoya en `D25` y en las capacidades aprobadas en `DEC-GOB-019`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D02`, `D03`, `D05`, `D26`, `D27`, `D28`, `D29`, `D31`, `D32`, `D33`, `D34` y `D35` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D02`, `D03`, `D05`, `D26`, `D27`, `D28`, `D29`, `D31`, `D32`, `D33`, `D34`, `D35`; `DEC-GOB-019`; `DEC-GOB-022`; `NEC-P-01`, `NEC-P-02`; `ESC-P-03`, `ESC-P-04`.
+- **Condiciones y límites:** No selecciona tipo de sensor, frecuencia de PWM, frecuencia de muestreo, ganancias, rangos de filtro o de rampa, límites de velocidad, procedimiento de ajuste ni criterios cuantitativos. Las respuestas y transiciones condicionadas por riesgos o permisos permanecen sujetas a las decisiones y análisis correspondientes. No autoriza la implementación.
+
+### DEC-GOB-024 — Supervisión, fallas, alarmas y recuperación
+
+- **Asunto:** Detección de fallas, alarmas, respuestas diferenciadas, supervisión temporal y recuperación.
+- **Contenido aprobado:**
+  - **D06 —** Se detectarán fallas, se generarán alarmas y se registrarán eventos. El diagnóstico causal automatizado no forma parte del alcance inicial.
+  - **D07 —** Las respuestas ante fallas serán diferenciadas según los riesgos identificados.
+  - **D11 —** La recuperación después de interrupciones será configurable y estará condicionada por los riesgos.
+  - **D17 —** La respuesta ante pérdida de comunicaciones será configurable y estará condicionada por los riesgos.
+  - **D30 —** La respuesta ante pérdida de realimentación estará condicionada por los riesgos.
+  - **D38 —** Se dispondrá de watchdog, detección de fallas internas y recuperación condicionada por los riesgos.
+  - **D46 —** La gestión de errores de comunicación será configurable.
+  - **D47 —** La ejecución será determinista, con prioridades y supervisión temporal.
+  - **D48 —** Los incumplimientos temporales se tratarán según su criticidad y los riesgos.
+  - **D51 —** La recuperación tras pérdida de alimentación será supervisada.
+  - **D54 —** Se realizará un autodiagnóstico supervisado antes de habilitar el motor.
+  - **D55 —** Los comandos serán validados integralmente.
+  - **D56 —** Las alarmas se clasificarán por severidad, con reconocimiento y condiciones de restablecimiento.
+  - **D57 —** Se conservará un historial auditable de alarmas.
+- **Justificación documentada:** Establece el tratamiento conceptual de condiciones anormales y recuperación, preservando la dependencia del análisis de riesgos y evitando declarar funciones de seguridad o estados seguros no aprobados. Es coherente con `DEC-GOB-017`, `DEC-GOB-019` y `DEC-GOB-021`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D06`, `D07`, `D11`, `D17`, `D30`, `D38`, `D46`, `D47`, `D48`, `D51`, `D54`, `D55`, `D56` y `D57` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D06`, `D07`, `D11`, `D17`, `D30`, `D38`, `D46`, `D47`, `D48`, `D51`, `D54`, `D55`, `D56`, `D57`; `DEC-GOB-017`, `DEC-GOB-019`, `DEC-GOB-021`; `NEC-P-03`, `NEC-P-07`, `NEC-P-08`; `ESC-P-06`, `ESC-P-09`.
+- **Condiciones y límites:** No define estados seguros, umbrales, tiempos de reacción, prioridades de parada, niveles de integridad o desempeño, algoritmos de diagnóstico, cobertura diagnóstica ni procedimientos de recuperación. No se asume que detener el motor o cortar su alimentación sea siempre seguro. Las respuestas condicionadas por riesgos permanecen abiertas hasta el análisis correspondiente. No autoriza la implementación.
+
+### DEC-GOB-025 — Operación, mando y estados
+
+- **Asunto:** Controles locales, interfaz desde computador, operación autónoma, supervisión remota, arranque y arbitraje de comandos.
+- **Contenido aprobado:**
+  - **D08 —** Se dispondrá de controles físicos locales y de una interfaz desde computador.
+  - **D18 —** Se contempla operación autónoma y supervisión remota, con arbitraje de comandos.
+  - **D37 —** El arranque será supervisado.
+  - **D49 —** El comportamiento se organizará mediante una máquina de estados supervisada.
+  - **D50 —** Los comandos serán arbitrados de forma supervisada.
+- **Justificación documentada:** Define el marco conceptual de operación y mando sin seleccionar interfaces, tecnologías ni políticas de prioridad. Se relaciona con los perfiles funcionales de `DEC-GOB-020` y con el tratamiento de fallas de `DEC-GOB-024`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D08`, `D18`, `D37`, `D49` y `D50` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D08`, `D18`, `D37`, `D49`, `D50`; `DEC-GOB-020`, `DEC-GOB-024`; `NEC-P-02`, `NEC-P-07`; `ESC-P-03`, `ESC-P-04`, `ESC-P-09`.
+- **Condiciones y límites:** No define tipos de controles locales, interfaz de computador, protocolos, prioridades de mando, política de arbitraje, estados, transiciones ni funciones de seguridad. No autoriza la implementación.
+
+### DEC-GOB-026 — Configuración, persistencia, registros y acceso
+
+- **Asunto:** Configuración validada, persistencia de parámetros, eventos y registros, tiempo, retención, integridad, auditoría, acceso y exportación.
+- **Contenido aprobado:**
+  - **D09 —** Se conservarán eventos y variables operativas.
+  - **D14 —** La configuración avanzada de parámetros será validada.
+  - **D15 —** Se dispondrá de perfiles de operador, técnico/integrador y administrador, con autenticación y auditoría.
+  - **D36 —** Los parámetros se conservarán con integridad y recuperación.
+  - **D39 —** Los registros diagnósticos incluirán contexto e historial.
+  - **D40 —** Se dispondrá de reloj interno, con sincronización externa opcional y detección de cambios horarios.
+  - **D41 —** La retención será configurable y se gestionará el almacenamiento lleno.
+  - **D42 —** Los registros contarán con integridad, auditoría y control de acceso.
+  - **D43 —** La exportación será manual y automática, mediante formatos documentados.
+- **Justificación documentada:** Define la información y las condiciones de acceso que deben conservarse para operación, diagnóstico y auditoría, sin seleccionar mecanismos técnicos. Es coherente con `DEC-GOB-020` y `DEC-GOB-021`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D09`, `D14`, `D15`, `D36`, `D39`, `D40`, `D41`, `D42` y `D43` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D09`, `D14`, `D15`, `D36`, `D39`, `D40`, `D41`, `D42`, `D43`; `DEC-GOB-020`, `DEC-GOB-021`; `NEC-P-03`, `NEC-P-05`, `NEC-P-09`; `ESC-P-05`, `ESC-P-07`, `ESC-P-10`.
+- **Condiciones y límites:** No selecciona mecanismo de autenticación, matriz de permisos, períodos de retención, tecnología de almacenamiento, formatos de registro o exportación, fuente de reloj ni protocolo de sincronización. Los controles de acceso no sustituyen las protecciones industriales. No autoriza la implementación.
+
+### DEC-GOB-027 — Diagnóstico, mantenimiento y actualización de firmware
+
+- **Asunto:** Diagnóstico, mantenimiento, actualización verificable y recuperación del firmware.
+- **Contenido aprobado:**
+  - **D16 —** Se contemplan diagnóstico, mantenimiento y actualizaciones controladas y recuperables.
+  - **D52 —** La actualización del firmware será verificable y recuperable.
+  - **D53 —** Se dispondrá de diagnóstico integral del firmware.
+- **Justificación documentada:** Define las condiciones conceptuales de mantenibilidad y actualización sin seleccionar mecanismos ni tecnologías. Se relaciona con la detección de fallas de `DEC-GOB-024` y con la documentación de `DEC-GOB-021`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D16`, `D52` y `D53` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D16`, `D52`, `D53`; `DEC-GOB-020`, `DEC-GOB-021`, `DEC-GOB-024`; `NEC-P-05`, `NEC-P-10`; `ESC-P-07`, `ESC-P-10`.
+- **Condiciones y límites:** No define transporte de actualización, gestor de arranque, firma, verificación criptográfica, mecanismo de reversión, cobertura diagnóstica ni procedimientos de mantenimiento. El diagnóstico causal automatizado continúa excluido del alcance inicial conforme a `D06`. No autoriza la implementación.
+
+### DEC-GOB-028 — Interfaces, modularidad y simulación
+
+- **Asunto:** Interfaces externas, separación entre control y potencia, modularidad, simulación y versionado de interfaces.
+- **Contenido aprobado:**
+  - **D10 —** Las interfaces externas estarán documentadas; la integración industrial funcional no será obligatoria inicialmente.
+  - **D19 —** Se separarán la lógica de control y la electrónica de potencia; los parámetros eléctricos quedan por definir.
+  - **D20 —** Se podrá simular el motor, las variables físicas, las anomalías y las interfaces.
+  - **D21 —** El simulador será independiente y dispondrá de interfaces equivalentes a las del hardware físico.
+  - **D44 —** Las interfaces serán desacopladas, documentadas y verificables.
+  - **D45 —** Las interfaces dispondrán de versionado y compatibilidad.
+- **Justificación documentada:** Establece principios conceptuales de modularidad, simulación y evolución de interfaces sin aprobar una arquitectura ni seleccionar protocolos. Se relaciona con `DEC-GOB-020` y con la estrategia de verificación de `DEC-GOB-029`.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D10`, `D19`, `D20`, `D21`, `D44` y `D45` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D10`, `D19`, `D20`, `D21`, `D44`, `D45`; `DEC-GOB-017`, `DEC-GOB-019`, `DEC-GOB-020`; `NEC-P-04`, `NEC-P-06`, `NEC-P-10`; `ESC-P-01`, `ESC-P-02`, `ESC-P-08`.
+- **Condiciones y límites:** No aprueba arquitectura de hardware, firmware o software, ni protocolos, capas físicas, formatos de datos, tecnología de simulación o criterios de equivalencia. La separación de `D19` es conceptual y no define aislamiento, protecciones ni parámetros eléctricos. No autoriza la implementación.
+
+### DEC-GOB-029 — Verificación, evidencia y cierre de incrementos
+
+- **Asunto:** Pruebas, validación, cobertura, trazabilidad de evidencias y gestión de cambios.
+- **Contenido aprobado:**
+  - **D22 —** Se realizarán pruebas unitarias, de integración y de sistema, incluyendo simulación de fallas.
+  - **D23 —** El cierre de cada incremento requerirá implementación, documentación, trazabilidad, riesgos, pruebas, evidencias y aprobación.
+  - **D58 —** Se realizarán pruebas automatizadas en simulación y pruebas físicas controladas.
+  - **D59 —** La validación será automática, con evidencias trazables y revisión de anomalías.
+  - **D60 —** La cobertura de pruebas se basará en requisitos y riesgos.
+  - **D61 —** Se mantendrá trazabilidad entre requisitos, riesgos, pruebas, resultados y evidencias.
+  - **D62 —** La gestión de cambios incluirá análisis de impacto, riesgos y regresión.
+- **Justificación documentada:** Define el marco conceptual de verificación y cierre sin fijar herramientas, procedimientos ni umbrales. Es coherente con `DEC-GOB-021` y con la metodología de definición de terminado.
+- **Estado:** Aprobada — alcance conceptual.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisiones `D22`, `D23`, `D58`, `D59`, `D60`, `D61` y `D62` adoptadas en la sesión de B2.3 y formalizadas en este bloque.
+- **Referencias:** `D22`, `D23`, `D58`, `D59`, `D60`, `D61`, `D62`; `DEC-GOB-021`; `NEC-P-09`, `NEC-P-10`; todos los escenarios aprobados en `DEC-GOB-016`.
+- **Condiciones y límites:** No define herramientas, umbrales de cobertura, procedimientos de prueba, valores de aceptación, banco o máquina de referencia, formatos de evidencia ni criterios de aprobación de una aplicación industrial concreta. La aprobación de cierre de cada incremento corresponde al responsable del proyecto. No autoriza la implementación.
+
+### DEC-GOB-030 — Cierre de las decisiones conceptuales
+
+- **Asunto:** Cierre de la fase de decisiones conceptuales, revisión de coherencia y preparación de la formalización documental.
+- **Contenido aprobado:**
+  - **D63 —** Se cierran las decisiones conceptuales, se revisan su coherencia y redundancias y se prepara su formalización documental.
+- **Justificación documentada:** La consolidación permite preservar la trazabilidad de las 63 decisiones, evitar duplicaciones y establecer una base documental revisable antes de derivar requisitos concretos. No crea decisiones técnicas nuevas.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-20 — fecha de formalización.
+- **Autoridad:** Responsable del proyecto ControlCore — makeAutomatic.
+- **Origen:** Decisión `D63` adoptada en la sesión de B2.3; formalización documental en este bloque.
+- **Referencias:** `D01` a `D63`; `DEC-GOB-022` a `DEC-GOB-029`; `docs/06-decisiones/consolidacion-decisiones-B2.3.md`.
+- **Condiciones y límites:** El cierre es documental y conceptual. No aprueba arquitectura, requisitos concretos, tecnologías, protocolos ni implementación. No resuelve las cuestiones técnicas que permanecen abiertas. La formalización documental queda sujeta a revisión y aprobación del responsable del proyecto.
+
+Las decisiones DEC-GOB-022 a DEC-GOB-030 consolidan decisiones conceptuales. No constituyen requisitos concretos, arquitectura aprobada, selección tecnológica, certificación industrial ni autorización de implementación. Su matriz completa de correspondencia con `D01` a `D63` se encuentra en `docs/06-decisiones/consolidacion-decisiones-B2.3.md`.
+
 ## 5. Estado de los documentos de gobierno
 
 En el momento de la incorporación inicial de este registro, los cinco documentos sustantivos de gobierno se encontraban en estado **Propuesta para aprobación**.
@@ -350,9 +537,9 @@ El 2026-10-19, el responsable del proyecto aprobó formalmente los cinco documen
 
 ## 6. Identificadores y decisiones futuras
 
-El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno, de gestión de requisitos y de alcance conceptual aprobadas por el responsable del proyecto. El prefijo **ADR** queda reservado para decisiones arquitectónicas y técnicas futuras.
+El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno, de gestión de requisitos, de alcance conceptual y de comportamiento conceptual del producto aprobadas por el responsable del proyecto. El prefijo **ADR** queda reservado para decisiones arquitectónicas y técnicas futuras.
 
-Las decisiones técnicas y arquitectónicas que se adopten en bloques posteriores deberán registrarse con su propio identificador, su justificación y su estado de aprobación. No deberán incorporarse a este registro como confirmadas sin una decisión expresa del responsable del proyecto.
+Las decisiones DEC-GOB-022 a DEC-GOB-030 no son ADR: describen alcance y comportamiento conceptual, no una arquitectura seleccionada, un componente, un protocolo ni una tecnología de implementación. Las decisiones arquitectónicas y técnicas que se adopten en bloques posteriores deberán registrarse con su propio identificador, su justificación y su estado de aprobación. No deberán incorporarse a este registro como confirmadas sin una decisión expresa del responsable del proyecto.
 
 Los asuntos pendientes se mantienen en `docs/06-decisiones/pendientes.md` y en `docs/00-gobierno/ESTADO-ACTUAL.md`.
 
