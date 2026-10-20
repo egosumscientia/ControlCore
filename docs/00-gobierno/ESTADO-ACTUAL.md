@@ -4,12 +4,14 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.8  
+**Versión del documento:** 0.9  
 **Fase actual:** Ingeniería de requisitos (B2)  
-**Bloque:** B2.1.1 — Formalización de las convenciones de requisitos  
-**Estado del bloque:** Convenciones de requisitos aprobadas; línea base de gestión establecida; requisitos concretos no definidos  
+**Bloque:** B2.2.1 — Identificación de necesidades, actores y escenarios de uso  
+**Estado del bloque:** Necesidades, actores y escenarios candidatos propuestos; validación pendiente  
 **Gobierno documental:** Aprobado — DEC-GOB-009 (2026-10-19)  
-**Requisitos:** Línea base de gestión aprobada; requisitos concretos no definidos ni aprobados  
+**Convenciones de requisitos:** Aprobadas — DEC-GOB-010 a DEC-GOB-015  
+**Necesidades y escenarios:** Propuestos — pendientes de validación  
+**Requisitos concretos:** No definidos ni aprobados  
 **Arquitectura:** No definida  
 **Implementación:** No autorizada
 
@@ -81,6 +83,8 @@ En la misma fecha se ejecutó el bloque B1.4: el responsable del proyecto aprob�
 En la misma fecha se inició B2 con el bloque B2.1: se estableció la estructura documental de requisitos, el esquema propuesto de identificación, los atributos, los estados y los mecanismos de trazabilidad. No se definieron requisitos concretos ni se aprobaron convenciones. La arquitectura no está definida y la implementación no está autorizada.
 
 En la misma fecha se ejecutó B2.1.1: el responsable del proyecto aprobó las seis decisiones de gestión de requisitos, registradas como DEC-GOB-010 a DEC-GOB-015, y los cuatro documentos de requisitos en versión 0.1. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
+
+En la misma fecha se inició B2.2 con el bloque B2.2.1: se identificaron diez necesidades candidatas, siete actores y diez escenarios de uso, y se consolidaron quince preguntas abiertas. Los documentos son propuestas pendientes de validación y aprobación. No se definieron requisitos concretos; la arquitectura no está definida y la implementación no está autorizada.
 
 No se ha aprobado todavía una arquitectura definitiva.
 
@@ -180,6 +184,16 @@ Estado: aprobados en versión 0.1 el 2026-10-19 (DEC-GOB-015). Incorporan las de
 No contienen requisitos concretos, identificadores asignados ni línea base de requisitos concretos.
 
 El registro histórico de asuntos resueltos se encuentra en `docs/06-decisiones/pendientes.md`.
+
+### 4.7. Documentos de identificación de necesidades
+
+En B2.2.1 se incorporaron como propuestas pendientes de aprobación:
+
+- `docs/01-requisitos/necesidades-producto.md` — diez necesidades candidatas y quince preguntas abiertas priorizadas.
+- `docs/01-requisitos/actores-uso.md` — siete actores y sus responsabilidades potenciales.
+- `docs/01-requisitos/escenarios-uso.md` — diez escenarios de uso como hipótesis.
+
+Estado: **Propuesta para aprobación**. No contienen requisitos aprobados ni sustituyen la línea base de gestión de requisitos.
 
 ## 5. Metodología de ingeniería
 
@@ -331,13 +345,15 @@ No quedan hallazgos pendientes de H-01 a H-06. Los hallazgos H-03 a H-06 quedaro
 
 ### 9.3. Requisitos — B2
 
-B2.1 cerró con la aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015). Las convenciones de identificación, versiones, estados, prioridad, trazabilidad y estructura documental están aprobadas.
+B2.1 cerró con la aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
+
+B2.2 inició con B2.2.1. Se propusieron diez necesidades candidatas, siete actores y diez escenarios de uso, con quince preguntas abiertas priorizadas. Todos son propuestas pendientes de validación y aprobación.
 
 No hay requisitos concretos definidos ni aprobados. No existe línea base de requisitos concretos.
 
-El siguiente bloque es B2.2 — Definición y elaboración de requisitos, que no se inicia automáticamente.
+El próximo bloque recomendado es B2.2.2 — Validación y priorización de necesidades, actores y escenarios, que no se inicia automáticamente.
 
-La aprobación de la línea base de gestión no autoriza la implementación del producto.
+La aprobación de la línea base de gestión y la identificación de necesidades no autorizan la implementación del producto.
 
 ### 9.4. Arquitectura
 
@@ -399,6 +415,18 @@ Interpretar la aprobación de la línea base documental o la autorización de B2
 
 Aprobar requisitos sin criterio de aceptación objetivo o sin método de verificación.
 
+**Necesidades inferidas tratadas como requisitos**
+
+Convertir necesidades candidatas o hipótesis de aplicación en requisitos obligatorios sin validación ni aprobación.
+
+**Escenarios no validados usados como especificación**
+
+Utilizar escenarios de uso hipotéticos como si definieran interfaces, comportamientos o criterios de aceptación.
+
+**Preguntas abiertas asumidas como respondidas**
+
+Tomar decisiones de producto a partir de respuestas supuestas a las preguntas pendientes.
+
 **Implementación anticipada**
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
@@ -411,7 +439,7 @@ Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los
 
 **Estado: No autorizada.**
 
-La aprobación del gobierno documental en B1.4, el inicio de B2.1 y la aprobación de la línea base de gestión de requisitos en B2.1.1 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
+La aprobación del gobierno documental en B1.4, el inicio de B2.1, la aprobación de la línea base de gestión de requisitos en B2.1.1 y el inicio de B2.2.1 no modifican este estado. La autorización para iniciar B2 — Ingeniería de requisitos no constituye autorización para implementar el producto.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -660,17 +688,52 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.9. Sesión 2026-10-19 — B2.2.1: Identificación de necesidades, actores y escenarios de uso
+
+**Objetivo:** Identificar y documentar necesidades, actores, escenarios y preguntas abiertas antes de establecer requisitos funcionales concretos.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B2.1.1 `a5030a3`.
+2. Se leyeron `README.md`, `AGENTS.md`, los cinco documentos aprobados de gobierno, los cuatro documentos aprobados de requisitos, el registro de decisiones, el registro de asuntos pendientes y esta bitácora.
+3. Se creó `docs/01-requisitos/necesidades-producto.md` con diez necesidades candidatas y quince preguntas abiertas priorizadas.
+4. Se creó `docs/01-requisitos/actores-uso.md` con siete actores y sus responsabilidades potenciales.
+5. Se creó `docs/01-requisitos/escenarios-uso.md` con diez escenarios de uso como hipótesis.
+6. Se registraron las quince preguntas pendientes en `docs/06-decisiones/pendientes.md`.
+7. Se actualizó esta bitácora.
+8. Se revisó el diff y se ejecutaron las verificaciones.
+
+**Resultados:**
+
+- Diez necesidades candidatas identificadas.
+- Siete actores identificados.
+- Diez escenarios de uso propuestos.
+- Quince preguntas abiertas priorizadas.
+- Ninguna necesidad, actor o escenario aprobado; todos pendientes de validación.
+- Ningún requisito concreto definido ni aprobado.
+- Ningún identificador `RF-###`, `RNF-###` o `RES-###` asignado.
+- Sin selección de tecnologías, interfaces, protocolos, tiempos ni comportamientos de seguridad.
+- Línea base de gobierno y de gestión de requisitos sin modificaciones.
+- Arquitectura no definida.
+- Implementación no autorizada.
+
+**Verificaciones ejecutadas:** revisión del diff, trazabilidad hacia documentos aprobados, distinción entre hechos, necesidades inferidas, hipótesis y preguntas, ausencia de requisitos inventados, ausencia de identificadores `RF-###`, `RNF-###` o `RES-###`, ausencia de selección tecnológica, coherencia entre actores, necesidades y escenarios, preguntas abiertas explícitas, integridad de la línea base aprobada y alcance limitado a B2.2.1.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. No se realizó validación con actores humanos ni se definieron requisitos concretos.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-B2.1 cerró con la aprobación de la línea base de gestión de requisitos. B2.1.1 no define requisitos concretos ni modifica la línea base de gobierno.
+B2.2.1 identificó necesidades, actores y escenarios candidatos. Todos están pendientes de validación y aprobación.
 
-El próximo bloque recomendado es **B2.2 — Definición y elaboración de requisitos**. B2.2 no se inicia automáticamente; requiere instrucciones del responsable del proyecto.
+El próximo bloque recomendado es **B2.2.2 — Validación y priorización de necesidades, actores y escenarios**. B2.2.2 no se inicia automáticamente; requiere instrucciones del responsable del proyecto.
 
-La línea base de gestión aprobada habilita la definición de requisitos, no la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
+La validación de necesidades y escenarios no autoriza la implementación del producto. La arquitectura continúa no definida y la implementación de hardware, firmware y software continúa no autorizada.
 
-Al iniciar B2.2 deberán consultarse `docs/01-requisitos/README.md`, los tres registros de requisitos, el registro de decisiones y esta bitácora.
+Al iniciar B2.2.2 deberán consultarse `docs/01-requisitos/necesidades-producto.md`, `docs/01-requisitos/actores-uso.md`, `docs/01-requisitos/escenarios-uso.md`, el registro de asuntos pendientes y esta bitácora.
 
-No deberán modificarse las decisiones aprobadas ni los documentos de la línea base de gestión sin control de cambios y autorización.
+Las respuestas a las preguntas abiertas deberán registrarse como decisiones aprobadas; no deberán asumirse.
 
 ## 14. Criterio de continuidad
 

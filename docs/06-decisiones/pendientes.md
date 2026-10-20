@@ -5,22 +5,22 @@
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Registro de asuntos de decisión  
 **Versión:** 0.1  
-**Estado:** Registro de asuntos resueltos — B2.1  
+**Estado:** Registro de asuntos de decisión — B2.1 resueltos y B2.2.1 pendientes  
 **Fase:** Ingeniería de requisitos  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** No aplica — registro histórico
+**Aprobación:** No aplica — registro de asuntos de decisión
 
 ---
 
 ## 1. Propósito
 
-Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1 y sus resoluciones en B2.1.1.
+Este documento registra los asuntos que requirieron una decisión del responsable del proyecto durante B2.1, sus resoluciones en B2.1.1 y las preguntas pendientes identificadas en B2.2.1.
 
 Conserva las alternativas consideradas y la trazabilidad hacia el registro formal de decisiones.
 
 ## 2. Alcance
 
-Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos y sus resoluciones en B2.1.1.
+Este registro comprende los asuntos identificados durante B2.1 — Estructura, identificación y trazabilidad de requisitos, sus resoluciones en B2.1.1, y las preguntas pendientes de B2.2.1 — Identificación de necesidades, actores y escenarios de uso.
 
 No contiene requisitos del producto. Las decisiones aprobadas se registran en `docs/06-decisiones/registro-decisiones.md`.
 
@@ -114,15 +114,40 @@ No contiene requisitos del producto. Las decisiones aprobadas se registran en `d
 - **Registro formal:** DEC-GOB-015.
 - **Autoridad:** Responsable del proyecto.
 
-## 4. Reglas de gestión
+## 4. Asuntos pendientes de B2.2.1
+
+Las preguntas siguientes requieren respuesta del responsable del proyecto. El texto completo y el contexto se encuentran en `docs/01-requisitos/necesidades-producto.md` (sección 6). No se asume ninguna respuesta.
+
+| Identificador | Pregunta | Impacto | Vínculos | Estado |
+|---|---|---|---|---|
+| `PREG-P-01` | ¿Qué funciones y responsabilidades de seguridad corresponden a ControlCore frente a la máquina y a los sistemas externos? | Seguridad y alcance | `NEC-P-08`; `ESC-P-06`, `ESC-P-09` | Pendiente |
+| `PREG-P-02` | ¿Qué análisis de riesgos y qué marco normativo deben aplicarse según el uso previsto y el mercado? | Seguridad y alcance | `NEC-P-08`; `ESC-P-06` | Pendiente |
+| `PREG-P-03` | ¿Qué condiciones deben considerarse estados seguros y quién los define? | Seguridad y alcance | `NEC-P-07`, `NEC-P-08`; `ESC-P-06`, `ESC-P-09` | Pendiente |
+| `PREG-P-04` | ¿Qué aplicaciones, máquinas y procesos industriales son prioritarios para la primera versión? | Aplicación objetivo | `NEC-P-01`, `NEC-P-06`; actores | Pendiente |
+| `PREG-P-05` | ¿Qué tipos de motores y actuadores deben considerarse en el alcance inicial? | Aplicación objetivo | `NEC-P-01`; `ESC-P-03` | Pendiente |
+| `PREG-P-06` | ¿Qué condiciones eléctricas, ambientales y de instalación deben soportarse? | Aplicación objetivo | `NEC-P-07`, `NEC-P-09`; `ESC-P-01`, `ESC-P-03` | Pendiente |
+| `PREG-P-07` | ¿Qué capacidades del alcance conceptual forman parte de la primera versión? | Capacidades primera versión | `NEC-P-01` a `NEC-P-10` | Pendiente |
+| `PREG-P-08` | ¿Qué capacidades quedan explícitamente fuera de la primera versión? | Capacidades primera versión | Todos los actores; todos los escenarios | Pendiente |
+| `PREG-P-09` | ¿Qué nivel de configuración, supervisión y diagnóstico se requiere inicialmente? | Capacidades primera versión | `NEC-P-02`, `NEC-P-03`, `NEC-P-04`; `ESC-P-02`, `ESC-P-04`, `ESC-P-05` | Pendiente |
+| `PREG-P-10` | ¿Con qué sistemas externos debe integrarse ControlCore y qué información debe intercambiar? | Interfaces y condiciones operativas | `NEC-P-06`; `ACT-P-01`, `ACT-P-07`; `ESC-P-08` | Pendiente |
+| `PREG-P-11` | ¿Qué actores deben operar, configurar y mantener el sistema, y qué responsabilidades y restricciones de acceso deben definirse? | Interfaces y condiciones operativas | Actores; `ESC-P-01`, `ESC-P-02`, `ESC-P-07`, `ESC-P-10` | Pendiente |
+| `PREG-P-12` | ¿Qué información debe registrarse y conservarse para operación, diagnóstico y auditoría? | Interfaces y condiciones operativas | `NEC-P-02`, `NEC-P-03`, `NEC-P-09`; `ESC-P-04`, `ESC-P-05` | Pendiente |
+| `PREG-P-13` | ¿Qué criterios de aceptación y qué evidencia deben exigirse para la primera versión? | Verificación y aceptación | `NEC-P-10`; todos los escenarios | Pendiente |
+| `PREG-P-14` | ¿Qué entorno de pruebas, banco o máquina de referencia se utilizará para verificar y validar el producto? | Verificación y aceptación | `NEC-P-09`, `NEC-P-10`; todos los escenarios | Pendiente |
+| `PREG-P-15` | ¿Qué documentación y soporte técnico debe entregarse con el producto? | Verificación y aceptación | `NEC-P-10`; `ACT-P-02`, `ACT-P-05`, `ACT-P-07` | Pendiente |
+
+Las respuestas deberán registrarse como decisiones aprobadas en el registro correspondiente y actualizar los documentos de necesidades, actores y escenarios.
+
+## 5. Reglas de gestión
 
 - Los asuntos de B2.1 fueron resueltos en B2.1.1.
-- La aprobación correspondió al responsable del proyecto.
+- Las preguntas de B2.2.1 están pendientes de respuesta y no constituyen decisiones aprobadas.
+- La aprobación de los asuntos resueltos correspondió al responsable del proyecto; las preguntas pendientes requieren su decisión.
 - Las resoluciones se registraron en DEC-GOB-010 a DEC-GOB-015.
 - Las alternativas no seleccionadas se conservan como historial.
 - La incorporación de una propuesta al repositorio no constituye aprobación.
 
-## 5. Referencias
+## 6. Referencias
 
 - `docs/00-gobierno/metodologia-diseno.md` (secciones 9, 24, 25 y 26)
 - `docs/00-gobierno/ESTADO-ACTUAL.md`
@@ -131,11 +156,15 @@ No contiene requisitos del producto. Las decisiones aprobadas se registran en `d
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/requisitos-no-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
+- `docs/01-requisitos/necesidades-producto.md`
+- `docs/01-requisitos/actores-uso.md`
+- `docs/01-requisitos/escenarios-uso.md`
 
-## 6. Historial de cambios
+## 7. Historial de cambios
 
 - **0.1 — 2026-10-19 — B2.1:** registro inicial de asuntos pendientes de la estructura de requisitos.
 - **0.1 — 2026-10-19 — B2.1.1:** resolución de los seis asuntos y registro formal DEC-GOB-010 a DEC-GOB-015.
+- **0.1 — 2026-10-19 — B2.2.1:** incorporación de las quince preguntas pendientes de necesidades, actores y escenarios de uso.
 
 ---
 
