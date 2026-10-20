@@ -4,8 +4,8 @@
 **Empresa:** makeAutomatic  
 **Documento:** Registro formal de decisiones  
 **Versión del documento:** 0.1  
-**Estado:** Registro de decisiones de gobierno — reglas confirmadas y decisiones aprobadas  
-**Fase:** Gobierno documental  
+**Estado:** Registro de decisiones de gobierno y gestión de requisitos — reglas confirmadas y decisiones aprobadas  
+**Fase:** Gobierno documental e ingeniería de requisitos  
 **Fecha de incorporación:** 2026-10-19
 
 ---
@@ -14,11 +14,11 @@
 
 Este documento constituye el registro formal de las decisiones de gobierno de ControlCore.
 
-Las decisiones aquí registradas provienen de reglas ya confirmadas en `docs/00-gobierno/ESTADO-ACTUAL.md`. Su incorporación no crea decisiones nuevas, no modifica su contenido y no altera el estado de los documentos sustantivos de gobierno, que permanecen en estado **Propuesta para aprobación** mientras no exista una aprobación expresa del responsable del proyecto.
+Las decisiones aquí registradas provienen de reglas confirmadas o de decisiones aprobadas por el responsable del proyecto. Su incorporación no crea decisiones nuevas ni modifica su contenido. La aprobación de los documentos sustantivos de gobierno se registra en DEC-GOB-009. Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos.
 
 ## 2. Convenciones y alcance
 
-- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
+- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno y de gestión de requisitos, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
 - **ADR-###:** identificador de decisiones arquitectónicas y técnicas, conforme al formato completo de `docs/00-gobierno/metodologia-diseno.md` (sección 10.2).
 - **Estado:** situación de la regla o decisión en este registro.
   - **Confirmada:** regla previamente confirmada en `docs/00-gobierno/ESTADO-ACTUAL.md`.
@@ -27,7 +27,7 @@ Las decisiones aquí registradas provienen de reglas ya confirmadas en `docs/00-
 
 La fecha de incorporación al registro no se interpreta como fecha de aprobación original de la decisión.
 
-Este registro no contiene decisiones técnicas, arquitectónicas ni de selección de componentes. Tampoco sustituye los documentos de requisitos, arquitectura o seguridad industrial.
+Este registro contiene decisiones de gobierno y de gestión de requisitos, pero no decisiones técnicas, arquitectónicas ni de selección de componentes. Tampoco sustituye los documentos de requisitos, arquitectura o seguridad industrial.
 
 ## 3. Resumen de decisiones registradas
 
@@ -42,6 +42,12 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 | DEC-GOB-007 | Bitácora al cierre de sesión | Confirmada — regla de gobierno vigente |
 | DEC-GOB-008 | Independencia de proveedores y herramientas de IA | Aprobada |
 | DEC-GOB-009 | Aprobación de la línea base de gobierno documental | Aprobada |
+| DEC-GOB-010 | Esquema de identificación de requisitos | Aprobada |
+| DEC-GOB-011 | Versionado de requisitos | Aprobada |
+| DEC-GOB-012 | Estados operativos de requisitos | Aprobada |
+| DEC-GOB-013 | Escala de prioridad de requisitos | Aprobada |
+| DEC-GOB-014 | Trazabilidad de requisitos | Aprobada |
+| DEC-GOB-015 | Estructura documental de requisitos | Aprobada |
 
 ## 4. Decisiones registradas
 
@@ -115,6 +121,68 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 - **Estado:** Aprobada.
 - **Referencia de origen:** Aprobación formal del responsable del proyecto durante B1.4.
 
+### DEC-GOB-010 — Esquema de identificación de requisitos
+
+- **Contenido:** Se aprueba el esquema de identificación de requisitos: `RF-###` para requisitos funcionales, `RNF-###` para requisitos no funcionales y `RES-###` para restricciones. Los identificadores son únicos dentro de cada categoría, permanentes y no reutilizables. Las versiones del contenido son independientes de los identificadores.
+- **Justificación documentada:** Permite identificar de forma estable y trazable cada requisito, evitar ambigüedades y preservar la trazabilidad cuando cambie su contenido. La metodología aprobada exige un esquema de identificación aprobado al iniciar el bloque de requisitos.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/README.md` (sección 3.1).
+
+### DEC-GOB-011 — Versionado de requisitos
+
+- **Contenido:** Se aprueba el esquema de versionado de requisitos: `0.x` para versiones propuestas no aprobadas; `1.0` para la primera versión aprobada; `1.1`, `1.2`, `1.3` y sucesivas para revisiones posteriores aprobadas. Toda modificación de un requisito aprobado exige evaluación de impacto y nueva aprobación. La conservación del historial es obligatoria. No se utiliza el criterio anterior que diferenciaba versiones mayores y menores según el alcance del cambio.
+- **Justificación documentada:** Distingue las propuestas de las versiones aprobadas, asegura que todo cambio aprobado sea evaluado y conserva el historial. La metodología aprobada exige control de cambios y aprobación expresa.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/README.md` (sección 3.2).
+
+### DEC-GOB-012 — Estados operativos de requisitos
+
+- **Contenido:** Se aprueban los estados operativos **En evaluación** y **Retirado**. Se integran con los estados **Propuesto**, **Aprobado**, **Revisión de requisito aprobado**, **Sustituido** y **Rechazado**. Se conservan las reglas de transición, revisión y autoridad establecidas en B2.1. La aprobación no modifica silenciosamente la metodología de gobierno.
+- **Justificación documentada:** Permite distinguir la evaluación formal y el retiro de un requisito aprobado sin sustitución, manteniendo la compatibilidad con la metodología aprobada.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/README.md` (sección 5).
+
+### DEC-GOB-013 — Escala de prioridad de requisitos
+
+- **Contenido:** Se aprueba la siguiente escala de prioridad:
+  - **Crítica:** indispensable para seguridad, cumplimiento obligatorio o viabilidad esencial del producto.
+  - **Alta:** necesaria para cumplir los objetivos principales.
+  - **Media:** importante, pero aplazable sin comprometer los objetivos esenciales.
+  - **Baja:** complementaria u opcional.
+
+  La prioridad no sustituye la evaluación de riesgos ni la clasificación de seguridad industrial.
+- **Justificación documentada:** Proporciona una escala común para ordenar requisitos y apoyar decisiones de alcance, sin reemplazar los análisis de riesgo o seguridad.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/README.md` (sección 3.3).
+
+### DEC-GOB-014 — Trazabilidad de requisitos
+
+- **Contenido:** Se aprueba el siguiente criterio de trazabilidad: las necesidades se referencian mediante documento y sección; los requisitos mediante sus identificadores `RF-###`, `RNF-###` o `RES-###`; las decisiones mediante `DEC-GOB-###` o `ADR-###`; la arquitectura, implementación, pruebas y evidencias mediante identificadores definidos cuando existan sus sistemas documentales. Los estados de vínculo son **Existente**, **Pendiente** y **No aplica**, con justificación cuando corresponda. No se inventan referencias ni artefactos futuros.
+- **Justificación documentada:** Permite reconstruir la cadena necesidad-requisito-decisión-arquitectura-implementación-prueba-evidencia sin presuponer artefactos inexistentes.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/README.md` (secciones 3.4 y 7).
+
+### DEC-GOB-015 — Estructura documental de requisitos
+
+- **Contenido:** Se aprueban los siguientes documentos: `docs/01-requisitos/README.md`, `docs/01-requisitos/requisitos-funcionales.md`, `docs/01-requisitos/requisitos-no-funcionales.md` y `docs/01-requisitos/restricciones-sistema.md`. La aprobación comprende estructura, convenciones, atributos y criterios de calidad. No constituye aprobación de requisitos concretos del producto.
+- **Justificación documentada:** Establece la línea base documental de gestión de requisitos necesaria para iniciar B2.2 de forma consistente.
+- **Estado:** Aprobada.
+- **Fecha de aprobación:** 2026-10-19.
+- **Origen:** Autorización expresa del responsable del proyecto.
+- **Referencia:** B2.1.1; `docs/01-requisitos/`; `docs/06-decisiones/pendientes.md`.
+
+Las decisiones DEC-GOB-010 a DEC-GOB-015 aprueban la línea base de gestión de requisitos. No forman parte de la línea base de gobierno documental aprobada en DEC-GOB-009 y no aprueban requisitos concretos del producto.
+
 ## 5. Estado de los documentos de gobierno
 
 En el momento de la incorporación inicial de este registro, los cinco documentos sustantivos de gobierno se encontraban en estado **Propuesta para aprobación**.
@@ -131,7 +199,7 @@ El 2026-10-19, el responsable del proyecto aprobó formalmente los cinco documen
 
 ## 6. Identificadores y decisiones futuras
 
-El prefijo **DEC-GOB** queda reservado para reglas de gobierno. El prefijo **ADR** queda reservado para decisiones arquitectónicas futuras.
+El prefijo **DEC-GOB** queda reservado para reglas y decisiones de gobierno y de gestión de requisitos. El prefijo **ADR** queda reservado para decisiones arquitectónicas futuras.
 
 Las decisiones técnicas y arquitectónicas que se adopten en bloques posteriores deberán registrarse con su propio identificador, su justificación y su estado de aprobación. No deberán incorporarse a este registro como confirmadas sin una decisión expresa del responsable del proyecto.
 

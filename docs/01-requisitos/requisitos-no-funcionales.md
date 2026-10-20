@@ -5,10 +5,10 @@
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Requisitos no funcionales  
 **Versión:** 0.1  
-**Estado:** Propuesta para aprobación  
+**Estado:** Aprobado  
 **Fase:** Ingeniería de requisitos  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto
+**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
 
 ---
 
@@ -27,7 +27,7 @@ No comprende requisitos funcionales ni restricciones externas, que se registran 
 - `docs/01-requisitos/requisitos-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
 
-No se ha definido ningún requisito no funcional. No se ha asignado ningún identificador `RNF-###` y no existe una línea base de requisitos no funcionales.
+No se ha definido ningún requisito no funcional. No se ha asignado ningún identificador `RNF-###`. La línea base de gestión de requisitos está aprobada; no existe una línea base de requisitos no funcionales concretos.
 
 ## 3. Convenciones
 
@@ -37,6 +37,8 @@ Se aplican las convenciones comunes de `docs/01-requisitos/README.md` (sección 
 - El identificador es único, estable y no reutilizable.
 - La versión del contenido es independiente del identificador.
 - No se asigna un identificador hasta que exista un requisito no funcional definido y registrado.
+- Se aplican las convenciones de prioridad y trazabilidad de `docs/01-requisitos/README.md` (secciones 3 y 5).
+- La versión de este documento es independiente de la versión de cada requisito individual.
 - Las referencias documentales utilizan rutas relativas a la raíz del repositorio.
 
 ## 4. Estructura de registro
@@ -89,10 +91,10 @@ Los vínculos se registrarán como **Existente**, **Pendiente** o **No aplica** 
 
 - No se han definido requisitos no funcionales.
 - No se ha asignado ningún identificador `RNF-###`.
-- El esquema de identificación, el esquema de versiones, los estados operativos y la escala de prioridad están pendientes de aprobación.
-- El esquema de referencia de necesidades y de vínculos futuros está pendiente de definición.
+- Las convenciones de identificación, versiones, estados, prioridad y trazabilidad están aprobadas (DEC-GOB-010 a DEC-GOB-014).
+- La estructura documental está aprobada (DEC-GOB-015).
 - Los umbrales de seguridad, prestaciones y confiabilidad requieren análisis y justificación posteriores.
-- No existe línea base de requisitos no funcionales.
+- No existe línea base de requisitos no funcionales concretos.
 
 ## 9. Referencias
 
@@ -113,7 +115,8 @@ Los vínculos se registrarán como **Existente**, **Pendiente** o **No aplica** 
 
 ## 10. Historial de cambios
 
-- **0.1 — 2026-10-19 — B2.1:** estructura inicial del registro de requisitos no funcionales. Sin requisitos definidos. Pendiente de aprobación.
+- **0.1 — 2026-10-19 — B2.1:** estructura inicial del registro de requisitos no funcionales. Sin requisitos definidos.
+- **0.1 — 2026-10-19 — B2.1.1:** aprobación de la estructura y de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
 
 ---
 

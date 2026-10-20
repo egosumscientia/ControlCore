@@ -5,10 +5,10 @@
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Índice y convenciones de requisitos  
 **Versión:** 0.1  
-**Estado:** Propuesta para aprobación  
+**Estado:** Aprobado  
 **Fase:** Ingeniería de requisitos  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto
+**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
 
 ---
 
@@ -32,13 +32,13 @@ Los requisitos se registrarán en:
 - `docs/01-requisitos/requisitos-no-funcionales.md`
 - `docs/01-requisitos/restricciones-sistema.md`
 
-No existe todavía una línea base de requisitos.
+La línea base de gestión de requisitos fue aprobada en B2.1.1 (DEC-GOB-010 a DEC-GOB-015). No existe todavía una línea base de requisitos concretos.
 
 ## 3. Convenciones
 
 ### 3.1. Identificadores
 
-Se propone el siguiente esquema:
+Se aprueba el siguiente esquema (DEC-GOB-010):
 
 | Prefijo | Tipo | Registro |
 |---|---|---|
@@ -55,38 +55,50 @@ Reglas:
 - La versión del contenido es independiente del identificador.
 - No se asigna un identificador hasta que exista un requisito definido y registrado.
 - Si se agota la numeración de tres dígitos, se requerirá una decisión de gobierno para ampliar el formato; no se reutilizarán identificadores.
-- Este esquema se propone como convención de B2.1 y requiere aprobación. La metodología aprobada establece que el esquema definitivo se aprobará al iniciar el bloque de requisitos.
+- Este esquema fue aprobado en B2.1.1 (DEC-GOB-010). La metodología aprobada establece que el esquema definitivo se aprueba al iniciar el bloque de requisitos.
 
 ### 3.2. Versiones del contenido
 
-Se propone el siguiente esquema de versiones, independiente del identificador:
+Se aprueba el siguiente esquema de versiones, independiente del identificador (DEC-GOB-011):
 
 | Versión | Uso |
 |---|---|
-| `0.y` | Requisito propuesto o en evaluación; todavía no aprobado. |
+| `0.x` | Requisito propuesto o en evaluación; todavía no aprobado. |
 | `1.0` | Primera versión aprobada del requisito. |
-| `1.y` | Cambios aprobados que preservan alcance, criterios de aceptación y dependencias. |
-| `2.0` o superior | Cambios aprobados que alteran alcance, criterios de aceptación, dependencias o interfaces. |
+| `1.1`, `1.2`, `1.3` y sucesivas | Revisiones posteriores aprobadas. |
 
 Reglas:
 
+- Toda modificación de un requisito aprobado exige evaluación de impacto y nueva aprobación.
 - La versión aprobada es la que se referencia en la línea base de requisitos.
-- Una versión anterior no se elimina del historial.
+- Una versión anterior no se elimina del historial; la conservación del historial es obligatoria.
 - La versión no sustituye al identificador ni al estado.
-- Este esquema se propone y requiere aprobación.
+- La versión de este documento es independiente de la versión de cada requisito individual.
+- No se utiliza un criterio de versiones mayores y menores basado en el alcance del cambio.
 
 ### 3.3. Prioridad
 
-La escala de prioridad se definirá antes de la primera aprobación de requisitos.
+Se aprueba la siguiente escala (DEC-GOB-013):
 
-Mientras no exista una escala aprobada, el atributo se registrará como **Pendiente de determinar**. No se asignarán valores de prioridad sin una escala documentada.
+- **Crítica:** indispensable para seguridad, cumplimiento obligatorio o viabilidad esencial del producto.
+- **Alta:** necesaria para cumplir los objetivos principales.
+- **Media:** importante, pero aplazable sin comprometer los objetivos esenciales.
+- **Baja:** complementaria u opcional.
+
+La prioridad no sustituye la evaluación de riesgos ni la clasificación de seguridad industrial.
+
+Mientras no se determine la prioridad de un requisito, el atributo se registrará como **Pendiente de determinar**.
 
 ### 3.4. Referencias y vínculos
 
+Se aprueba el siguiente criterio de trazabilidad (DEC-GOB-014):
+
 - Las referencias documentales utilizan rutas relativas a la raíz del repositorio.
-- Las decisiones se referencian mediante `DEC-GOB-###` o `ADR-###`, según su familia.
-- La necesidad de origen se referenciará mediante el documento y la sección correspondiente. Si en el futuro se aprueba un esquema de identificadores de necesidad, se utilizará ese esquema.
-- Los vínculos hacia arquitectura, implementación, pruebas y evidencias utilizarán el esquema que se defina cuando esos elementos existan. Hasta entonces se registrarán como **Pendiente**.
+- Las necesidades se referencian mediante documento y sección.
+- Los requisitos se referencian mediante sus identificadores `RF-###`, `RNF-###` o `RES-###`.
+- Las decisiones se referencian mediante `DEC-GOB-###` o `ADR-###`.
+- Los vínculos hacia arquitectura, implementación, pruebas y evidencias utilizarán los identificadores que se definan cuando existan sus sistemas documentales.
+- No se inventan referencias ni artefactos futuros.
 - Los estados de un vínculo son:
   - **Existente:** el elemento referenciado existe y está identificado.
   - **Pendiente:** el elemento se espera, pero todavía no existe o no está identificado.
@@ -146,19 +158,19 @@ La siguiente es una plantilla. No constituye un requisito registrado ni asigna u
 
 ### 5.1. Estados
 
-El modelo operativo propuesto distingue los siguientes estados y su relación con la metodología aprobada:
+El modelo operativo aprobado distingue los siguientes estados y su relación con la metodología aprobada:
 
 | Estado | Definición | Relación con la metodología |
 |---|---|---|
 | **Propuesto** | Requisito identificado y registrado, todavía no sometido a evaluación formal. | Equivale a **Propuesto**. |
-| **En evaluación** | Requisito sometido a revisión técnica, análisis de consistencia y verificación de criterios. | Subestado operativo de **Propuesto**; se propone como refinamiento y requiere aprobación. |
+| **En evaluación** | Requisito sometido a revisión técnica, análisis de consistencia y verificación de criterios. | Subestado operativo de **Propuesto**; aprobado en B2.1.1 (DEC-GOB-012). |
 | **Aprobado** | Requisito aceptado por el responsable del proyecto como base de diseño, implementación o verificación. | Equivale a **Aprobado**. |
 | **Revisión de requisito aprobado** | Requisito previamente aprobado sujeto a un cambio controlado. | Equivale a **Revisión de requisito aprobado**. |
 | **Sustituido** | Requisito reemplazado formalmente por otro requisito aprobado. | Equivale a **Sustituido**. |
-| **Retirado** | Requisito aprobado que se retira del alcance sin sustitución, después de un cambio controlado. | No tiene equivalente exacto en la metodología; se propone como estado operativo adicional y requiere aprobación. |
+| **Retirado** | Requisito aprobado que se retira del alcance sin sustitución, después de un cambio controlado. | No tiene equivalente exacto en la metodología; estado operativo adicional aprobado en B2.1.1 (DEC-GOB-012). |
 | **Rechazado** | Requisito propuesto que se descarta antes de su aprobación, conservando el registro. | Equivale a **Rechazado**. |
 
-El vocabulario de la metodología aprobada prevalece. La incorporación de **En evaluación** y **Retirado** como estados operativos requiere aprobación y no modifica la metodología.
+El vocabulario de la metodología aprobada prevalece. Los estados operativos **En evaluación** y **Retirado** fueron aprobados en B2.1.1 (DEC-GOB-012) y no modifican la metodología de gobierno.
 
 ### 5.2. Transiciones permitidas
 
@@ -214,7 +226,7 @@ La línea base se identificará por fecha y por el conjunto de versiones aprobad
 
 Las modificaciones posteriores a una línea base requerirán control de cambios y una nueva aprobación.
 
-No existe todavía una línea base de requisitos.
+No existe todavía una línea base de requisitos concretos.
 
 ## 6. Criterios de calidad
 
@@ -268,18 +280,13 @@ Reglas:
 
 ## 8. Pendientes
 
-No se han definido requisitos funcionales, no funcionales ni restricciones.
+No quedan convenciones pendientes de aprobación para la estructura de requisitos.
 
-Las siguientes convenciones se proponen y permanecen pendientes de aprobación:
+Las seis decisiones de B2.1 fueron aprobadas en B2.1.1 y registradas como DEC-GOB-010 a DEC-GOB-015.
 
-1. Esquema de identificación `RF-###`, `RNF-###`, `RES-###`.
-2. Esquema de versiones del contenido.
-3. Estados operativos **En evaluación** y **Retirado** y su relación con la metodología aprobada.
-4. Escala de prioridad.
-5. Esquema de referencia de necesidades y de vínculos hacia arquitectura, implementación, pruebas y evidencias.
-6. Estructura documental de este índice y de los tres registros.
+No se han definido requisitos funcionales, no funcionales ni restricciones. No existe línea base de requisitos concretos.
 
-El detalle y las alternativas se encuentran en `docs/06-decisiones/pendientes.md`.
+El siguiente paso es la definición y elaboración de requisitos en B2.2, que no se inicia automáticamente.
 
 ## 9. Referencias
 
@@ -301,7 +308,8 @@ El detalle y las alternativas se encuentran en `docs/06-decisiones/pendientes.md
 
 ## 10. Historial de cambios
 
-- **0.1 — 2026-10-19 — B2.1:** estructura inicial, convenciones, atributos, estados y trazabilidad propuestos. Pendiente de aprobación.
+- **0.1 — 2026-10-19 — B2.1:** estructura inicial, convenciones, atributos, estados y trazabilidad propuestos.
+- **0.1 — 2026-10-19 — B2.1.1:** aprobación de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
 
 ---
 

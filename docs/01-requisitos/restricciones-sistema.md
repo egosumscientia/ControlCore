@@ -5,10 +5,10 @@
 **Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Restricciones del sistema  
 **Versión:** 0.1  
-**Estado:** Propuesta para aprobación  
+**Estado:** Aprobado  
 **Fase:** Ingeniería de requisitos  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto
+**Aprobación:** 2026-10-19 — Responsable del proyecto ControlCore, makeAutomatic
 
 ---
 
@@ -29,7 +29,7 @@ No comprende requisitos funcionales ni no funcionales, que se registran en:
 
 Las restricciones podrán provenir de normativa, condiciones ambientales, interfaces externas, requisitos del cliente, limitaciones físicas o decisiones de gobierno. Su origen deberá documentarse.
 
-No se ha definido ninguna restricción. No se ha asignado ningún identificador `RES-###` y no existe una línea base de restricciones.
+No se ha definido ninguna restricción. No se ha asignado ningún identificador `RES-###`. La línea base de gestión de requisitos está aprobada; no existe una línea base de restricciones concretas.
 
 ## 3. Convenciones
 
@@ -39,6 +39,8 @@ Se aplican las convenciones comunes de `docs/01-requisitos/README.md` (sección 
 - El identificador es único, estable y no reutilizable.
 - La versión del contenido es independiente del identificador.
 - No se asigna un identificador hasta que exista una restricción definida y registrada.
+- Se aplican las convenciones de prioridad y trazabilidad de `docs/01-requisitos/README.md` (secciones 3 y 5).
+- La versión de este documento es independiente de la versión de cada requisito individual.
 - Las referencias documentales utilizan rutas relativas a la raíz del repositorio.
 
 ## 4. Estructura de registro
@@ -91,10 +93,10 @@ Los vínculos se registrarán como **Existente**, **Pendiente** o **No aplica** 
 
 - No se han definido restricciones.
 - No se ha asignado ningún identificador `RES-###`.
-- El esquema de identificación, el esquema de versiones, los estados operativos y la escala de prioridad están pendientes de aprobación.
-- El esquema de referencia de fuentes externas y de vínculos futuros está pendiente de definición.
+- Las convenciones de identificación, versiones, estados, prioridad y trazabilidad están aprobadas (DEC-GOB-010 a DEC-GOB-014).
+- La estructura documental está aprobada (DEC-GOB-015).
 - La evaluación de normativa aplicable y de condiciones ambientales o de interfaz requiere los análisis correspondientes.
-- No existe línea base de restricciones.
+- No existe línea base de restricciones concretas.
 
 ## 9. Referencias
 
@@ -115,7 +117,8 @@ Los vínculos se registrarán como **Existente**, **Pendiente** o **No aplica** 
 
 ## 10. Historial de cambios
 
-- **0.1 — 2026-10-19 — B2.1:** estructura inicial del registro de restricciones. Sin restricciones definidas. Pendiente de aprobación.
+- **0.1 — 2026-10-19 — B2.1:** estructura inicial del registro de restricciones. Sin restricciones definidas.
+- **0.1 — 2026-10-19 — B2.1.1:** aprobación de la estructura y de la línea base de gestión de requisitos (DEC-GOB-010 a DEC-GOB-015).
 
 ---
 
