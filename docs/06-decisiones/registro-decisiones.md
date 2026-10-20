@@ -18,10 +18,10 @@ Las decisiones aquí registradas provienen de reglas ya confirmadas en `docs/00-
 
 ## 2. Convenciones y alcance
 
-- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno.
-- **ADR-###:** reservado para futuras decisiones arquitectónicas, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10).
+- **DEC-GOB-###:** identificador de reglas y decisiones de gobierno, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 10.1).
+- **ADR-###:** identificador de decisiones arquitectónicas y técnicas, conforme al formato completo de `docs/00-gobierno/metodologia-diseno.md` (sección 10.2).
 - **Estado:** situación de la regla o decisión en este registro.
-  - **Confirmada:** regla previamente confirmada en `ESTADO-ACTUAL.md`.
+  - **Confirmada:** regla previamente confirmada en `docs/00-gobierno/ESTADO-ACTUAL.md`.
   - **Aprobada:** decisión adoptada expresamente por el responsable del proyecto.
 - **Referencia de origen:** documento y sección donde la regla o decisión fue confirmada o aprobada.
 
@@ -67,7 +67,7 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 
 ### DEC-GOB-004 — Evaluación de alternativas
 
-- **Contenido:** Las decisiones técnicas relevantes seguirán la metodología de análisis de alternativas establecida en `metodologia-diseno.md`.
+- **Contenido:** Las decisiones técnicas relevantes seguirán la metodología de análisis de alternativas establecida en `docs/00-gobierno/metodologia-diseno.md`.
 - **Justificación documentada:** `README.md` (sección 5) establece rondas estructuradas de decisiones con alternativas A, B y C; `AGENTS.md` (sección 15) exige presentar preferiblemente tres alternativas con ventajas, desventajas y riesgos; `docs/00-gobierno/metodologia-diseno.md` (secciones 4 y 5) desarrolla el método de análisis y la regla de una decisión por interacción.
 - **Estado:** Confirmada — regla de gobierno vigente.
 - **Referencia de origen:** `docs/00-gobierno/ESTADO-ACTUAL.md`, sección 8, DEC-GOB-004.
@@ -88,7 +88,7 @@ Este registro no contiene decisiones técnicas, arquitectónicas ni de selecció
 
 ### DEC-GOB-007 — Bitácora al cierre de sesión
 
-- **Contenido:** `ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
+- **Contenido:** `docs/00-gobierno/ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
 - **Justificación documentada:** `AGENTS.md` (sección 14) exige recuperar el estado vigente y preparar un resumen estructurado al cierre de sesión; `docs/00-gobierno/metodologia-diseno.md` (sección 22) define el procedimiento de cierre; `docs/00-gobierno/definicion-de-terminado.md` (sección 27) establece la bitácora como registro de continuidad y cierre.
 - **Estado:** Confirmada — regla de gobierno vigente.
 - **Referencia de origen:** `docs/00-gobierno/ESTADO-ACTUAL.md`, sección 8, DEC-GOB-007.

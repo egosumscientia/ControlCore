@@ -3,13 +3,13 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Criterios de calidad  
-**Versión del documento:** 0.1  
+**Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
 **Fase:** Ingeniería conceptual  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Aprobación:** Pendiente — responsable del proyecto
 
 ---
 
@@ -354,7 +354,7 @@ No deberán presentarse hipótesis como hechos comprobados.
 
 Los documentos incompletos o vacíos no deberán interpretarse como especificaciones aprobadas.
 
-El estado de aprobación se determinará conforme a `metodologia-diseno.md` (sección 24). La presencia de un documento en el repositorio o su publicación mediante Git no constituye aprobación.
+El estado de aprobación se determinará conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). La presencia de un documento en el repositorio o su publicación mediante Git no constituye aprobación.
 
 Las contradicciones relevantes deberán resolverse antes de implementar componentes afectados.
 

@@ -3,13 +3,13 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Definición de terminado  
-**Versión del documento:** 0.1  
+**Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
 **Fase:** Ingeniería conceptual  
 **Fecha de revisión:** 2026-10-19  
-**Aprobación:** Pendiente — responsable del proyecto  
-**Tipo de proyecto:** Desarrollo de producto industrial comercial
+**Aprobación:** Pendiente — responsable del proyecto
 
 ---
 
@@ -85,7 +85,7 @@ El trabajo está identificado, pero no ha comenzado.
 
 El trabajo se encuentra en desarrollo y todavía no cumple todas las condiciones necesarias para su revisión.
 
-### 4.3. En revisión
+### 4.3. En evaluación
 
 El entregable está disponible para evaluación técnica, pero todavía no cuenta con aprobación definitiva.
 
@@ -187,7 +187,7 @@ Un documento extenso no se considerará necesariamente completo.
 
 La calidad documental dependerá de su precisión, coherencia, utilidad y capacidad de orientar decisiones y actividades reales.
 
-La incorporación al repositorio, la ejecución de un commit o push y la actualización de la bitácora no constituyen aprobación. La aprobación requiere una decisión expresa del responsable del proyecto conforme a `metodologia-diseno.md`.
+La incorporación al repositorio, la ejecución de un commit o push y la actualización de la bitácora no constituyen aprobación. La aprobación requiere una decisión expresa del responsable del proyecto conforme a `docs/00-gobierno/metodologia-diseno.md`.
 
 No deberán introducirse reglas redundantes o contradictorias únicamente para aumentar el nivel de detalle.
 
@@ -230,7 +230,7 @@ Una decisión de ingeniería podrá declararse terminada cuando:
 10. La decisión esté documentada.
 11. Sus consecuencias para otros componentes estén identificadas.
 
-La metodología de ControlCore contempla la presentación de alternativas A, B y C para las decisiones relevantes, conforme a lo establecido en `metodologia-diseno.md`.
+La metodología de ControlCore contempla la presentación de alternativas A, B y C para las decisiones relevantes, conforme a lo establecido en `docs/00-gobierno/metodologia-diseno.md`.
 
 La recomendación de un agente de inteligencia artificial no constituye una decisión aprobada.
 

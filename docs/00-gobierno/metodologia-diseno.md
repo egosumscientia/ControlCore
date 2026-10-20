@@ -2,6 +2,7 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Metodología de diseño e ingeniería  
 **Versión:** 0.1  
 **Estado:** Propuesta para aprobación  
@@ -189,7 +190,7 @@ Cada decisión relevante deberá tener uno de los siguientes estados:
 
 **Condicionada:** la decisión ha sido seleccionada, pero depende de una comprobación o restricción pendiente.
 
-**En revisión:** nueva evidencia exige reconsiderar una decisión anterior.
+**Revisión de decisión:** nueva evidencia exige reconsiderar una decisión anterior.
 
 **Sustituida:** otra decisión aprobada reemplaza formalmente la anterior.
 
@@ -197,11 +198,32 @@ Las decisiones condicionadas deberán identificar claramente sus condiciones de 
 
 Una decisión aprobada no deberá modificarse silenciosamente.
 
-## 10. Registro de decisiones arquitectónicas
+## 10. Registro de decisiones
 
-Las decisiones relevantes se documentarán en:
+Las decisiones de gobierno, arquitectónicas y técnicas se documentarán en:
 
 `docs/06-decisiones/`
+
+Se distinguen dos familias de identificadores y formatos.
+
+### 10.1. Decisiones de gobierno — DEC-GOB
+
+Las decisiones de gobierno se identifican como `DEC-GOB-###` y se registran en `docs/06-decisiones/registro-decisiones.md`.
+
+Cada registro deberá incluir:
+
+- Identificador.
+- Título.
+- Contenido de la regla o decisión.
+- Justificación documentada.
+- Estado.
+- Referencia de origen.
+
+Este formato se aplica a reglas de gobierno ya confirmadas y a decisiones de gobierno aprobadas expresamente. No requiere evaluación de alternativas técnicas cuando la decisión no selecciona una arquitectura, una tecnología o un componente.
+
+### 10.2. Decisiones arquitectónicas y técnicas — ADR
+
+Las decisiones arquitectónicas y técnicas se identifican como `ADR-###`.
 
 Cada registro deberá incluir, cuando corresponda:
 
@@ -210,23 +232,25 @@ Cada registro deberá incluir, cuando corresponda:
 - Bloque de ingeniería.
 - Problema.
 - Contexto.
-- Alternativas.
-- Recomendación.
-- Selección aprobada.
+- Alternativas evaluadas.
+- Recomendación técnica.
+- Alternativa seleccionada.
 - Justificación.
 - Consecuencias.
 - Riesgos.
 - Dependencias.
 - Estado.
-- Referencias a requisitos y documentos.
+- Referencias a requisitos, documentos y evidencias.
 
-Se utilizarán identificadores estables, por ejemplo:
+El formato ADR deberá permitir documentar la evaluación estructurada de alternativas, la justificación, las consecuencias, los riesgos, las dependencias y la trazabilidad exigidas por esta metodología.
 
-- ADR-001.
-- ADR-002.
-- ADR-003.
+### 10.3. Reglas comunes
 
-Los cambios posteriores deberán preservar el historial de las decisiones.
+Los identificadores deberán ser estables y únicos dentro de su familia.
+
+Los cambios posteriores deberán preservar el historial de las decisiones y su trazabilidad.
+
+La existencia de un registro no constituye aprobación. El estado de aprobación se rige por la sección 9 y por la sección 24.
 
 ## 11. Criterios de madurez del diseño
 
@@ -376,7 +400,7 @@ No se utilizarán instrucciones genéricas que deleguen decisiones arquitectóni
 
 ## 18. Calidad de implementación
 
-Las tareas deberán cumplir los principios establecidos en `AGENTS.md` y `principios-ingenieria.md`.
+Las tareas deberán cumplir los principios establecidos en `AGENTS.md` y `docs/00-gobierno/principios-ingenieria.md`.
 
 Se verificará especialmente:
 
@@ -465,13 +489,13 @@ El cierre incluirá:
 - Riesgos.
 - Próximo paso.
 
-Se actualizará el contenido de `ESTADO-ACTUAL.md` y, cuando corresponda, el registro de decisiones.
+Se actualizará el contenido de `docs/00-gobierno/ESTADO-ACTUAL.md` y, cuando corresponda, el registro de decisiones.
 
 Si el asistente no dispone de autorización o capacidad para modificar directamente el repositorio, entregará el contenido listo para incorporarlo mediante el procedimiento elegido por el responsable.
 
 No afirmará que GitHub está actualizado hasta que se haya confirmado la publicación de los cambios.
 
-La actualización de `ESTADO-ACTUAL.md` no constituye aprobación de documentos, decisiones ni entregables.
+La actualización de `docs/00-gobierno/ESTADO-ACTUAL.md` no constituye aprobación de documentos, decisiones ni entregables.
 
 ## 23. Inicio de una nueva conversación
 
@@ -502,7 +526,7 @@ Se utilizarán, según corresponda:
 - **Borrador:** contenido en elaboración; no apto para uso como referencia.
 - **Propuesta para aprobación:** contenido completo para revisión, pero no aprobado.
 - **Aprobado:** el responsable del proyecto ha aceptado expresamente la versión indicada.
-- **En revisión:** una versión aprobada se encuentra sujeta a revisión por nueva evidencia o cambio de alcance.
+- **Revisión de documento aprobado:** una versión aprobada se encuentra sujeta a revisión por nueva evidencia o cambio de alcance.
 - **Sustituido:** existe una versión posterior aprobada que reemplaza formalmente la anterior.
 
 Estos estados se aplican a documentos. Los estados de las decisiones se rigen por la sección 9 y no deberán confundirse con los estados documentales.
@@ -525,14 +549,14 @@ Mientras un documento permanezca en estado **Propuesta para aprobación**, su co
 
 ### 24.3. Registro y trazabilidad
 
-El estado de aprobación deberá reflejarse en el encabezado del documento y en `ESTADO-ACTUAL.md`.
+El estado de aprobación deberá reflejarse en el encabezado del documento y en `docs/00-gobierno/ESTADO-ACTUAL.md`.
 
 Las decisiones formales se registrarán en `docs/06-decisiones/`. La bitácora de continuidad no sustituye ese registro.
 
 Los cambios sobre documentos aprobados deberán:
 
 1. Identificar el motivo y el alcance.
-2. Pasar el documento al estado **En revisión** o generar una nueva versión.
+2. Pasar el documento al estado **Revisión de documento aprobado** o generar una nueva versión.
 3. Evaluar el impacto sobre requisitos, arquitectura, implementación, pruebas y validación.
 4. Obtener una nueva aprobación antes de utilizar la versión modificada como base de implementación.
 
@@ -563,7 +587,7 @@ Cada requisito deberá disponer, cuando corresponda, de:
 
 El esquema definitivo de identificación se aprobará al iniciar el bloque de requisitos y se mantendrá estable durante el proyecto.
 
-Los criterios de calidad aplicables a los requisitos y la cadena de trazabilidad se establecen en `criterios-calidad.md` (secciones 3 y 13).
+Los criterios de calidad aplicables a los requisitos y la cadena de trazabilidad se establecen en `docs/00-gobierno/criterios-calidad.md` (secciones 3 y 13).
 
 ### 25.2. Estados y línea base
 
@@ -571,7 +595,7 @@ Los requisitos utilizarán los siguientes estados:
 
 - **Propuesto:** identificado, pero no aprobado.
 - **Aprobado:** aceptado como base de diseño, implementación o verificación.
-- **En revisión:** aprobado previamente y sujeto a modificación.
+- **Revisión de requisito aprobado:** aprobado previamente y sujeto a modificación.
 - **Sustituido:** reemplazado formalmente por otro requisito aprobado.
 - **Rechazado:** evaluado y descartado, conservando el registro de la decisión.
 
@@ -579,7 +603,7 @@ Un conjunto de requisitos aprobados para un alcance constituye una línea base. 
 
 ### 25.3. Requisitos pendientes
 
-Los requisitos no definidos, no aprobados o en revisión deberán permanecer identificados como tales.
+Los requisitos no definidos, no aprobados o que se encuentren en estado **Revisión de requisito aprobado** deberán permanecer identificados como tales.
 
 No deberá implementarse una funcionalidad cuyo requisito esencial permanezca pendiente, salvo que exista una autorización expresa para realizar un experimento delimitado y se registre su carácter exploratorio.
 
@@ -590,7 +614,7 @@ Cuando se detecte una contradicción entre requisitos, decisiones, arquitectura,
 1. Identificarla de forma explícita, citando los documentos y secciones afectados.
 2. Determinar su alcance e impacto potencial.
 3. Abstenerse de aplicar una interpretación silenciosa.
-4. Registrarla como asunto pendiente en `ESTADO-ACTUAL.md` y, cuando corresponda, en `docs/06-decisiones/pendientes.md`.
+4. Registrarla como asunto pendiente en `docs/00-gobierno/ESTADO-ACTUAL.md` y, cuando corresponda, en `docs/06-decisiones/pendientes.md`.
 5. Suspender la implementación afectada hasta que exista una resolución aprobada, cuando la contradicción comprometa requisitos, seguridad o contratos.
 
 La resolución deberá ser adoptada por el responsable del proyecto y registrada con su justificación.

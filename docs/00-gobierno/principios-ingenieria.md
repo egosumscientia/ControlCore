@@ -2,6 +2,7 @@
 
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
+**Tipo de proyecto:** Desarrollo de producto industrial comercial  
 **Documento:** Principios de ingeniería  
 **Versión:** 0.1  
 **Estado:** Propuesta para aprobación  

@@ -4,10 +4,10 @@
 **Proyecto:** ControlCore  
 **Empresa:** makeAutomatic  
 **Fecha de actualización:** 2026-10-19  
-**Versión del documento:** 0.4  
+**Versión del documento:** 0.5  
 **Fase actual:** Gobierno documental y preparación de ingeniería  
-**Bloque:** B1.2 — Generalización completa y auditoría de gobierno  
-**Estado del bloque:** Auditoría completada; correcciones editoriales aplicadas; aprobación formal pendiente  
+**Bloque:** B1.3 — Resolución de hallazgos de auditoría  
+**Estado del bloque:** Hallazgos H-03 a H-06 resueltos; aprobación formal pendiente  
 **Estado del proyecto:** Ingeniería conceptual — implementación no autorizada
 
 ---
@@ -70,6 +70,8 @@ En la misma fecha se ejecutó el bloque B1.1: se generalizaron las reglas de age
 
 También en esa fecha se ejecutó el bloque B1.2: se generalizaron las referencias de herramienta de `docs/00-gobierno/metodologia-diseno.md`, se registró DEC-GOB-008 y se realizó la auditoría integral de los cinco documentos sustantivos de gobierno. Las correcciones aplicadas son editoriales y no modifican decisiones, obligaciones ni alcance. Los cinco documentos permanecen en estado **Propuesta para aprobación**.
 
+En la misma fecha se ejecutó el bloque B1.3, autorizado por el responsable del proyecto, para resolver los hallazgos H-03 a H-06 de la auditoría: normalización de referencias internas, diferenciación de estados, armonización del esquema DEC-GOB/ADR y unificación de metadatos. No se modificaron decisiones técnicas, requisitos del producto, obligaciones sustantivas ni estados de aprobación. Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+
 No se ha aprobado todavía una arquitectura definitiva.
 
 No se ha autorizado la implementación del producto.
@@ -98,7 +100,7 @@ Durante B1.1 se incorporaron además:
 
 Durante B1.2 se incorporó:
 
-- `docs/00-gobierno/auditoria-gobierno-B1.md` — informe de auditoría integral del gobierno documental.
+- `docs/00-gobierno/auditoria-gobierno-B1.md` — informe de auditoría integral del gobierno documental, actualizado en B1.3.
 
 `README.md` y `AGENTS.md` no fueron modificados durante B1; fueron actualizados en B1.1 para generalizar las reglas de agentes.
 
@@ -108,7 +110,7 @@ Los cinco documentos sustantivos de gobierno se encuentran en estado **Propuesta
 
 Los documentos de gobierno se encuentran incorporados al repositorio y versionados mediante Git. Su incorporación y publicación no constituyen aprobación formal.
 
-La aprobación formal de cada documento deberá ser otorgada de forma expresa por el responsable del proyecto, conforme a `metodologia-diseno.md` (sección 24). Mientras no exista ese registro, los documentos deberán tratarse como propuestas de referencia y no como especificaciones aprobadas.
+La aprobación formal de cada documento deberá ser otorgada de forma expresa por el responsable del proyecto, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24). Mientras no exista ese registro, los documentos deberán tratarse como propuestas de referencia y no como especificaciones aprobadas.
 
 El registro formal `docs/06-decisiones/registro-decisiones.md` contiene las reglas DEC-GOB-001 a DEC-GOB-007 y la decisión aprobada DEC-GOB-008. Su registro no implica la aprobación de los documentos sustantivos de gobierno.
 
@@ -228,7 +230,7 @@ Los agentes de IA no podrán aprobar decisiones por iniciativa propia.
 
 **DEC-GOB-004 — Evaluación de alternativas**
 
-Las decisiones técnicas relevantes seguirán la metodología de análisis de alternativas establecida en `metodologia-diseno.md`.
+Las decisiones técnicas relevantes seguirán la metodología de análisis de alternativas establecida en `docs/00-gobierno/metodologia-diseno.md`.
 
 **DEC-GOB-005 — Calidad obligatoria**
 
@@ -240,7 +242,7 @@ La continuidad del proyecto deberá basarse en la documentación vigente del rep
 
 **DEC-GOB-007 — Bitácora al cierre de sesión**
 
-`ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
+`docs/00-gobierno/ESTADO-ACTUAL.md` se actualizará al finalizar las sesiones de ingeniería, una vez completadas las actividades correspondientes.
 
 **DEC-GOB-008 — Independencia de proveedores y herramientas de IA**
 
@@ -254,21 +256,20 @@ Estas referencias se mantienen en la bitácora como origen y resumen. El registr
 
 ### 9.1. Aprobación formal de documentos
 
-- Aprobar o rechazar formalmente `vision-producto.md`.
-- Aprobar o rechazar formalmente `principios-ingenieria.md`.
-- Aprobar o rechazar formalmente `metodologia-diseno.md`.
-- Aprobar o rechazar formalmente `criterios-calidad.md`.
-- Aprobar o rechazar formalmente `definicion-de-terminado.md`.
+- Aprobar o rechazar formalmente `docs/00-gobierno/vision-producto.md`.
+- Aprobar o rechazar formalmente `docs/00-gobierno/principios-ingenieria.md`.
+- Aprobar o rechazar formalmente `docs/00-gobierno/metodologia-diseno.md`.
+- Aprobar o rechazar formalmente `docs/00-gobierno/criterios-calidad.md`.
+- Aprobar o rechazar formalmente `docs/00-gobierno/definicion-de-terminado.md`.
 - Registrar cada decisión con versión, fecha y autoridad, y actualizar el estado en el encabezado del documento correspondiente.
 
 Mientras no se realice esta aprobación, los documentos permanecen como propuestas.
 
 ### 9.2. Coherencia documental
 
-- Atender los hallazgos no bloqueantes H-03 a H-06 del informe de auditoría, aceptándolos formalmente o autorizando su corrección.
 - Verificar, al iniciar el próximo bloque documental, que las referencias entre documentos y la numeración de secciones sigan siendo válidas.
 
-La generalización de `metodologia-diseno.md`, la referencia a `docs/04-modulos/`, la incorporación de DEC-GOB-001 a DEC-GOB-007 y el registro de DEC-GOB-008 quedaron resueltos en B1.1 y B1.2.
+Los hallazgos H-03 a H-06 quedaron resueltos en B1.3 y documentados en el informe de auditoría actualizado. La generalización de `docs/00-gobierno/metodologia-diseno.md`, la referencia a `docs/04-modulos/`, la incorporación de DEC-GOB-001 a DEC-GOB-007 y el registro de DEC-GOB-008 quedaron resueltos en B1.1, B1.2 y B1.3.
 
 ### 9.3. Requisitos
 
@@ -320,14 +321,6 @@ Asumir que un documento incorporado al repositorio, publicado mediante Git o cit
 
 Mantener referencias a directorios, herramientas o documentos que no reflejan el estado real del repositorio.
 
-**Terminología de estados**
-
-Usar el término «En revisión» con alcances distintos para documentos, trabajos y requisitos, generando confusión en la bitácora o en los registros.
-
-**Hallazgos editoriales pendientes**
-
-Mantener observaciones no bloqueantes de estilo o metadatos sin una decisión expresa sobre su aceptación o corrección.
-
 **Pérdida de trazabilidad**
 
 Tomar decisiones durante conversaciones sin registrarlas posteriormente en el repositorio.
@@ -340,13 +333,15 @@ Interpretar resultados de laboratorio como evidencia suficiente para operación 
 
 Comenzar el desarrollo sin haber definido las condiciones necesarias de seguridad, funcionamiento y aceptación.
 
+Los riesgos de terminología de estados y de hallazgos editoriales pendientes quedaron resueltos en B1.3.
+
 Estos riesgos deberán gestionarse mediante la metodología de ingeniería y los controles documentales establecidos.
 
 ## 11. Implementación
 
 **Estado: No autorizada.**
 
-La consolidación documental de los bloques B1, B1.1 y B1.2 no modifica este estado.
+La consolidación documental de los bloques B1, B1.1, B1.2 y B1.3 no modifica este estado.
 
 No existe todavía una arquitectura definitiva aprobada para el producto.
 
@@ -385,7 +380,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 2. Se leyeron `README.md`, `AGENTS.md` y todos los documentos de `docs/00-gobierno/`.
 3. Se examinó la estructura documental y se identificaron vacíos, duplicaciones y estados de aprobación ambiguos.
 4. Se armonizaron los encabezados y estados de los documentos de gobierno.
-5. Se definió el régimen de control documental y aprobación en `metodologia-diseno.md`.
+5. Se definió el régimen de control documental y aprobación en `docs/00-gobierno/metodologia-diseno.md`.
 6. Se añadieron criterios de gestión de requisitos y de resolución de contradicciones documentales.
 7. Se actualizó esta bitácora con el estado real del repositorio y los asuntos pendientes.
 8. Se revisó el diff, se verificó el alcance y se ejecutaron las comprobaciones disponibles.
@@ -430,7 +425,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Verificaciones ejecutadas:** revisión del diff, comprobación de referencias internas y rutas, verificación de identificadores únicos, comprobación de ausencia de referencias específicas de proveedor en `README.md` y `AGENTS.md`, verificación del alcance autorizado y comprobación del estado del árbol de trabajo.
 
-**Limitaciones:** no se ejecutaron pruebas de software porque no existe código en esta fase. La generalización de `metodologia-diseno.md` no formó parte del alcance autorizado y permanece pendiente.
+**Limitaciones:** no se ejecutaron pruebas de software porque no existe código en esta fase. La generalización de `docs/00-gobierno/metodologia-diseno.md` no formó parte del alcance autorizado de B1.1 y se resolvió en B1.2.
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
@@ -442,7 +437,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B1.1 `3381967`.
 2. Se leyeron `README.md`, `AGENTS.md`, los documentos de `docs/00-gobierno/` y el registro de decisiones.
-3. Se generalizaron las referencias a proveedores y herramientas en `metodologia-diseno.md` (secciones 17, 19, 21 y 23).
+3. Se generalizaron las referencias a proveedores y herramientas en `docs/00-gobierno/metodologia-diseno.md` (secciones 17, 19, 21 y 23).
 4. Se registró DEC-GOB-008 en `docs/06-decisiones/registro-decisiones.md`.
 5. Se auditaron los cinco documentos sustantivos contra los catorce criterios establecidos en el bloque.
 6. Se corrigieron las referencias incompletas a `docs/04-modulos/` en visión, criterios de calidad y definición de terminado.
@@ -456,7 +451,7 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 - DEC-GOB-008 aprobada y registrada formalmente.
 - Auditoría integral completada sin hallazgos bloqueantes.
 - Correcciones editoriales aplicadas sin modificar decisiones, obligaciones ni alcance.
-- Hallazgos no bloqueantes H-03 a H-06 documentados y pendientes de aceptación o corrección.
+- Hallazgos no bloqueantes H-03 a H-06 documentados; resueltos en B1.3.
 - Los cinco documentos sustantivos de gobierno permanecen en estado **Propuesta para aprobación**.
 - No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
 - No se realizó implementación ni validación industrial.
@@ -467,15 +462,51 @@ La implementación deberá planificarse a partir de requisitos y decisiones de i
 
 **Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
 
+### 12.5. Sesión 2026-10-19 — B1.3: Resolución de hallazgos de auditoría
+
+**Objetivo:** Resolver los hallazgos H-03 a H-06 autorizados por el responsable del proyecto, sin modificar decisiones técnicas, requisitos del producto ni obligaciones sustantivas.
+
+**Actividades realizadas:**
+
+1. Se verificó la rama `main`, el árbol limpio, la coincidencia de `HEAD` con `origin/main` y la existencia del commit B1.2 `f0d5da6`.
+2. Se leyeron `README.md`, `AGENTS.md`, los cinco documentos de gobierno, el informe de auditoría, el registro de decisiones y esta bitácora.
+3. Se normalizaron las referencias internas a rutas relativas a la raíz del repositorio (H-03).
+4. Se diferenciaron las denominaciones de estado para decisiones, documentos, requisitos y entregables (H-04).
+5. Se armonizó la sección 10 de la metodología con el registro de decisiones mediante los formatos DEC-GOB y ADR (H-05).
+6. Se unificó el bloque de metadatos de los cinco documentos de gobierno (H-06).
+7. Se actualizó el informe de auditoría a la versión 0.2.
+8. Se actualizó esta bitácora.
+9. Se revisó el diff y se ejecutaron las comprobaciones disponibles.
+
+**Resultados:**
+
+- Hallazgos H-03 a H-06 resueltos.
+- Referencias internas normalizadas y verificadas.
+- Vocabulario de estados diferenciado sin alterar transiciones, restricciones ni autoridades.
+- Esquema DEC-GOB/ADR definido; los ocho registros DEC-GOB permanecen intactos.
+- Metadatos uniformes en los cinco documentos.
+- Informe de auditoría actualizado; recomienda presentar los cinco documentos para aprobación formal.
+- Los cinco documentos permanecen en estado **Propuesta para aprobación**.
+- No se aprobaron documentos, tecnologías, arquitecturas ni requisitos funcionales.
+- No se realizó implementación ni validación industrial.
+
+**Verificaciones ejecutadas:** revisión del diff, comprobación de rutas y referencias, consistencia de estados, uniformidad de metadatos, correspondencia metodología-registro, verificación de DEC-GOB-001 a DEC-GOB-008, conservación de obligaciones, ausencia de decisiones técnicas inventadas y verificación del alcance autorizado.
+
+**Limitaciones:** no se ejecutaron pruebas de software ni ensayos de hardware porque no existe código ni prototipo en esta fase. La auditoría es documental y no sustituye las evaluaciones técnicas, eléctricas, mecánicas, ambientales o de seguridad requeridas para una aplicación industrial.
+
+**Cierre y publicación:** el bloque se cierra con un commit único y su publicación en la rama activa, conforme al procedimiento autorizado. La confirmación operativa del push se reporta al responsable del proyecto.
+
 ## 13. Próximo paso
 
-Los bloques B1, B1.1 y B1.2 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
+Los bloques B1, B1.1, B1.2 y B1.3 quedaron consolidados documentalmente. No se inicia B2 sin autorización expresa.
 
 La siguiente actividad recomendada es:
 
-1. Revisar el informe `docs/00-gobierno/auditoria-gobierno-B1.md` y decidir la aprobación formal de los cinco documentos, aceptando o corrigiendo los hallazgos H-03 a H-06.
-2. Registrar cada aprobación con versión, fecha y autoridad, conforme a `metodologia-diseno.md` (sección 24).
+1. Revisar el informe actualizado `docs/00-gobierno/auditoria-gobierno-B1.md` y decidir la aprobación formal de los cinco documentos.
+2. Registrar cada aprobación con versión, fecha y autoridad, conforme a `docs/00-gobierno/metodologia-diseno.md` (sección 24).
 3. Una vez aprobado el gobierno, autorizar el bloque de requisitos y definir el esquema de identificadores.
+
+El informe de auditoría recomienda presentar los cinco documentos para aprobación formal. Esta recomendación no constituye aprobación.
 
 Al iniciar una nueva sesión deberán consultarse `README.md`, `AGENTS.md`, este archivo, el registro de decisiones y el informe de auditoría.
 
